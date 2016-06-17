@@ -5,6 +5,7 @@ export default class App extends Component {
     return (
       <div>
         jajajaja!!!!
+        <ResultsContainer/>
       </div>
     );
   }

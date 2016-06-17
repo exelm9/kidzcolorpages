@@ -12,3 +12,5 @@ jspm_packages
 
 # OSX files
 .DS_Store
+
+.idea

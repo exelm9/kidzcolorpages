@@ -13,8 +13,18 @@ import { ReduxAsyncConnect } from 'redux-async-connect';
 import useScroll from 'scroll-behavior/lib/useStandardScroll';
 
 import App from './containers/App/App';
+import Sidepanel from './containers/Sidepanel/Sidepanel'
+var blurb = [
+'Animals',
+'People',
+'Precolored'
+]
 
 ReactDOM.render(
-  <App />
+  <div>
+	  <App/>
+	  <Sidepanel filters={blurb}/>
+  </div>
   , document.querySelector('.container')
 );
+

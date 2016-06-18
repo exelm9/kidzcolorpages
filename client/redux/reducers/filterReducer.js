@@ -1,7 +1,7 @@
 import { SET_FILTER } from '../constants/ActionTypes'
 
 const initialState = {
-  filters: ['ninjas, animals, furrys']
+  filters: ['ninjas', 'animals', 'furrys']
 };
 
 export default function picturesReducer(filters = initialState, action) {

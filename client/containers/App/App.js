@@ -1,10 +1,13 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import Sidepanel from '../../components/Sidepanel/Sidepanel';
 import * as ColorPagesActions from '../../redux/actions';
 
 export default class App extends Component {
+  componentDidMount(){
+  	console.log(this.props, this)
+  }
   render() {
     return (
       <div>
@@ -13,11 +16,16 @@ export default class App extends Component {
     );
   }
 }
+App.propTypes = {
+  pictures: PropTypes.object.isRequired,
+  filters: PropTypes.object.isRequired,
+  actions: PropTypes.object.isRequired
+}
 
 function mapStateToProps(state) {
-	console.log(state,'ninjas')
   return {
-    todos: state.todos
+    pictures: state.pictures,
+    filters: state.filters
   }
 }
 

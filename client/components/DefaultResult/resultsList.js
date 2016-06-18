@@ -2,14 +2,17 @@
 import React from 'react';
 import ResultsListItem from './resultsListItem';
 
-const ResultsList = () => {
-  console.log(ResultsList)
-  return (
+const ResultsList = (props) => {
+    console.log("Inside resultsList", props);
+    const resultMemes = props.images.result.map((meme) => {
+        return <ResultsListItem image={meme.imageUrl} caption={meme.displayName} key={meme.generatorID}/>
+    });
+    return (
+      <div className="row">
+      {resultMemes}
 
-    <div>
-      <ResultsListItem />
-    </div>
-  )
+      </div>
+    );
 };
 
 export default ResultsList;

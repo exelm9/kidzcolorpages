@@ -8,8 +8,6 @@ export default class App extends Component {
     return (
       <div>
       <ResultsContainer />
-        jajajaja!!!!
-        And this
       </div>
     );
   }

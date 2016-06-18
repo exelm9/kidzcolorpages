@@ -3,8 +3,8 @@ import React from 'react';
 
 const ResultsJumbotron = () => {
   return (
-    <div>Let me out.</div>
-  )
+    <div>Jumbotron</div>
+  );
 };
 
 export default ResultsJumbotron;

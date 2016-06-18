@@ -1,14 +1,15 @@
-// // action
-// export const UPDATE_PICTURES = 'UPDATE_PICTURES';
-// const initialState = {
-//   pictures: []
-// };
+// action
+export const SET_FILTER = 'SET_FILTER';
 
-// export default function picturesReducer(pictures = initialState, action) {
-//   switch (action.type) {
-//     case "UPDATE_PICTURES":
-//       return pictures.push(action.payload);
-//     default:
-//       return pictures;
-//   }
-// }
+const initialState = {
+  filters: ['ninjas, animals, furrys']
+};
+
+export default function picturesReducer(filters = initialState, action) {
+  switch (action.type) {
+    case "SET_FILTER":
+      return filters.push(action.payload);
+    default:
+      return filters;
+  }
+}

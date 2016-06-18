@@ -14,17 +14,27 @@ import useScroll from 'scroll-behavior/lib/useStandardScroll';
 
 import App from './containers/App/App';
 import Sidepanel from './containers/Sidepanel/Sidepanel'
-var blurb = [
+
+
+ReactDOM.render(
+  <div>
+	  <App/>
+	  <Sidepanel filters={fBlurb} pictures={picBlurb}/>
+  </div>
+  , document.querySelector('.container')
+);
+
+
+
+var fBlurb = [
 'Animals',
 'People',
 'Precolored'
 ]
 
-ReactDOM.render(
-  <div>
-	  <App/>
-	  <Sidepanel filters={blurb}/>
-  </div>
-  , document.querySelector('.container')
-);
-
+var picBlurb = [
+{url:"http//:lol.com",
+id:'flockwocka'},
+{url:"http//:lols.com",
+id:'flockwockaz'}
+]

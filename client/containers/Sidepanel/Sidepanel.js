@@ -23,7 +23,8 @@ export default class Sidepanel extends Component {
 
   render() {
     return (
-      <div>
+      <div className="sidepanel">
+        <h5>Sidepanel</h5>
         <SearchBar onSearchChange={ this.pictureSearch }/>
       </div>
     );

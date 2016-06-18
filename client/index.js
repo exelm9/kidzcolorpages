@@ -4,37 +4,29 @@
 import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import createStore from './redux/create';
-// will need api client
+import { createStore } from 'redux';
 import {Provider} from 'react-redux';
+import reducer from './redux/reducers'
 import { Router, browserHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
 import { ReduxAsyncConnect } from 'redux-async-connect';
 import useScroll from 'scroll-behavior/lib/useStandardScroll';
 
 import App from './containers/App/App';
-import Sidepanel from './containers/Sidepanel/Sidepanel'
 
 
+const history = browserHistory;
+const store = createStore(reducer);
 ReactDOM.render(
-  <div>
-	  <App/>
-	  <Sidepanel filters={fBlurb} pictures={picBlurb}/>
-  </div>
+  <Provider store={store}>
+	  <div>
+		  <App/>
+		  
+	  </div>
+  </Provider>
   , document.querySelector('.container')
 );
 
 
 
-var fBlurb = [
-'Animals',
-'People',
-'Precolored'
-]
 
-var picBlurb = [
-{url:"http//:lol.com",
-id:'flockwocka'},
-{url:"http//:lols.com",
-id:'flockwockaz'}
-]

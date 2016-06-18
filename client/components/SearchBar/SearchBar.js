@@ -14,8 +14,11 @@ export default class SearchBar extends Component {
 	render () {
 		return(
 			<div className="search-bar">
-				<input value = { this.state.term }
-				onChange={ event => this.onInputChange(event.target.value) } />
+				<input 
+					value = { this.state.term }
+					onChange={ event => this.onInputChange(event.target.value) }
+					placeholder="Search for pictures!"
+				/>
 			</div>
 		);
 	}

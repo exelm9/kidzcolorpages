@@ -21,12 +21,7 @@ ReactDOM.render(
   <Provider store={store}>
 	  <div>
 		  <App/>
-		  
 	  </div>
   </Provider>
   , document.querySelector('.container')
 );
-
-
-
-

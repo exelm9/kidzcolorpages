@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import Sidepanel from '../../components/Sidepanel/Sidepanel'
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import Sidepanel from '../../components/Sidepanel/Sidepanel';
+import * as ColorPagesActions from '../../redux/actions';
 
 export default class App extends Component {
   render() {
@@ -10,6 +13,24 @@ export default class App extends Component {
     );
   }
 }
+
+function mapStateToProps(state) {
+	console.log(state)
+  return {
+    todos: state.todos
+  }
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    actions: bindActionCreators(ColorPagesActions, dispatch)
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App)
 
 
 // <Sidepanel />

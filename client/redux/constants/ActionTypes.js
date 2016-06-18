@@ -1,0 +1,1 @@
+export const UPDATE_PICTURES = 'UPDATE_PICTURES';

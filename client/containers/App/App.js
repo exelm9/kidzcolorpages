@@ -42,18 +42,3 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(App)
-
-
-// <Sidepanel />
-// var fBlurb = [
-// 'Animals',
-// 'People',
-// 'Precolored'
-// ]
-
-// var picBlurb = [
-// {url:"http//:lol.com",
-// id:'flockwocka'},
-// {url:"http//:lols.com",
-// id:'flockwockaz'}
-// ]

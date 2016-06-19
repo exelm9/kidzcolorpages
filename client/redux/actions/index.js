@@ -7,4 +7,3 @@ export function updatePictures(pics) {
 export function setFilter(text) {
   return { type: types.SET_FILTER, text }
 }
-

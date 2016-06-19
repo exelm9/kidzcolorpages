@@ -2,7 +2,9 @@ import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import Sidepanel from '../../components/Sidepanel/Sidepanel';
+import TestMiddlePanel from '../../components/TestMiddlePanel/TestMiddlePanel';
 import * as ColorPagesActions from '../../redux/actions';
+
 
 export default class App extends Component {
   componentDidMount(){
@@ -11,7 +13,8 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <Sidepanel/>
+        <Sidepanel filters={this.props.filters} actions={this.props.actions} />
+        <TestMiddlePanel pictures={this.props.pictures} actions={this.props.actions} />
       </div>
     );
   }

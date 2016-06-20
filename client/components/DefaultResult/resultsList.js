@@ -1,7 +1,6 @@
 // contains individual result components (dumb)
 import React from 'react';
 import ResultsListItem from './resultsListItem';
-import ResultsJumbotron from '../FeaturedResult/resultsJumbotron';
 
 const ResultsList = (props) => {
 

@@ -2,7 +2,6 @@
 import React from 'react';
 
 const ResultsJumbotron = (props) => {
-  console.log("Inside Jumbotron, props: ", props);
 
   // creates array of images for Jumbotron
   const imageArray = props.images.result.map((image) =>{
@@ -24,8 +23,6 @@ const ResultsJumbotron = (props) => {
             jumboImages.storage.push(imageArray[tempIndex].generatorID);
         }
     }
-
-    console.log("Inside Jumbotron, jumboImages", jumboImages[jumboImages.storage[0]].displayName);
 
   return (
     <div id="carousel-example-generic" className="carousel slide" data-ride="carousel">

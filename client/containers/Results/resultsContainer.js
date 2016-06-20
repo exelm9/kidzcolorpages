@@ -17,12 +17,12 @@ class ResultsContainer extends Component {
 
   }
   render() {
-    
+
 
     return (
       <div>
       The container surrounds the results
-      <ResultsJumbotron />
+      <ResultsJumbotron images={this.state.images}/>
       <ResultsList images={this.state.images} />
       <Footer />
       The container surrounds the results

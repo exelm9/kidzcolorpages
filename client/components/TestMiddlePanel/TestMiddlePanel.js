@@ -13,7 +13,7 @@ const PictureList = (props) => {
 	});
 
 	return (
-		<div className='picture-container'>
+		<div className='picture-container col-md-9 col-md-push-3'>
 			{pictureItems}
 		</div>
 	);

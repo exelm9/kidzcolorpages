@@ -1,9 +1,9 @@
-import types from '../constants/ActionTypes';
+import * as types from '../constants/ActionTypes';
 
-export function updatePictures(pics) {
-  return { type: types.UPDATE_PICTURES, pics }
+export function findPictures(pics) {
+  return { type: types.FIND_PICTURES, pics }
 }
 
 export function setFilter(text) {
-  return { type: types.SET_FILTER, text }
+  return { type: types.SET_FILTERS, text }
 }

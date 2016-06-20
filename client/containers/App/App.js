@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import Sidepanel from '../../components/Sidepanel/Sidepanel';
 import TestMiddlePanel from '../../components/TestMiddlePanel/TestMiddlePanel';
 import * as ColorPagesActions from '../../redux/actions';
+import _ from 'lodash';
 
 import ResultsContainer from '../Results/resultsContainer';
 
@@ -13,11 +14,10 @@ export default class App extends Component {
   }
   render() {
     return (
-      <div>
+      <div className="row">
         {/*<ResultsContainer />*/}
-        <Sidepanel filters={this.props.filters} actions={this.props.actions} />
         <TestMiddlePanel pictures={this.props.pictures} actions={this.props.actions} />
-
+        <Sidepanel filters={this.props.filters} actions={this.props.actions} />
       </div>
     );
   }

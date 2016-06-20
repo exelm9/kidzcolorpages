@@ -1,4 +1,6 @@
-import { UPDATE_PICTURES } from '../constants/ActionTypes'
+
+import * as types from '../constants/ActionTypes'
+
 const initialState = {
   pictures: [
 	  { url:"http://cdn.quotesgram.com/img/85/55/329025798-weeninja-2.png",
@@ -11,7 +13,8 @@ const initialState = {
 
 export default function picturesReducer(pictures = initialState, action) {
   switch (action.type) {
-    case UPDATE_PICTURES:
+    case types.FIND_PICTURES:
+    console.log('reducer picked it up')
       return pictures.push(action.payload);
     default:
       return pictures;

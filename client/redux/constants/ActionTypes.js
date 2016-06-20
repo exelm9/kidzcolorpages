@@ -1,5 +1,5 @@
 // pictures
-export const UPDATE_PICTURES = 'UPDATE_PICTURES';
+export const FIND_PICTURES = 'FIND_PICTURES';
 
 // filters
-export const SET_FILTER = 'SET_FILTER';
+export const SET_FILTERS = 'SET_FILTERS';

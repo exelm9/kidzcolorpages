@@ -27,6 +27,7 @@ const afterSearchRequest = {
 export default function picturesReducer(pictures = initialState, action) {
   switch (action.type) {
     case types.FIND_PICTURES:
+      console.log(action)
       return afterSearchRequest;
     default:
       return pictures;

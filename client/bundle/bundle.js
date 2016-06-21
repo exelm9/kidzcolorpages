@@ -35661,7 +35661,7 @@
 	  _createClass(App, [{
 	    key: 'componentDidMount',
 	    value: function componentDidMount() {
-	      console.log(this);
+	      //console.log(this)
 	    }
 	  }, {
 	    key: 'render',
@@ -35669,7 +35669,7 @@
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'row' },
-	        _react2.default.createElement(_TestMiddlePanel2.default, { pictures: this.props.pictures, actions: this.props.actions }),
+	        _react2.default.createElement(_resultsContainer2.default, null),
 	        _react2.default.createElement(_Sidepanel2.default, { filters: this.props.filters, actions: this.props.actions })
 	      );
 	    }
@@ -35743,7 +35743,7 @@
 	      pictures: props.pictures
 	    };
 
-	    console.log(props.actions.searchPictures('flocka'), 'sidepanel');
+	    //console.log(props.actions.searchPictures('flocka'), 'sidepanel')
 
 	    return _this;
 	  }
@@ -35931,10 +35931,11 @@
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 	function searchPictures(pics) {
-		return function (dispatch) {
-			console.log(dispatch, 'what');
-		};
+		return function (dispatch) {}
+		//console.log(dispatch,'what')
+
 		//return { type: types.FIND_PICTURES, pics }
+		;
 	}
 
 	function setFilter(text) {

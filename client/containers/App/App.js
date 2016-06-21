@@ -10,13 +10,13 @@ import ResultsContainer from '../Results/resultsContainer';
 
 export default class App extends Component {
   componentDidMount(){
-  	console.log(this)
+  	//console.log(this)
   }
   render() {
     return (
       <div className="row">
-        {/*<ResultsContainer />*/}
-        <TestMiddlePanel pictures={this.props.pictures} actions={this.props.actions} />
+        <ResultsContainer />
+        {/*<TestMiddlePanel pictures={this.props.pictures} actions={this.props.actions} />*/}
         <Sidepanel filters={this.props.filters} actions={this.props.actions} />
       </div>
     );

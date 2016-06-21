@@ -10,6 +10,8 @@ export default class Sidepanel extends Component {
       pictures: props.pictures
     };
 
+    //console.log(props.actions.searchPictures('flocka'), 'sidepanel')
+
   }
 
   pictureSearch(term){
@@ -23,9 +25,10 @@ export default class Sidepanel extends Component {
 
   render() {
     return (
-      <div className="sidepanel">
+      <div className="sidepanel col-md-3 col-md-pull-9">
         <h5>Sidepanel</h5>
         <SearchBar onSearchChange={ this.pictureSearch }/>
+        
       </div>
     );
   }

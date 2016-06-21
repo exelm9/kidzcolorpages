@@ -4,9 +4,10 @@
 import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import {Provider} from 'react-redux';
-import reducer from './redux/reducers'
+import reducer from './redux/reducers';
+import thunk from 'redux-thunk';
 import { Router, browserHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
 import { ReduxAsyncConnect } from 'redux-async-connect';
@@ -15,7 +16,7 @@ import useScroll from 'scroll-behavior/lib/useStandardScroll';
 import App from './containers/App/App';
 
 const history = browserHistory;
-const store = createStore(reducer);
+const store = createStore(reducer, applyMiddleware(thunk));
 
 ReactDOM.render(
   <Provider store={store}>

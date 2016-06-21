@@ -10,19 +10,18 @@ import reducer from './redux/reducers';
 import thunk from 'redux-thunk';
 import { Router, browserHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
-import { ReduxAsyncConnect } from 'redux-async-connect';
-import useScroll from 'scroll-behavior/lib/useStandardScroll';
+import routes from './routes.js';
 
 import App from './containers/App/App';
 
-const history = browserHistory;
 const store = createStore(reducer, applyMiddleware(thunk));
+const history = syncHistoryWithStore(browserHistory, store);
 
 ReactDOM.render(
   <Provider store={store}>
-	  <div>
-		  <App/>
-	  </div>
+    <div>
+      <Router history={history} routes={routes} />
+    </div>
   </Provider>
   , document.querySelector('.container')
 );

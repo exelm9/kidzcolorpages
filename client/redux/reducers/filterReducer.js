@@ -7,7 +7,7 @@ const initialState = {
 export default function filtersReducer(filters = initialState, action) {
   switch (action.type) {
     case SET_FILTERS :
-      return filters.push(action.payload);
+      return filters;
     default:
       return filters;
   }

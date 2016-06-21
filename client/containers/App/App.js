@@ -10,7 +10,7 @@ import ResultsContainer from '../Results/resultsContainer';
 
 export default class App extends Component {
   componentDidMount(){
-  	console.log(this.props, this)
+  	console.log(this)
   }
   render() {
     return (

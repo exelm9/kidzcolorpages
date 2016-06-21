@@ -1,6 +1,9 @@
 import * as types from '../constants/ActionTypes';
 
 export function findPictures(pics) {
+	// return function(dispatch) {
+	// 	console.log(dispatch,'what')
+	// }
   return { type: types.FIND_PICTURES, pics }
 }
 

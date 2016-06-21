@@ -1,16 +1,9 @@
 
 import * as types from '../constants/ActionTypes'
+import memes from '../../../images/memes'
+console.log(memes);
 
-const initialState = {
-  pictures: [
-	  { url:"http://cdn.quotesgram.com/img/85/55/329025798-weeninja-2.png",
-		category:"ninja"},
-	  {url:"http://www.cutestpaw.com/wp-content/uploads/2011/11/How-is-it-so-fluffy.jpg",
-	  	category:"dog"
-	  }
-  ]
-};
-
+const initialState = memes;
 const afterSearchRequest = {
   pictures: [
     { url:"http://cdn.quotesgram.com/img/85/55/329025798-weeninja-2.png",

@@ -5,15 +5,16 @@ import ResultsJumbotron from '../../components/FeaturedResult/resultsJumbotron';
 import Footer from '../../components/footer';
 
 //test data
-import memes from '../../../images/memes';
+// import memes from '../../../images/memes';
 
 
 
 class ResultsContainer extends Component {
   constructor(props) {
     super(props);
+    console.log("props in results container: ", props);
 
-    this.state = { images: memes };
+    this.state = { images: props.pictures };
 
   }
   render() {

@@ -13,9 +13,9 @@ const PictureList = (props) => {
 	});
 
 	return (
-		<ul className=''>
+		<div className='picture-container col-md-9 col-md-push-3'>
 			{pictureItems}
-		</ul>
+		</div>
 	);
 }
 

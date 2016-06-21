@@ -9,7 +9,7 @@ module.exports = function(app, express){
   app.use(express.static(cnfg.paths._DOC_ROOT));
   // Module routes
   app.get('/', function(req, res){
-  	res.send('Hi there');
+  	// res.send('Hi there');
   })
     
 }

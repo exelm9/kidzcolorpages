@@ -6,13 +6,10 @@ const PictureListItem = ({picture}) => {
 	
 
 	return(
-		<li className="list-group-item">
-			<div className="video-list media">
-				<div className="media-left">
-					<img className="media-object" src={imageUrl} />
-				</div>
-			</div>
-		</li>
+		<div className="picture-wrap media">
+				<img className="media-object" src={imageUrl} />
+		</div>
+
 	);
 }
 

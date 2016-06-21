@@ -7,3 +7,17 @@
 .search-bar{
 	
 }
+
+.picture-container{
+}
+
+.picture-wrap{
+	display:inline-block;
+	width:200px;
+	height:200px;
+}
+
+.picture-wrap img{
+	width:100%;
+	height:auto;
+}

@@ -10,7 +10,7 @@ export default class Sidepanel extends Component {
       pictures: props.pictures
     };
 
-    console.log(props.actions.findPictures('flocka'), 'sidepanel')
+    console.log(props.actions.searchPictures('flocka'), 'sidepanel')
 
   }
 

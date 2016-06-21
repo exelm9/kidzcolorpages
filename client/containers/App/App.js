@@ -14,7 +14,7 @@ export default class App extends Component {
   render() {
     return (
       <div className="row">
-        <ResultsContainer />
+        <ResultsContainer pictures={this.props.pictures}/>
         {/*<TestMiddlePanel pictures={this.props.pictures} actions={this.props.actions} />*/}
         <Sidepanel filters={this.props.filters} actions={this.props.actions} />
       </div>
@@ -45,4 +45,3 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(App)
-

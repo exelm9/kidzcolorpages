@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import Sidepanel from '../../components/Sidepanel/Sidepanel';
 import TestMiddlePanel from '../../components/TestMiddlePanel/TestMiddlePanel';
 import * as ColorPagesActions from '../../redux/actions';
-import _ from 'lodash';
 
 import ResultsContainer from '../Results/resultsContainer';
 

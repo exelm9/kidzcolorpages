@@ -15,7 +15,6 @@ import routes from './routes.js';
 import App from './containers/App/App';
 
 const store = createStore(reducer, applyMiddleware(thunk));
-// const history = browserHistory;
 const history = syncHistoryWithStore(browserHistory, store);
 
 ReactDOM.render(

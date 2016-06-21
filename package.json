@@ -24,7 +24,9 @@
   ],
   "main": "index.js",
   "scripts": {
-    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js"
+    "start": "concurrent --kill-others \"npm run start-server\"",
+    "dev-frontend-start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "start-server": "node server/server.js"
   },
   "dependencies": {
     "babel-core": "^6.5.2",

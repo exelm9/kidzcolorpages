@@ -40,10 +40,10 @@ ResultsContainer.defaultProps = {
   isFetching: true
 }
 
-function mapStateToProps(state) {
+function mapStateToProps({pictures}) {
   return {
-    pictures: state.pictures.pictures,
-    isFetching: state.pictures.isFetching
+    pictures: pictures.pictures,
+    isFetching: pictures.isFetching
   }
 }
 

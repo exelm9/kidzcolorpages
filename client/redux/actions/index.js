@@ -6,9 +6,9 @@ import request from 'axios';
 const API_URL = 'http://localhost:1337/test';
 
 export function searchPictures(pics) {
-	
 	return function(dispatch) {
 		request.post(API_URL,{firstName:'Ninja', lastName:'Doge'}).then(function(response){
+			console.log('is thsi firing')
 			dispatch({ type: types.FIND_PICTURES, payload: response.data })
 		})
 	}

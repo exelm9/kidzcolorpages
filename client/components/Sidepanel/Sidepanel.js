@@ -1,15 +1,18 @@
 import React, {PropTypes, Component} from 'react';
 import SearchBar from '../../components/SearchBar/SearchBar';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import * as ColorPagesActions from '../../redux/actions';
 import _ from 'lodash';
 
 export default class Sidepanel extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      filters: props.filters,
-      pictures: props.pictures
-    };
+    // this.state = {
+    //   filters: props.filters,
+    //   pictures: props.pictures
+    // };
 
     this.pictureSearch = this.pictureSearch.bind(this);
   }
@@ -31,3 +34,21 @@ export default class Sidepanel extends Component {
     );
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    filters: state.filters
+  }
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    actions: bindActionCreators(ColorPagesActions, dispatch)
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Sidepanel)
+

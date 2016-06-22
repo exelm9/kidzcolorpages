@@ -1,18 +1,43 @@
-import React, { PropTypes } from 'react';
-import ModalHeader from '../ModalHeader/ModalHeader';
-import ModalPreview from '../../components/ModalPreview';
-import ModalFooter from '../ModalFooter/ModalFooter';
+import React, { Component, PropTypes } from 'react';
+import { Modal, Carousel, Image, Button } from 'react-bootstrap';
 
-const Modal = (props) => (
-  <div class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-      <div class="modal-content">
-        <ModalHeader />
-        <ModalPreview />
-        <ModalFooter />
-      </div>
-    </div>
-  </div>
-)
+class ResultModal extends Component {
+    const results = props.results;
+    let current = props.current;
 
-export default Modal;
+    const getInitialState = () => {
+        return {index: 0, direction: null};
+    };
+
+    const carouselItems = results.map((result) =>
+        <Carousel.Item>
+            <Image src={result.imageUrl}></Image>
+            <Carousel.Caption>
+                <h3>{result.displayName}</h3>
+            </Carousel.Caption>
+        </Carousel.Item>
+    );
+
+    function handleSelect(selectedIndex, e) {
+        this.setState({
+            index: selectedIndex,
+            direction: e.direction
+        });
+    }
+    return (
+        <Modal {...this.props} bsSize="large" aria-labelledby="contained-modal-title-lg">
+            <Modal.Header closeButton />
+            <Modal.Body>
+                <Carousel activeIndex={this.state.index} direction={this.state.direction} onSelect={this.handleSelect}>
+                    {carouselItems}
+                </Carousel>
+            </Modal.Body>
+            <Modal.Footer>
+                <Button onClick={this.props.onHide}>Close</Button>
+            </Modal.Footer>
+        </Modal>
+    );
+
+}
+
+export default ResultModal;

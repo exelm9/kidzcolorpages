@@ -21,3 +21,7 @@
 	width:100%;
 	height:auto;
 }
+
+.resultListItem{
+	display:inline-block;
+}

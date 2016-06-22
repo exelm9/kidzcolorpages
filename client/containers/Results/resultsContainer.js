@@ -11,7 +11,19 @@ export default class ResultsContainer extends Component {
   constructor(props) {
     super(props);
   }
+
+  componentWillMount(){
+
+  }
+
   render() {
+    const {
+      isFetching
+    } = this.props;
+
+    if (isFetching) {
+      return <h2><i>Loading Pics</i></h2>
+    }
 
     return (
       <div className="col-md-9 col-md-push-3">
@@ -24,9 +36,14 @@ export default class ResultsContainer extends Component {
   }
 };
 
+ResultsContainer.defaultProps = {
+  isFetching: true
+}
+
 function mapStateToProps(state) {
   return {
-    pictures: state.pictures
+    pictures: state.pictures.pictures,
+    isFetching: state.pictures.isFetching
   }
 }
 

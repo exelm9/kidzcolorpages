@@ -5,11 +5,13 @@ import lessMemes from '../../../images/lessMemes'
 const initialState = memes;
 const changedState = lessMemes
 
-export default function picturesReducer(pictures = initialState, action) {
+export default function picturesReducer(state = {pictures:null, isFetching:true}, action) {
   switch (action.type) {
-    case 'FIND_PICTURES':
-      return changedState;
+    case types.FETCH_PICTURES:
+    	return {pictures: initialState, isFetching:false};
+    case types.FIND_PICTURES:
+      return {pictures: changedState, isFetching:false};
     default:
-      return pictures;
+      return state;
   }
 }

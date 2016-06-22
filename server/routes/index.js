@@ -12,11 +12,11 @@ module.exports = function(app, express){
   app.use(bodyParser.json());
   app.use(bodyParser.urlencoded({ extended: true }));
   // Module routes
-  app.get('/test', function(req, res){
+  app.get('/home', function(req, res){
   	res.send('Fetched pics galore');
   })
 
-  app.post('/test',function(req, res){
+  app.post('/home',function(req, res){
   	console.log(req.body)
   	res.send('pics galore');
   })

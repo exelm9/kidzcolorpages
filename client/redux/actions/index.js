@@ -5,7 +5,7 @@ import request from 'axios';
 
 export function searchPictures(pics) {
 	return function(dispatch) {
-		request.post('/test',{firstName:'Ninja', lastName:'Doge'}).then(function(response){
+		request.post('/home',{firstName:'Ninja', lastName:'Doge'}).then(function(response){
 			dispatch({ type: types.FIND_PICTURES, payload: response.data })
 		})
 	}
@@ -14,7 +14,7 @@ export function searchPictures(pics) {
 export function fetchPictures() {
 	console.log(browserHistory,'huh')
 	return function(dispatch) {
-		request.get('/test').then(function(response){
+		request.get('/home').then(function(response){
 			dispatch({ type: types.FETCH_PICTURES, payload: response.data })
 		})
 	}

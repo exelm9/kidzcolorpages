@@ -5,13 +5,13 @@ export default class Sidepanel extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      filters: props.filters,
-      pictures: props.pictures
-    };
+    
 
   }
-
+  componentDidMount(){
+    console.log('lol')
+    //console.log(this)
+  }
   pictureSearch(term){
     console.log(term)
     // axios call to server possibly

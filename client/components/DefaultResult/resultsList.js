@@ -3,7 +3,6 @@ import React from 'react';
 import ResultsListItem from './resultsListItem';
 
 const ResultsList = (props) => {
-
     //creates array of list items
     let results = {};
     results.complete = props.images.result;

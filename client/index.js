@@ -17,6 +17,8 @@ import App from './containers/App/App';
 const store = createStore(reducer, applyMiddleware(thunk));
 const history = syncHistoryWithStore(browserHistory, store);
 
+console.log(store,'store')
+
 ReactDOM.render(
   <Provider store={store}>
     <div>

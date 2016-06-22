@@ -11,13 +11,14 @@ import thunk from 'redux-thunk';
 import { Router, browserHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
 import routes from './routes.js';
+import {fetchPictures} from './redux/actions';
 
 import App from './containers/App/App';
 
 const store = createStore(reducer, applyMiddleware(thunk));
 const history = syncHistoryWithStore(browserHistory, store);
-
-console.log(store,'store')
+console.log(store)
+store.dispatch(fetchPictures());
 
 ReactDOM.render(
   <Provider store={store}>

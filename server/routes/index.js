@@ -12,8 +12,8 @@ module.exports = function(app, express){
   app.use(bodyParser.json());
   app.use(bodyParser.urlencoded({ extended: true }));
   // Module routes
-  app.get('/', function(req, res){
-  	// res.send('Hi there');
+  app.get('/test', function(req, res){
+  	res.send('Fetched pics galore');
   })
 
   app.post('/test',function(req, res){

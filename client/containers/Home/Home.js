@@ -9,7 +9,7 @@ export default class Home extends Component {
   render() {
     return (
       <div>
-        <ResultsContainer pictures={this.props.pictures} />
+        <ResultsContainer />
         <Sidepanel />
       </div>
     );
@@ -18,7 +18,6 @@ export default class Home extends Component {
 
 function mapStateToProps(state) {
   return {
-    pictures: state.pictures,
     filters: state.filters
   }
 }

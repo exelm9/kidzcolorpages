@@ -17,7 +17,7 @@ import App from './containers/App/App';
 
 const store = createStore(reducer, applyMiddleware(thunk));
 const history = syncHistoryWithStore(browserHistory, store);
-console.log(store)
+// Initial request for populating pictures
 store.dispatch(fetchPictures());
 
 ReactDOM.render(

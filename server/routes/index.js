@@ -12,11 +12,12 @@ module.exports = function(app, express){
   app.use(bodyParser.json());
   app.use(bodyParser.urlencoded({ extended: true }));
   // Module routes
-  app.get('/home', function(req, res){
-  	res.send('Fetched pics galore');
+  app.get('/api/', function(req, res){
+    var data = {filters:['ninjas', 'animals', 'furrys'], 'pics': 'Fetched pics galore'}
+  	res.send(JSON.stringify(data));
   })
 
-  app.post('/home',function(req, res){
+  app.post('/api/search',function(req, res){
   	console.log(req.body)
   	res.send('pics galore');
   })

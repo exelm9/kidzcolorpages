@@ -3,18 +3,17 @@ import { browserHistory } from 'react-router';
 import request from 'axios';
 
 
-export function searchPictures(pics) {
+export function searchPictures(term) {
 	return function(dispatch) {
-		request.post('/home',{firstName:'Ninja', lastName:'Doge'}).then(function(response){
+		request.post('/api/search',{searchQuery:term}).then(function(response){
 			dispatch({ type: types.FIND_PICTURES, payload: response.data })
 		})
 	}
 }
 
 export function fetchPictures() {
-	console.log(browserHistory,'huh')
 	return function(dispatch) {
-		request.get('/home').then(function(response){
+		request.get('/api').then(function(response){
 			dispatch({ type: types.FETCH_PICTURES, payload: response.data })
 		})
 	}

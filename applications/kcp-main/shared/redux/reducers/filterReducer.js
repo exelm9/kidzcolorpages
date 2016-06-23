@@ -1,4 +1,4 @@
-import * as types from '../constants/ActionTypes'
+import { SET_FILTERS } from '../constants/ActionTypes'
 import filterList  from '../constants/FilterList'
 
 const initialState = {
@@ -7,7 +7,7 @@ const initialState = {
 
 export default function filtersReducer(filters = initialState, action) {
   switch (action.type) {
-    case types.SET_FILTERS :
+    case SET_FILTERS :
       return filters;
     default:
       return filters;

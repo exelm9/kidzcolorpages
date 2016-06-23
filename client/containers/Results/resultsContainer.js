@@ -6,38 +6,33 @@ import * as ColorPagesActions from '../../redux/actions';
 import ResultsList from '../../components/DefaultResult/resultsList';
 // import ResultsJumbotron from '../../components/FeaturedResult/resultsJumbotron';
 import Footer from '../../components/footer';
+import ResultModal from '../'
 
 export default class ResultsContainer extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props);
-  }
-  render() {
-
+  };
+  
+  render () {
     return (
       <div className="col-md-9 col-md-push-3">
         {/*<ResultsJumbotron images={this.props.pictures} />*/}
-        <ResultsList images={this.props.pictures} />
+        <ResultsList images={this.props.pictures}/>
         <Footer />
+        {/*<ResultModal />*/}
       </div>
-
     );
-  }
+  };
 };
 
-function mapStateToProps(state) {
-  return {
-    pictures: state.pictures
-  }
-}
+const mapStateToProps = ({pictures}) => ({pictures});
 
-function mapDispatchToProps(dispatch) {
-  return {
-    actions: bindActionCreators(ColorPagesActions, dispatch)
-  }
-}
+const mapDispatchToProps = (dispatch) => ({
+  actions: bindActionCreators(ColorPagesActions, dispatch)
+});
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(ResultsContainer)
+)(ResultsContainer);
 

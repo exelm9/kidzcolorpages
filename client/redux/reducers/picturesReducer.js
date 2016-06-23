@@ -16,7 +16,7 @@ export default function picturesReducer(state = initialState, action) {
     case FETCH_PICTURES:
     	return {pictures: initialPics, isFetching:false};
     case FIND_PICTURES:
-      return {pictures: changedState, isFetching:false};
+      return {pictures: changedPics, isFetching:false};
     default:
       return state;
   }

@@ -52,16 +52,15 @@ app.get('/', function (req, res, next) {
 
 app.get('*', function (req, res, next) {
 
-	index = index || require(path.join(__dirname, '../../media/aliases/index.json'));
+	index = require(path.join(__dirname, '../../media/aliases/index.json'));
 
 	// We already know the file alias
 	if( index.aliases[req.originalUrl.split('/media/alias/').pop()] ){
-	   var alias = index.aliases[req.originalUrl.split('/media/alias/').pop()];
-	   var uuid  = atlas_paths._MEDIA_ + '/files/' + alias.uuid + alias.uuid_file_ext;
+	    var alias = index.aliases[req.originalUrl.split('/media/alias/').pop()];
+	    var uuid  = atlas_paths._MEDIA_ + '/files/' + alias.uuid + alias.uuid_file_ext;
 
 	} else { // ok let's see if we can find it
 
-	///
 		var media = MA.getAliasPath(url.parse(req.originalUrl).pathname, req.query);
 		var alias = MA.loadAliasDetails(media[0])
 		var uuid  = atlas_paths._MEDIA_ + '/files/' + alias.uuid + alias.uuid_file_ext;

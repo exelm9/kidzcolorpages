@@ -29,7 +29,7 @@ const file_hasher = require('hash-file');
 
 
 function get_index(){
-	return JSON.parse(fs.readFileSync(path.join(__dirname, '../../media/aliases/index.json'), 'utf8'));
+	return JSON.parse(fs.readFileSync(path.join(__dirname, '/../../media/aliases/index.json'), 'utf8'));
 }
 
 function getAliasPath  ( alias_path ) {

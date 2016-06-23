@@ -1,10 +1,10 @@
 module.exports = {
  entry: [
-   '../client/index.js'
+   '../client/'
  ],
  output: {
-   path: __dirname + '/../client/bundle',
-   publicPath: '/',
+   path: __dirname + '/../dist',
+   publicPath: '/kcp-dist',
    filename: 'bundle.js'
  },
  module: {

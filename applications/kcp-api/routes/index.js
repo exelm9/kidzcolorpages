@@ -9,7 +9,7 @@ require(path.join(__dirname, '/../../../autoload'));
 const atlas_paths = require('atlas_paths');
 
 const MA = require('../../media-aliases/media-aliases');
-
+const index = MA.get_index();
 
 module.exports = function(app){
 
@@ -24,7 +24,7 @@ module.exports = function(app){
 		// const offset; // Return results from this offset
 		// const size; // how many results do you want
 
-		const index = MA.get_index();
+		const _index = index  || MA.get_index();
 		// const results = [];
 
 		// var keys = Object.key(index.categories);
@@ -38,16 +38,17 @@ module.exports = function(app){
 
 		// const filters = require(path.join(__dirname, '../filters'));
 
-	  	res.send(`<pre> ${JSON.stringify(index.categories, null, "  ")} </pre>`)
+	  	res.json(JSON.stringify(_index.categories))
 	});
 
 		// Basic Route Demos
 	app.get('/', function(req, res, next) {
+		const _index = index || MA.get_index();
 		const results = {};
-			  results.categories = MA.get_index().categories;
-			  results.filters:['ninjas', 'animals', 'furrys'];
+			  results.categories = _index.categories;
+			  results.filters = ['ninjas', 'animals', 'furrys'];
 
-	  	res.send(`<pre> ${JSON.stringify(index.categories, null, "  ")} </pre>`)
+	  	res.json(JSON.stringify(results.categories))
 	});
 
 	app.get("/err", function(req, res, next){

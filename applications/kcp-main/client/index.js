@@ -3,14 +3,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore, applyMiddleware } from 'redux';
 import {Provider} from 'react-redux';
-import reducer from './redux/reducers';
+import reducer from '../shared/redux/reducers';
 import thunk from 'redux-thunk';
 import { Router, browserHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
-import routes from './routes.js';
-import {fetchPictures} from './redux/actions';
+import routes from '../shared/routes.js';
+import {fetchPictures} from '../shared/redux/actions';
 
-import App from './containers/App/App';
+import App from '../shared/containers/App/App';
 
 const store = createStore(reducer, applyMiddleware(thunk));
 const history = syncHistoryWithStore(browserHistory, store);

@@ -6,7 +6,7 @@ import adminPlacholder from './components/TestMiddlePanel/testRoute';
 
 
 export default (
-  <Route path="/" component={App}>
+  <Route path="/browse" component={App}>
   	<IndexRoute component={Home}/>
     <Route path="/admin" component={adminPlacholder} />
   </Route>

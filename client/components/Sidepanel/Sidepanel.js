@@ -19,10 +19,10 @@ export default class Sidepanel extends Component {
   componentDidMount(){
 
   }
-  
+
   render() {
     const pictureSearch = _.debounce((term) => { this.pictureSearch(term) }, 300);
-    console.log(this.props)
+    // build out list of filters
 
     return (
       <div className="sidepanel col-md-3 col-md-pull-9">

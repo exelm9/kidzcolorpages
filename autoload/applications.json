@@ -1,0 +1,23 @@
+[
+	{
+		"app_name": "Kidz Coloring Pages API",
+		"app_description": "The KCP Data API",
+		"base_url": "/api/", 
+		"app_dir": "/kcp-api", 
+		"entry": "/app.js"
+	},
+	{
+		"app_name": "Kidz Coloring Pages Main Client",
+		"app_description": "The Main Coloring Pages GUI",
+		"base_url": "/", 
+		"app_dir": "/kcp-api", 
+		"entry": "/app.js"
+	},
+	{
+		"app_name": "Media Alias files",
+		"app_description": "Use media alias files on your site.",
+		"base_url": "*/media", 
+		"app_dir": "/media-aliases", 
+		"entry": "/app.js"
+	}
+]

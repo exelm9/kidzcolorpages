@@ -14,7 +14,7 @@ const changedPics = lessMemes
 export default function picturesReducer(state = initialState, action) {
   switch (action.type) {
     case FETCH_PICTURES:
-    	return {pictures: initialState, isFetching:false};
+    	return {pictures: initialPics, isFetching:false};
     case FIND_PICTURES:
       return {pictures: changedState, isFetching:false};
     default:

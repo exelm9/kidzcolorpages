@@ -1,0 +1,27 @@
+.sidepanel{
+	border:1px solid black;
+	width:300px;
+	padding:10px;
+}
+
+.search-bar{
+	
+}
+
+.picture-container{
+}
+
+.picture-wrap{
+	display:inline-block;
+	width:200px;
+	height:200px;
+}
+
+.picture-wrap img{
+	width:100%;
+	height:auto;
+}
+
+.resultListItem{
+	display:inline-block;
+}

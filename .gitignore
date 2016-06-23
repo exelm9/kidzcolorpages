@@ -1,3 +1,8 @@
+.idea
+
+## Restore Stubs
+!.Stub
+
 # Logs
 logs
 *.log
@@ -12,5 +17,3 @@ jspm_packages
 
 # OSX files
 .DS_Store
-
-.idea

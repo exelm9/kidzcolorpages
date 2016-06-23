@@ -1,0 +1,18 @@
+{
+    "src": "local",
+    "uuid": "ff6099b0-38d1-11e6-8c39-a3cf5eb89595",
+    "uuid_dir": "/media",
+    "uuid_etag": "",
+    "uuid_file_size": 721969,
+    "uuid_file_ext": ".jpg",
+    "uuid_mime_type": "",
+    "alias_title": "",
+    "alias_url_name": "",
+    "alias_alt_tag": "",
+    "alias_details": "",
+    "status": "active",
+    "source_name": "IMG_0021.jpg",
+    "source_path": "../../media/incoming/fun/sketchies/simpsons/IMG_0021.jpg",
+    "source_dirname": "../../media/incoming/fun/sketchies/simpsons",
+    "type": "file"
+}

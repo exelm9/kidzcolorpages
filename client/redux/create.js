@@ -12,7 +12,6 @@ export default function createStore(history, client, data) {
 
   finalCreateStore = applyMiddleware(...middleware)(_createStore);
 
-
   const reducer = require('./modules/reducer');
   const store = finalCreateStore(reducer, data);
 

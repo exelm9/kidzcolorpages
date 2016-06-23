@@ -1,14 +1,14 @@
-import * as types from '../constants/ActionTypes'
+import { FETCH_PICTURES } from '../constants/ActionTypes';
 
 const initialState = {
 	filters:[]
 };
 
-export default function filtersReducer(filters = initialState, action) {
+export default const filtersReducer = (filters = initialState, action) => {
   switch (action.type) {
-    case types.FETCH_PICTURES:
+    case FETCH_PICTURES:
       return {filters: action.payload.filters};
     default:
       return filters;
   }
-}
+};

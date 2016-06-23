@@ -46,9 +46,18 @@ module.exports = function(app){
 		const _index = index || MA.get_index();
 		const results = {};
 			  results.categories = _index.categories;
-			  results.filters = ['ninjas', 'animals', 'furrys'];
+			  results.filters = 
+			  ['animals',
+			  'education',
+			  'holidays',
+			  'movie characters',
+			  'projects',
+			  'stories',
+			  'vehicles',
+			  'fun',
+			  'sketchies'];
 
-	  	res.json(JSON.stringify(results.categories))
+	  	res.json(JSON.stringify(results))
 	});
 
 	app.get("/err", function(req, res, next){

@@ -5,7 +5,7 @@ import ResultsListItem from './resultsListItem';
 const ResultsList = (props) => {
     //creates array of list items
     let results = {};
-    results.complete = props.images.result;
+    results.complete = props.images;
     results.pages = 1;
     results[1] = [];
     results.complete.forEach(function(result){
@@ -18,7 +18,6 @@ const ResultsList = (props) => {
         }
 
         });
-
 
     const resultImages = results[1].map((image) => {
         return <ResultsListItem image={image.imageUrl} caption={image.displayName} key={image.generatorID}/>

@@ -16,9 +16,9 @@ const changedPics = null; // = lessMemes   Refactor to use API
 export default function picturesReducer(state = initialState, action) {
   switch (action.type) {
     case FETCH_PICTURES:
-    	return {pictures: initialPics, isFetching:false};
+    	return {pictures: action.payload, isFetching:false};
     case FIND_PICTURES:
-      return {pictures: changedState, isFetching:false};
+      return {pictures: changedPics, isFetching:false};
     default:
       return state;
   }

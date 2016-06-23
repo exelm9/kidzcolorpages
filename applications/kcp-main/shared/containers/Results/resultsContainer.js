@@ -40,11 +40,25 @@ ResultsContainer.defaultProps = {
   isFetching: true
 }
 
-const mapStateToProps = ({pictures}) => ({
-  pictures: pictures.pictures,
-  isFetching: pictures.isFetching,
-  enabledFilters:pictures.enabledFilters
-});
+const mapStateToProps = ({pictures}) => {
+  var pics = [];
+  if(pictures.pictures){
+    var allNestedPictures = pictures.pictures.categories;
+    for(var key in allNestedPictures){
+      var categoryPictures = allNestedPictures[key];
+      for(var i = 0; i < categoryPictures.length; i++){
+        var individualPicture = categoryPictures[i]
+        pics.push(individualPicture);
+      }
+    }
+  }
+
+  return {
+    pictures: pics,
+    isFetching: pictures.isFetching,
+    enabledFilters:pictures.enabledFilters
+  }
+};
 
 function mapDispatchToProps(dispatch) {
   return {

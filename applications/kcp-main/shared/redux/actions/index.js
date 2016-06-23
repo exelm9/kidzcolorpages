@@ -14,7 +14,8 @@ export function searchPictures(term) {
 export function fetchPictures() {
 	return function(dispatch) {
 		request.get('/api').then(function(response){
-			dispatch({ type: types.FETCH_PICTURES, payload: response.data })
+			var data = JSON.parse(response.data);
+			dispatch({ type: types.FETCH_PICTURES, payload: data })
 		})
 	}
 }

@@ -9,11 +9,6 @@ export default class Sidepanel extends Component {
   constructor(props) {
     super(props);
 
-    // this.state = {
-    //   filters: props.filters,
-    //   pictures: props.pictures
-    // };
-
     this.pictureSearch = this.pictureSearch.bind(this);
   }
 
@@ -21,9 +16,13 @@ export default class Sidepanel extends Component {
     this.props.actions.searchPictures(term);
   }
 
+  componentDidMount(){
+
+  }
 
   render() {
     const pictureSearch = _.debounce((term) => { this.pictureSearch(term) }, 300);
+    // build out list of filters
 
     return (
       <div className="sidepanel col-md-3 col-md-pull-9">

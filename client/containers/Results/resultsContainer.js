@@ -43,7 +43,8 @@ ResultsContainer.defaultProps = {
 function mapStateToProps({pictures}) {
   return {
     pictures: pictures.pictures,
-    isFetching: pictures.isFetching
+    isFetching: pictures.isFetching,
+    enabledFilters:pictures.enabledFilters
   }
 }
 

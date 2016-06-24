@@ -2,31 +2,32 @@ import React, { Component, PropTypes } from 'react';
 import { Modal, Carousel, Image, Button } from 'react-bootstrap';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { ModalActions } from '../../redux/actions';
+import { showModal } from '../../redux/actions';
 
-class ResultModal extends Component {
-  const me = this;
-
+export default class ResultModal extends Component {
+  constructor() {
+    super(props);
+  }
   const carouselItems = results.map((result) => (
     <Carousel.Item>
-      <Image src={result.imageUrl} />
+      <Image src={`/media/alias/${result.uuid}`}/>
       <Carousel.Caption>
-        <h3>{result.displayName}</h3>
+        <h3>{result.title}</h3>
       </Carousel.Caption>
     </Carousel.Item>
   ));
 
   const handleSelect = (selectedIndex, e) =>
-    me.setState({
-      imgIdx: selectedIndex,
-      direction: e.direction
-    }
-  );
+    showModal({
+        imgIdx: selectedIndex,
+        direction: e.direction
+      }
+    );
 
   render () {
     return (
       <Modal {...this.props} bsSize="large" aria-labelledby="contained-modal-title-lg">
-        <Modal.Header closeButton />
+        <Modal.Header closeButton/>
         <Modal.Body>
           <Carousel activeIndex={this.props.imgIdx} direction={this.props.direction} onSelect={this.handleSelect}>
             {carouselItems}
@@ -36,22 +37,21 @@ class ResultModal extends Component {
           <Button onClick={this.props.onHide}>Close</Button>
         </Modal.Footer>
       </Modal>
-  );
+    );
+  }
 }
 
-const mapStateToProps = (state) => ({
-    results: state.results,
-    imgIdx: state.imgIdx,
-    direction: state.direction
+const mapStateToProps = ({results, imgIdx, direction}) => ({
+  results,
+  imgIdx,
+  direction
 });
 
 const mapDispatchToProps = (dispatch) => ({
-    actions: bindActionCreators(ModalActions, dispatch)
+  actions: bindActionCreators(ModalActions, dispatch)
 });
 
 export default connect(
-    mapStateToProps,
-    mapDispatchToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(ResultModal);
-
-export default ResultModal;

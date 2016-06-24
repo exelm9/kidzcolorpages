@@ -7,16 +7,22 @@ import ResultsList from '../../components/DefaultResult/resultsList';
 // import ResultsJumbotron from '../../components/FeaturedResult/resultsJumbotron';
 import Footer from '../../components/footer';
 import _ from 'lodash';
+import ResultModal from '../ResultModal/ResultModal';
 
 export default class ResultsContainer extends Component {
   constructor(props) {
     super(props);
+    this.showModal =  this.showModal.bind(this);
   }
 
   componentWillMount(){
 
   }
-
+  
+  showModal(modalState) {
+    this.props.actions.showModal(modalState);
+  }
+  
   render() {
     const {
       isFetching
@@ -26,11 +32,14 @@ export default class ResultsContainer extends Component {
       return <h2><i>Loading Pics</i></h2>
     }
 
+    
+
     return (
       <div className="col-md-9 col-md-push-3">
         {/*<ResultsJumbotron images={this.props.pictures} />*/}
-        <ResultsList images={this.props.pictures}/>
+        <ResultsList images={this.props.pictures} showModal={this.showModal} />
         <Footer />
+        <ResultModal />
       </div>
 
     );
@@ -74,15 +83,14 @@ const mapStateToProps = ({pictures}) => {
   return {
     pictures: flatPicsArr,
     isFetching: pictures.isFetching,
-    enabledFilter:pictures.enabledFilter
+    enabledFilters: pictures.enabledFilters,
+    visibleResults: pictures.visibleResults
   }
 };
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    actions: bindActionCreators(ColorPagesActions, dispatch)
-  }
-}
+const mapDispatchToProps = (dispatch) => (
+  { actions: bindActionCreators(ColorPagesActions, dispatch) }
+);
 
 export default connect(
   mapStateToProps,

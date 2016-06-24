@@ -41,26 +41,28 @@ ResultsContainer.defaultProps = {
 }
 
 const mapStateToProps = ({pictures}) => {
-  var pics = [];
-  if(pictures.pictures){
-    var allNestedPictures = pictures.pictures.categories;
-    for(var key in allNestedPictures){
-      var categoryPictures = allNestedPictures[key];
-      for(var i = 0; i < categoryPictures.length; i++){
-        var individualPicture = categoryPictures[i]
-        pics.push(individualPicture);
+  let flatPicsArr = [];
+  let pics = pictures.pictures
+
+  if(pics){
+    let allNestedPictures = pics.categories;
+    for(let key in allNestedPictures){
+      let categoryPictures = allNestedPictures[key];
+      for(let i = 0; i < categoryPictures.length; i++){
+        let individualPicture = categoryPictures[i]
+        flatPicsArr.push(individualPicture);
       }
     }
   }
 
   return {
-    pictures: pics,
+    pictures: flatPicsArr,
     isFetching: pictures.isFetching,
     enabledFilters:pictures.enabledFilters
   }
 };
 
-function mapDispatchToProps(dispatch) {
+const mapDispatchToProps = (dispatch) => {
   return {
     actions: bindActionCreators(ColorPagesActions, dispatch)
   }

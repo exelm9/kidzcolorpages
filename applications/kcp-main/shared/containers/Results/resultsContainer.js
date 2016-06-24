@@ -43,7 +43,7 @@ ResultsContainer.defaultProps = {
 
 const mapStateToProps = ({pictures}) => {
   let flatPicsArr = [];
-  let pics = pictures.pictures
+  let pics = filterPictures(pictures)
 
   if(pics){
     let allNestedPictures = pics.categories;
@@ -70,7 +70,9 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 // helper functions
-const filter
+const filterPictures = (filters) => {
+  console.log(filters)
+}
 
 export default connect(
   mapStateToProps,

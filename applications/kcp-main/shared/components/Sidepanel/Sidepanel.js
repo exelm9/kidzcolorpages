@@ -27,7 +27,6 @@ export default class Sidepanel extends Component {
   }
 
   render() {
-    console.log(this.props,'sidepanel error')
     const pictureSearch = _.debounce((term) => { this.pictureSearch(term) }, 300);
     const filters = this.props.filters.filters
     return (

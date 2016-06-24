@@ -37,17 +37,32 @@ export default class ResultsContainer extends Component {
   }
 };
 
+// helper functions
+const removeCategory = (category, filter) => {
+  let categories = category.split("/");
+  for(let i = 0; i < categories.length; i++){
+    if(categories[i] === filter) 
+      return false;
+  }
+  return true;
+}
+
 ResultsContainer.defaultProps = {
   isFetching: true
 }
 
 const mapStateToProps = ({pictures}) => {
+  // turn nested picture data into a flat array
   let flatPicsArr = [];
-  let pics = filterPictures(pictures.pictures)
+  let pics = pictures.pictures
 
   if(pics){
     let allNestedPictures = pics.categories;
     for(let key in allNestedPictures){
+      // if filter is enabled, then only add filtered content to flatPicsArr
+      if(pictures.enabledFilter){
+        if(removeCategory(key, pictures.enabledFilter)) continue;
+      }
       let categoryPictures = allNestedPictures[key];
       for(let i = 0; i < categoryPictures.length; i++){
         let individualPicture = categoryPictures[i]
@@ -67,17 +82,6 @@ const mapDispatchToProps = (dispatch) => {
   return {
     actions: bindActionCreators(ColorPagesActions, dispatch)
   }
-}
-
-// helper functions
-const filterPictures = (data) => {
-  if(data === null){
-    return null;
-  }
-  console.log(data, 'filter here')
-
-
-  return data;
 }
 
 export default connect(

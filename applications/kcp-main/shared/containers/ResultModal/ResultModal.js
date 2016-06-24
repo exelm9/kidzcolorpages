@@ -8,7 +8,8 @@ export default class ResultModal extends Component {
   constructor() {
     super(props);
   }
-  const carouselItems = results.map((result) => (
+
+  carouselItems = this.props.results.map((result) => (
     <Carousel.Item>
       <Image src={`/media/alias/${result.uuid}`}/>
       <Carousel.Caption>
@@ -17,7 +18,7 @@ export default class ResultModal extends Component {
     </Carousel.Item>
   ));
 
-  const handleSelect = (selectedIndex, e) =>
+  handleSelect = (selectedIndex, e) =>
     showModal({
         imgIdx: selectedIndex,
         direction: e.direction

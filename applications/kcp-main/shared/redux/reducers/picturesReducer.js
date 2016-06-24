@@ -1,4 +1,4 @@
-import { FETCH_PICTURES, FIND_PICTURES, SET_FILTERS SHOW_PICTURES } from '../constants/ActionTypes';
+import { FETCH_PICTURES, FIND_PICTURES, SET_FILTERS, SHOW_PICTURES } from '../constants/ActionTypes';
 
 const initialState = {
 	pictures:null,

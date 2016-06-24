@@ -4,7 +4,7 @@ const initialState = {
 	filters:[]
 };
 
-export default const filtersReducer = (filters = initialState, action) => {
+const filtersReducer = (filters = initialState, action) => {
   switch (action.type) {
     case FETCH_PICTURES:
       return {filters: action.payload.filters};
@@ -12,3 +12,5 @@ export default const filtersReducer = (filters = initialState, action) => {
       return filters;
   }
 };
+
+export default filtersReducer;

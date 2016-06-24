@@ -19,8 +19,9 @@ const ResultsList = (props) => {
 
         });
 
+
     const resultImages = results[1].map((image) => {
-        return <ResultsListItem image={image.imageUrl} caption={image.displayName} key={image.generatorID}/>
+        return <ResultsListItem image={"/media/alias/" +image.uuid} caption={image.title} key={image.generatorID}/>
     });
 
     return (

@@ -52999,7 +52999,7 @@
 	    });
 
 	    var resultImages = results[1].map(function (image) {
-	        return _react2.default.createElement(_resultsListItem2.default, { image: image.imageUrl, caption: image.displayName, key: image.generatorID });
+	        return _react2.default.createElement(_resultsListItem2.default, { image: "/media/alias/" + image.uuid, caption: image.title, key: image.generatorID });
 	    });
 
 	    return _react2.default.createElement(

@@ -1,4 +1,4 @@
-import { FETCH_PICTURES, FIND_PICTURES } from '../constants/ActionTypes'
+import { FETCH_PICTURES, FIND_PICTURES, SHOW_PICTURES } from '../constants/ActionTypes'
 
 // Need to Refactor to use /kcp-api/
 // import memes from '../../../images/memes'
@@ -6,6 +6,7 @@ import { FETCH_PICTURES, FIND_PICTURES } from '../constants/ActionTypes'
 
 const initialState = {
 	pictures:null,
+  visiblePictures: null,
 	isFetching:true,
 	enabledFilters:[]
 }
@@ -16,9 +17,11 @@ const changedPics = null; // = lessMemes   Refactor to use API
 export default function picturesReducer(state = initialState, action) {
   switch (action.type) {
     case FETCH_PICTURES:
-    	return {pictures: action.payload, isFetching:false};
+    	return {pictures: action.payload, isFetching: false};
     case FIND_PICTURES:
-      return {pictures: changedPics, isFetching:false};
+      return {pictures: changedPics, isFetching: false};
+    case SHOW_PICTURES:
+      return {pictures: action.payload, visiblePictures: action.visiblePictures, isFetching: false}
     default:
       return state;
   }

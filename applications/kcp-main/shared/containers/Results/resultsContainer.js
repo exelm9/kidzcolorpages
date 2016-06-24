@@ -11,12 +11,17 @@ import ResultModal from '../ResultModal/ResultModal';
 export default class ResultsContainer extends Component {
   constructor(props) {
     super(props);
+    this.showModal =  this.showModal.bind(this);
   }
 
   componentWillMount(){
 
   }
-
+  
+  showModal(modalState) {
+    this.props.actions.showModal(modalState);
+  }
+  
   render() {
     const {
       isFetching
@@ -26,10 +31,12 @@ export default class ResultsContainer extends Component {
       return <h2><i>Loading Pics</i></h2>
     }
 
+    
+
     return (
       <div className="col-md-9 col-md-push-3">
         {/*<ResultsJumbotron images={this.props.pictures} />*/}
-        <ResultsList images={this.props.pictures} />
+        <ResultsList images={this.props.pictures} showModal={this.showModal} />
         <Footer />
         <ResultModal />
       </div>
@@ -42,7 +49,7 @@ ResultsContainer.defaultProps = {
   isFetching: true
 }
 
-const mapStateToProps = ({pictures}) => {
+const mapStateToProps = ({pictures, visibleResults}) => {
   var pics = [];
   if(pictures.pictures){
     var allNestedPictures = pictures.pictures.categories;
@@ -58,7 +65,9 @@ const mapStateToProps = ({pictures}) => {
   return {
     pictures: pics,
     isFetching: pictures.isFetching,
-    enabledFilters:pictures.enabledFilters
+    enabledFilters: pictures.enabledFilters,
+    visibleResults,
+    
   }
 };
 

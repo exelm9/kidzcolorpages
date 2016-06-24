@@ -6,7 +6,7 @@ import { showModal } from '../../redux/actions';
 
 export default class ResultModal extends Component {
   constructor() {
-    
+    super(props);
   }
   const carouselItems = results.map((result) => (
     <Carousel.Item>

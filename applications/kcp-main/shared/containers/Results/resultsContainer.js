@@ -6,6 +6,7 @@ import * as ColorPagesActions from '../../redux/actions';
 import ResultsList from '../../components/DefaultResult/resultsList';
 // import ResultsJumbotron from '../../components/FeaturedResult/resultsJumbotron';
 import Footer from '../../components/footer';
+import ResultModal from '../ResultModal/ResultModal';
 
 export default class ResultsContainer extends Component {
   constructor(props) {
@@ -28,8 +29,9 @@ export default class ResultsContainer extends Component {
     return (
       <div className="col-md-9 col-md-push-3">
         {/*<ResultsJumbotron images={this.props.pictures} />*/}
-        <ResultsList images={this.props.pictures}/>
+        <ResultsList images={this.props.pictures} />
         <Footer />
+        <ResultModal />
       </div>
 
     );

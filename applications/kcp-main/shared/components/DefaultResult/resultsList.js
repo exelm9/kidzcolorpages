@@ -25,7 +25,7 @@ const ResultsList = (props) => {
     });
 
     return (
-            <div className="row">{resultImages}</div>
+        <div className="row">{resultImages}</div>
     );
 }
 

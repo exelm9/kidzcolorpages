@@ -11,7 +11,7 @@ export default function picturesReducer(state = initialState, action) {
     case FETCH_PICTURES:
     	return {...state, pictures: action.payload, isFetching:false};
     case SET_FILTERS:
-      return {...state, enabledFilter:action.filters };
+      return {...state, enabledFilter:action.filters};
     case FIND_PICTURES:
       return {...state, pictures: action.payload};
     default:

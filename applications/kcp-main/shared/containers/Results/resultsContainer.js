@@ -74,7 +74,7 @@ const filterPictures = (data) => {
   if(data === null){
     return null;
   }
-
+  console.log(data, 'filter here')
 
 
   return data;

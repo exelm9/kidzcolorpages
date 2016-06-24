@@ -4,20 +4,12 @@ import ResultsListItem from './resultsListItem';
 
 const ResultsList = (props) => {
     //creates array of list items
-    let results = {};
-    results.complete = props.images;
-    results.pages = 1;
-    results[1] = [];
-    results.complete.forEach(function(result){
-        if (results[results.pages].length <= 12){
-            results[results.pages].push(result);
-        } else {
-            results.pages++;
-            results[results.pages] = [];
-            results[results.pages].push(result);
-        }
+    let pages = 1;
+    let results = props.images.slice(0,12);
 
-        });
+    const handleClick = function (picture) {
+
+    }
 
 
     const resultImages = results[1].map((image) => {
@@ -25,7 +17,7 @@ const ResultsList = (props) => {
     });
 
     return (
-            <div className="row">{resultImages}</div>
+        <div className="row">{resultImages}</div>
     );
 }
 

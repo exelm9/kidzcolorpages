@@ -1,26 +1,29 @@
-import * as types from '../constants/ActionTypes';
+import { FIND_PICTURES, FETCH_PICTURES, SET_FILTERS, SHOW_PICTURES, SHOW_MODAL } from '../constants/ActionTypes';
 import { browserHistory } from 'react-router';
 import request from 'axios';
 import _ from 'lodash';
 
 
-export function searchPictures(term) {
-	return function(dispatch) {
-		request.post('/api/search',{searchQuery:term}).then(function(response){
-			dispatch({ type: types.FIND_PICTURES, payload: response.data })
-		})
-	}
-}
+export const searchPictures = (term) => 
+	(dispatch) =>
+		request.post('/api/search',{searchQuery:term}).then((response) =>
+			dispatch({ type: FIND_PICTURES, payload: response.data })
+		);
 
-export function fetchPictures() {
-	return function(dispatch) {
-		request.get('/api').then(function(response){
+export const fetchPictures = () => 
+	(dispatch) =>
+		request.get('/api').then((response) => {
 			var data = JSON.parse(response.data);
-			dispatch({ type: types.FETCH_PICTURES, payload: data })
-		})
-	}
-}
+			dispatch({ type: FETCH_PICTURES, payload: data })
+		});
 
-export function filterPictures(filter) {
-  return { type: types.SET_FILTERS, filters: filter  }
-}
+export const filterPictures = (filter) =>
+	({ type: SET_FILTERS, filters: filter });
+
+export const showPictures = (pictures, count) =>
+	({ type: SHOW_PICTURES, payload: pictures.slice(0, count + 12) });
+
+
+export const showModal = (modalState) =>
+	({ type: SHOW_MODAL, modalState });
+

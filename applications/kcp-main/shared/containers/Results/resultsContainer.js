@@ -6,6 +6,7 @@ import * as ColorPagesActions from '../../redux/actions';
 import ResultsList from '../../components/DefaultResult/resultsList';
 // import ResultsJumbotron from '../../components/FeaturedResult/resultsJumbotron';
 import Footer from '../../components/footer';
+import _ from 'lodash';
 
 export default class ResultsContainer extends Component {
   constructor(props) {
@@ -36,31 +37,48 @@ export default class ResultsContainer extends Component {
   }
 };
 
+// helper functions
+const removeCategory = (category, filter) => {
+  let categories = category.split("/");
+  for(let i = 0; i < categories.length; i++){
+    if(categories[i] === filter) 
+      return false;
+  }
+  return true;
+}
+
 ResultsContainer.defaultProps = {
   isFetching: true
 }
 
 const mapStateToProps = ({pictures}) => {
-  var pics = [];
-  if(pictures.pictures){
-    var allNestedPictures = pictures.pictures.categories;
-    for(var key in allNestedPictures){
-      var categoryPictures = allNestedPictures[key];
-      for(var i = 0; i < categoryPictures.length; i++){
-        var individualPicture = categoryPictures[i]
-        pics.push(individualPicture);
+  // turn nested picture data into a flat array
+  let flatPicsArr = [];
+  let pics = pictures.pictures
+
+  if(pics){
+    let allNestedPictures = pics.categories;
+    for(let key in allNestedPictures){
+      // if filter is enabled, then only add filtered content to flatPicsArr
+      if(pictures.enabledFilter){
+        if(removeCategory(key, pictures.enabledFilter)) continue;
+      }
+      let categoryPictures = allNestedPictures[key];
+      for(let i = 0; i < categoryPictures.length; i++){
+        let individualPicture = categoryPictures[i]
+        flatPicsArr.push(individualPicture);
       }
     }
   }
 
   return {
-    pictures: pics,
+    pictures: flatPicsArr,
     isFetching: pictures.isFetching,
-    enabledFilters:pictures.enabledFilters
+    enabledFilter:pictures.enabledFilter
   }
 };
 
-function mapDispatchToProps(dispatch) {
+const mapDispatchToProps = (dispatch) => {
   return {
     actions: bindActionCreators(ColorPagesActions, dispatch)
   }

@@ -37,19 +37,31 @@ export default class ResultsContainer extends Component {
   }
 };
 
+ResultsContainer.defaultProps = {
+  isFetching: true
+}
+
 // helper functions
 const removeCategory = (category, filter) => {
   let categories = category.split("/");
   for(let i = 0; i < categories.length; i++){
-    if(categories[i] === filter) 
+    if(categories[i] === filter)
       return false;
   }
   return true;
 }
 
-ResultsContainer.defaultProps = {
-  isFetching: true
+const searchCategory = (category, searchTerm) => {
+  let categories = category.split("/");
+  for(let i = 0; i < categories.length; i++){
+    if( categories[i].indexOf(searchTerm) > -1 )
+      return false;
+  }
+  return true;
+
 }
+
+// redux
 
 const mapStateToProps = ({pictures}) => {
   // turn nested picture data into a flat array
@@ -63,6 +75,12 @@ const mapStateToProps = ({pictures}) => {
       if(pictures.enabledFilter){
         if(removeCategory(key, pictures.enabledFilter)) continue;
       }
+
+      // if user is searching, then only add serched content to flatPicsArr
+      if(pictures.searchFor){
+        if(removeCategory(key, pictures.searchFor)) continue;
+      }
+
       let categoryPictures = allNestedPictures[key];
       for(let i = 0; i < categoryPictures.length; i++){
         let individualPicture = categoryPictures[i]
@@ -74,7 +92,8 @@ const mapStateToProps = ({pictures}) => {
   return {
     pictures: flatPicsArr,
     isFetching: pictures.isFetching,
-    enabledFilter:pictures.enabledFilter
+    enabledFilter:pictures.enabledFilter,
+    searchFor: pictures.searchFor
   }
 };
 

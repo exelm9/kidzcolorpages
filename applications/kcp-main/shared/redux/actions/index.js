@@ -5,22 +5,18 @@ import _ from 'lodash';
 
 
 export function searchPictures(term) {
-	return function(dispatch) {
-		request.post('/api/search',{searchQuery:term}).then(function(response){
-			dispatch({ type: types.FIND_PICTURES, payload: response.data })
-		})
-	}
+	return { type: types.FIND_PICTURES, term: term };
 }
 
 export function fetchPictures() {
 	return function(dispatch) {
 		request.get('/api').then(function(response){
 			var data = JSON.parse(response.data);
-			dispatch({ type: types.FETCH_PICTURES, payload: data })
-		})
-	}
+			dispatch({ type: types.FETCH_PICTURES, payload: data });
+		});
+	};
 }
 
 export function filterPictures(filter) {
-  return { type: types.SET_FILTERS, filters: filter  }
+  return { type: types.SET_FILTERS, filter: filter  };
 }

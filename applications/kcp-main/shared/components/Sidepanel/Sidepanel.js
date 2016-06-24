@@ -15,7 +15,7 @@ export default class Sidepanel extends Component {
   }
 
   pictureSearch(term){
-    this.props.actions.searchPictures(term);
+    this.props.actions.searchPictures(term.toLowerCase());
   }
 
   filterPictures(filter){
@@ -28,7 +28,7 @@ export default class Sidepanel extends Component {
 
   render() {
     const pictureSearch = _.debounce((term) => { this.pictureSearch(term) }, 300);
-    const filters = this.props.filters.filters
+    const filters = this.props.filters.filters;
     return (
       <div className="sidepanel col-md-3 col-md-pull-9">
         <h5>Sidepanel</h5>

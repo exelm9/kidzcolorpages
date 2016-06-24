@@ -8,14 +8,21 @@ export default class SearchBar extends Component {
 
 	onInputChange(term) {
 		this.setState({term});
-		this.props.onSearchChange(term);
+	}
+
+	onKeyDown(keycode) {
+		// on enter search for pictures
+		if(keycode === 13){
+			this.props.onSearchChange(this.state.term);
+		}
 	}
 
 	render () {
 		return(
 			<div className="search-bar">
-				<input 
+				<input
 					value = { this.state.term }
+					onKeyDown={event => this.onKeyDown(event.keyCode)}
 					onChange={ event => this.onInputChange(event.target.value) }
 					placeholder="Search for pictures!"
 				/>

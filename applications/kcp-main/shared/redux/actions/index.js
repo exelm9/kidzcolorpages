@@ -1,6 +1,7 @@
 import * as types from '../constants/ActionTypes';
 import { browserHistory } from 'react-router';
 import request from 'axios';
+import _ from 'lodash';
 
 
 export function searchPictures(term) {
@@ -20,6 +21,6 @@ export function fetchPictures() {
 	}
 }
 
-export function setFilter(text) {
-  return { type: types.SET_FILTERS, text }
+export function filterPictures(filter) {
+  return { type: types.SET_FILTERS, filters: filter  }
 }

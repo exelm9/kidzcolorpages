@@ -25,3 +25,12 @@
 .resultListItem{
 	display:inline-block;
 }
+
+.filtersWrap{
+	margin-top:5px;
+}
+
+.filterButtons{
+	margin:5px 0 5px 0;
+	width:100%;
+}

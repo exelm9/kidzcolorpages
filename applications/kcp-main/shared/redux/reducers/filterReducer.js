@@ -1,14 +1,13 @@
 import * as types from '../constants/ActionTypes'
-import filterList  from '../constants/FilterList'
 
 const initialState = {
-  filters: filterList
+	filters:[]
 };
 
 export default function filtersReducer(filters = initialState, action) {
   switch (action.type) {
-    case types.SET_FILTERS :
-      return filters;
+    case types.FETCH_PICTURES:
+      return {filters: action.payload.filters};
     default:
       return filters;
   }

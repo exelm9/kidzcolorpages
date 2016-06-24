@@ -19,7 +19,6 @@ export default class Sidepanel extends Component {
   }
 
   filterPictures(filter){
-    return;
     this.props.actions.filterPictures(filter);
   }
 

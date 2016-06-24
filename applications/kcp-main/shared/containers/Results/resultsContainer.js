@@ -43,7 +43,7 @@ ResultsContainer.defaultProps = {
 
 const mapStateToProps = ({pictures}) => {
   let flatPicsArr = [];
-  let pics = filterPictures(pictures)
+  let pics = filterPictures(pictures.pictures)
 
   if(pics){
     let allNestedPictures = pics.categories;
@@ -59,7 +59,7 @@ const mapStateToProps = ({pictures}) => {
   return {
     pictures: flatPicsArr,
     isFetching: pictures.isFetching,
-    enabledFilters:pictures.enabledFilters
+    enabledFilter:pictures.enabledFilter
   }
 };
 
@@ -70,8 +70,14 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 // helper functions
-const filterPictures = (filters) => {
-  console.log(filters)
+const filterPictures = (data) => {
+  if(data === null){
+    return null;
+  }
+
+
+
+  return data;
 }
 
 export default connect(

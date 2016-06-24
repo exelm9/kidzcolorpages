@@ -3,6 +3,8 @@
 ## Restore Stubs
 !.Stub
 
+dist/*
+
 # Logs
 logs
 *.log

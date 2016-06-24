@@ -54,8 +54,9 @@ const removeCategory = (category, filter) => {
 const searchCategory = (category, searchTerm) => {
   let categories = category.split("/");
   for(let i = 0; i < categories.length; i++){
-    if( categories[i].indexOf(searchTerm) > -1 )
+    if( categories[i].indexOf(searchTerm) > -1 ){
       return false;
+    }
   }
   return true;
 
@@ -64,33 +65,9 @@ const searchCategory = (category, searchTerm) => {
 // redux
 
 const mapStateToProps = ({pictures}) => {
-  // turn nested picture data into a flat array
-  let flatPicsArr = [];
-  let pics = pictures.pictures
-
-  if(pics){
-    let allNestedPictures = pics.categories;
-    for(let key in allNestedPictures){
-      // if filter is enabled, then only add filtered content to flatPicsArr
-      if(pictures.enabledFilter){
-        if(removeCategory(key, pictures.enabledFilter)) continue;
-      }
-
-      // if user is searching, then only add serched content to flatPicsArr
-      if(pictures.searchFor){
-        if(removeCategory(key, pictures.searchFor)) continue;
-      }
-
-      let categoryPictures = allNestedPictures[key];
-      for(let i = 0; i < categoryPictures.length; i++){
-        let individualPicture = categoryPictures[i]
-        flatPicsArr.push(individualPicture);
-      }
-    }
-  }
-
   return {
-    pictures: flatPicsArr,
+    allPictures: pictures.allPictures,
+    pictures: pictures.filteredPictures,
     isFetching: pictures.isFetching,
     enabledFilter:pictures.enabledFilter,
     searchFor: pictures.searchFor

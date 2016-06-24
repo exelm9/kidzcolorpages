@@ -12,9 +12,17 @@ export default class SearchBar extends Component {
 
 	onKeyDown(keycode) {
 		// on enter search for pictures
-		if(keycode === 13){
+		if(keycode === 13 && this.state.term.length > 1){
 			this.props.onSearchChange(this.state.term);
 		}
+	}
+
+	onBlur(term){
+		this.setState({term});
+		if(term.length > 1){
+			this.props.onSearchBlur(this.state.term);
+		}
+		
 	}
 
 	render () {
@@ -22,8 +30,9 @@ export default class SearchBar extends Component {
 			<div className="search-bar">
 				<input
 					value = { this.state.term }
+					onBlur={event => this.onBlur(event.target.value)}
 					onKeyDown={event => this.onKeyDown(event.keyCode)}
-					onChange={ event => this.onInputChange(event.target.value) }
+					onChange={ event => this.onInputChange(event.target.value)}
 					placeholder="Search for pictures!"
 				/>
 			</div>

@@ -12,6 +12,7 @@ export default class Sidepanel extends Component {
 
     this.pictureSearch = this.pictureSearch.bind(this);
     this.filterPictures = this.filterPictures.bind(this);
+    this.setSearchOnBlur = this.setSearchOnBlur.bind(this);
   }
 
   pictureSearch(term){
@@ -20,6 +21,10 @@ export default class Sidepanel extends Component {
 
   filterPictures(filter){
     this.props.actions.filterPictures(filter);
+  }
+
+  setSearchOnBlur(term){
+    this.props.actions.onSearchBlur(term.toLowerCase());
   }
 
   componentDidMount(){
@@ -32,7 +37,10 @@ export default class Sidepanel extends Component {
     return (
       <div className="sidepanel col-md-3 col-md-pull-9">
         <h5>Sidepanel</h5>
-        <SearchBar onSearchChange={ pictureSearch }/>
+        <SearchBar
+          onSearchChange={ pictureSearch }
+          onSearchBlur={ this.setSearchOnBlur }
+        />
         <div className="filtersWrap">
           {filters.map(filter =>{
             return(

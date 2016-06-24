@@ -8,6 +8,10 @@ export function searchPictures(term) {
 	return { type: types.FIND_PICTURES, term: term };
 }
 
+export function onSearchBlur(term) {
+  return { type: types.SET_SEARCH, term: term  };
+}
+
 export function fetchPictures() {
 	return function(dispatch) {
 		request.get('/api').then(function(response){

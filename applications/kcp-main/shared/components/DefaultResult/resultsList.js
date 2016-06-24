@@ -1,11 +1,13 @@
 // contains individual result components (dumb)
 import React from 'react';
 import ResultsListItem from './resultsListItem';
+import ReactInfinite from 'react-infinite';
 
 const ResultsList = (props) => {
     //creates array of list items
     let results = {};
     results.complete = props.images;
+    console.log("full results: ", results.complete);
     results.pages = 1;
     results[1] = [];
     results.complete.forEach(function(result){
@@ -19,13 +21,19 @@ const ResultsList = (props) => {
 
         });
 
+        //changing to populate all images
 
-    const resultImages = results[1].map((image) => {
-        return <ResultsListItem image={"/media/alias/" +image.uuid} caption={image.title} key={image.generatorID}/>
+
+
+
+    const resultImages = results.complete.map((image) => {
+        return <ResultsListItem image={"/media/alias/" +image.uuid} caption={image.title} key={image.uuid}/>
     });
 
     return (
-            <div className="row">{resultImages}</div>
+        <Infinite containerHeight={200} elementHeight={40}>
+            {resultImages}
+            </Infinite>
     );
 }
 

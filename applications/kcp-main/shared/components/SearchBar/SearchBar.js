@@ -5,7 +5,7 @@ export default class SearchBar extends Component {
 		super(props);
 		this.state = {term: ''};
 	}
-
+	// set state of SearchBar to the value of the input on keypress
 	onInputChange(term) {
 		this.setState({term});
 	}

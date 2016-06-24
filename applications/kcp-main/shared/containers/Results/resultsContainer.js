@@ -17,6 +17,7 @@ export default class ResultsContainer extends Component {
   }
 
   render() {
+    console.log(this.props,'results container')
     const {
       isFetching
     } = this.props;

@@ -26,12 +26,12 @@ const ResultsList = (props) => {
 
 
 
-    const resultImages = results.complete.map((image) => {
+    let resultImages = results.complete.map((image) => {
         return <ResultsListItem image={"/media/alias/" +image.uuid} caption={image.title} key={image.uuid}/>
     });
 
     return (
-        <Infinite containerHeight={200} elementHeight={40}>
+        <Infinite  elementHeight={200} preloadBatchSize={1} useWindowAsScrollContainer="true">
             {resultImages}
             </Infinite>
     );

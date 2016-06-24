@@ -11,10 +11,17 @@ export default class Sidepanel extends Component {
     super(props);
 
     this.pictureSearch = this.pictureSearch.bind(this);
+    this.filterPictures = this.filterPictures.bind(this);
   }
 
   pictureSearch(term){
     this.props.actions.searchPictures(term);
+  }
+
+  filterPictures(filter){
+    console.log(filter,'what')
+    return;
+    this.props.actions.filterPictures(filter);
   }
 
   componentDidMount(){
@@ -23,19 +30,21 @@ export default class Sidepanel extends Component {
 
   render() {
     const pictureSearch = _.debounce((term) => { this.pictureSearch(term) }, 300);
-    // build out list of filters
-
+    const filters = this.props.filters.filters
     return (
       <div className="sidepanel col-md-3 col-md-pull-9">
         <h5>Sidepanel</h5>
         <SearchBar onSearchChange={ pictureSearch }/>
-        {todos.map(todo =>
-          <Todo
-            key={todo.id}
-            {...todo}
-            onClick={() => onTodoClick(todo.id)}
-          />
-        )}
+        <div className="filtersWrap">
+          {filters.map(filter =>{
+            return(
+            <FilterButton
+              onClick={() => this.filterPictures(filter)}
+              filterType={ filter }
+            />);
+           }
+          )}
+        </div>
       </div>
     );
   }

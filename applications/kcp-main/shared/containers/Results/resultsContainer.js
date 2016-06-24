@@ -6,6 +6,7 @@ import * as ColorPagesActions from '../../redux/actions';
 import ResultsList from '../../components/DefaultResult/resultsList';
 // import ResultsJumbotron from '../../components/FeaturedResult/resultsJumbotron';
 import Footer from '../../components/footer';
+import _ from 'lodash';
 
 export default class ResultsContainer extends Component {
   constructor(props) {
@@ -67,6 +68,9 @@ const mapDispatchToProps = (dispatch) => {
     actions: bindActionCreators(ColorPagesActions, dispatch)
   }
 }
+
+// helper functions
+const filter
 
 export default connect(
   mapStateToProps,

@@ -3,6 +3,8 @@
 ## Restore Stubs
 !.Stub
 
+/applications/kcp-main/dist/*
+
 # Logs
 logs
 *.log

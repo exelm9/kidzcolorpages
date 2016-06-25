@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import * as ColorPagesActions from '../../redux/actions';
 import ResultsList from '../../components/DefaultResult/resultsList';
 // import ResultsJumbotron from '../../components/FeaturedResult/resultsJumbotron';
-import Footer from '../../components/footer';
+
 import _ from 'lodash';
 import ResultModal from '../ResultModal/ResultModal';
 
@@ -18,12 +18,13 @@ export default class ResultsContainer extends Component {
   componentWillMount(){
 
   }
-  
+
   showModal(modalState) {
     this.props.actions.showModal(modalState);
   }
-  
+
   render() {
+    console.log(this.props,'results container')
     const {
       isFetching
     } = this.props;
@@ -32,14 +33,14 @@ export default class ResultsContainer extends Component {
       return <h2><i>Loading Pics</i></h2>
     }
 
-    
+
 
     return (
       <div className="col-md-9 col-md-push-3">
         {/*<ResultsJumbotron images={this.props.pictures} />*/}
         <ResultsList images={this.props.pictures} showModal={this.showModal} />
-        <Footer />
         <ResultModal />
+
       </div>
 
     );
@@ -50,7 +51,7 @@ export default class ResultsContainer extends Component {
 const removeCategory = (category, filter) => {
   let categories = category.split("/");
   for(let i = 0; i < categories.length; i++){
-    if(categories[i] === filter) 
+    if(categories[i] === filter)
       return false;
   }
   return true;
@@ -96,4 +97,3 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(ResultsContainer)
-

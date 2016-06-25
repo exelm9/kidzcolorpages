@@ -19,8 +19,8 @@ export default class ResultsContainer extends Component {
 
   }
   
-  showModal(modalState) {
-    this.props.actions.showModal(modalState);
+  showModal(imgIdx) {
+    this.props.actions.showModal({ show: true, imgIdx, results: this.props.visiblePictures });
   }
   
   render() {
@@ -32,59 +32,27 @@ export default class ResultsContainer extends Component {
       return <h2><i>Loading Pics</i></h2>
     }
 
-    
-
     return (
       <div className="col-md-9 col-md-push-3">
         {/*<ResultsJumbotron images={this.props.pictures} />*/}
-        <ResultsList images={this.props.pictures} showModal={this.showModal} />
+        <ResultsList visiblePictures={this.props.visiblePictures} showModal={this.showModal} />
         <Footer />
-        <ResultModal />
+        <ResultModal visiblePictures={this.props.visiblePictures} />
       </div>
-
     );
   }
 };
 
-// helper functions
-const removeCategory = (category, filter) => {
-  let categories = category.split("/");
-  for(let i = 0; i < categories.length; i++){
-    if(categories[i] === filter) 
-      return false;
-  }
-  return true;
-}
-
 ResultsContainer.defaultProps = {
   isFetching: true
-}
+};
 
 const mapStateToProps = ({pictures}) => {
-  // turn nested picture data into a flat array
-  let flatPicsArr = [];
-  let pics = pictures.pictures
-
-  if(pics){
-    let allNestedPictures = pics.categories;
-    for(let key in allNestedPictures){
-      // if filter is enabled, then only add filtered content to flatPicsArr
-      if(pictures.enabledFilter){
-        if(removeCategory(key, pictures.enabledFilter)) continue;
-      }
-      let categoryPictures = allNestedPictures[key];
-      for(let i = 0; i < categoryPictures.length; i++){
-        let individualPicture = categoryPictures[i]
-        flatPicsArr.push(individualPicture);
-      }
-    }
-  }
-
   return {
-    pictures: flatPicsArr,
+    pictures: pictures.filteredPictures,
+    visiblePictures: pictures.visiblePictures,
     isFetching: pictures.isFetching,
-    enabledFilters: pictures.enabledFilters,
-    visibleResults: pictures.visibleResults
+    enabledFilters: pictures.enabledFilters
   }
 };
 
@@ -95,5 +63,4 @@ const mapDispatchToProps = (dispatch) => (
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(ResultsContainer)
-
+)(ResultsContainer);

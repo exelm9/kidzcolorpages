@@ -3,11 +3,21 @@ import React from 'react';
 import ResultsListItem from './resultsListItem';
 import ReactInfinite from 'react-infinite';
 
-const ResultsList = (props) => {
+export default class ResultsList extends Component {
+    constructor(props){
+        super(props);
+
+        this.state = {
+
+        }
+    }
+
+
     //creates array of list items
-<<<<<<< HEAD
+
     let pages = 1;
-    let results = props.images.slice(0,12);
+    // let results = props.images.slice(0,12);
+    let results = props.images;
 
     const handleClick = function (picture) {
 
@@ -15,19 +25,18 @@ const ResultsList = (props) => {
 
         //changing to populate all images
 
-
-
-
-    let resultImages = results.complete.map((image) => {
+    let resultImages = results.map((image) => {
         return <ResultsListItem image={"/media/alias/" +image.uuid} caption={image.title} key={image.uuid}/>
     });
+    render() {
+        return (
 
-    return (
+            <Infinite  elementHeight={200} preloadBatchSize={Infinite.containerHeightScaleFactor(0.5)} useWindowAsScrollContainer={true}>
+                {resultImages}
+                </Infinite>
+        );
 
-        <Infinite  elementHeight={200} preloadBatchSize={1} useWindowAsScrollContainer="true">
-            {resultImages}
-            </Infinite>
-    );
+    }
+
+
 }
-
-export default ResultsList;

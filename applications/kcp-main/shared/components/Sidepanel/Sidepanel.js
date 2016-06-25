@@ -10,6 +10,8 @@ export default class Sidepanel extends Component {
   constructor(props) {
     super(props);
 
+    this.state = {activeFilterBtn:null};
+
     this.pictureSearch = this.pictureSearch.bind(this);
     this.filterPictures = this.filterPictures.bind(this);
     this.setSearchOnBlur = this.setSearchOnBlur.bind(this);
@@ -20,11 +22,11 @@ export default class Sidepanel extends Component {
   }
 
   filterPictures(filter){
+    this.setState({activeFilterBtn:filter})
     this.props.actions.filterPictures(filter);
   }
 
   setSearchOnBlur(term){
-    console.log('term', term)
     this.props.actions.onSearchBlur(term.toLowerCase());
   }
 
@@ -35,6 +37,8 @@ export default class Sidepanel extends Component {
   render() {
     const pictureSearch = _.debounce((term) => { this.pictureSearch(term) }, 300);
     const filters = this.props.filters.filters;
+    const activeFilter = this.state.activeFilterBtn
+
     return (
       <div className="sidepanel col-md-3 col-md-pull-9">
         <h5>Sidepanel</h5>
@@ -49,6 +53,7 @@ export default class Sidepanel extends Component {
               onClick={() => this.filterPictures(filter)}
               filterType={ filter }
               key={ idx }
+              activeFilter= { activeFilter }
             />);
            }
           )}
@@ -58,7 +63,7 @@ export default class Sidepanel extends Component {
   }
 }
 
-function mapStateToProps(state) {
+function mapStateToProps(state, ownProps) {
   return {
     filters: state.filters
   }

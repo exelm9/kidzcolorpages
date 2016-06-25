@@ -3,7 +3,9 @@ import React, { Component } from 'react';
 export default class SearchBar extends Component {
 	constructor(props){
 		super(props);
-		this.state = {term: ''};
+		this.state = {
+			term: ''
+		};
 	}
 	// set state of SearchBar to the value of the input on keypress
 	onInputChange(term) {

@@ -19,10 +19,7 @@ export default class SearchBar extends Component {
 
 	onBlur(term){
 		this.setState({term});
-		if(term.length > 1){
-			this.props.onSearchBlur(this.state.term);
-		}
-		
+		this.props.onSearchBlur(this.state.term);
 	}
 
 	render () {

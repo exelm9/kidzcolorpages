@@ -12,7 +12,7 @@ const initialState = {
 export default function picturesReducer(state = initialState, action) {
   const flattenArray = (pictures, filter, searchTerm) => {
     // turn nested picture data into a flat array
-    console.log(state.enabledFilter, state.searchFor)
+    //console.log(state.enabledFilter, state.searchFor, pictures,'should be all')
     let flatPicsArr = [];
     let pics = pictures;
 
@@ -33,7 +33,7 @@ export default function picturesReducer(state = initialState, action) {
         } else if(state.searchFor){
           if(searchCategory(key, state.searchFor)) continue;
         }
-
+        console.log(allNestedPictures[key],'huh')
         let categoryPictures = allNestedPictures[key];
         for(let i = 0; i < categoryPictures.length; i++){
           let individualPicture = categoryPictures[i]
@@ -72,6 +72,7 @@ export default function picturesReducer(state = initialState, action) {
     case FIND_PICTURES:
       return {...state, searchFor:action.term, filteredPictures:flattenArray(state.allPictures, null, action.term) };
     case SET_SEARCH:
+    console.log('action term', action.term)
       return {...state, searchFor:action.term}
     default:
       return state;

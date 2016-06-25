@@ -24,6 +24,7 @@ export default class Sidepanel extends Component {
   }
 
   setSearchOnBlur(term){
+    console.log('term', term)
     this.props.actions.onSearchBlur(term.toLowerCase());
   }
 

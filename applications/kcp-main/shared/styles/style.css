@@ -34,3 +34,10 @@
 	margin:5px 0 5px 0;
 	width:100%;
 }
+
+/* override bootstrap css */
+.filterButtons.active{
+	color:#286090 !important;
+	background-color:#FFFFFF !important;
+
+}

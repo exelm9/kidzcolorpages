@@ -25,7 +25,8 @@ export default class ResultsContainer extends Component {
 
   render() {
     const {
-      isFetching
+      isFetching,
+      allPictures
     } = this.props;
 
     if (isFetching) {
@@ -36,7 +37,7 @@ export default class ResultsContainer extends Component {
       <div className="col-md-9 col-md-push-3">
         {/*<ResultsJumbotron images={this.props.pictures} />*/}
 
-        <ResultsList visiblePictures={this.props.visiblePictures} showModal={this.showModal} />
+        <ResultsList allPictures={allPictures.categories} visiblePictures={this.props.visiblePictures} showModal={this.showModal} />
         <ResultModal visiblePictures={this.props.visiblePictures} />
 
       </div>

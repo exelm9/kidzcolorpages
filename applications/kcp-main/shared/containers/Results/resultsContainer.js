@@ -41,27 +41,6 @@ ResultsContainer.defaultProps = {
   isFetching: true
 }
 
-// helper functions
-const removeCategory = (category, filter) => {
-  let categories = category.split("/");
-  for(let i = 0; i < categories.length; i++){
-    if(categories[i] === filter)
-      return false;
-  }
-  return true;
-}
-
-const searchCategory = (category, searchTerm) => {
-  let categories = category.split("/");
-  for(let i = 0; i < categories.length; i++){
-    if( categories[i].indexOf(searchTerm) > -1 ){
-      return false;
-    }
-  }
-  return true;
-
-}
-
 // redux
 
 const mapStateToProps = ({pictures}) => {

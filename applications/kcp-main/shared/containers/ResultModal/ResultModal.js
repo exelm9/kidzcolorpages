@@ -49,10 +49,10 @@ export default class ResultModal extends Component {
 }
 
 const mapStateToProps = ({modal}) => {
-  console.log("result modal state: ");
-  console.log("show: ", modal.show);
-  console.log("imgIdx: ", modal.imgIdx);
-  console.log("direction: : ", modal.direction);
+  // console.log("result modal state: ");
+  // console.log("show: ", modal.show);
+  // console.log("imgIdx: ", modal.imgIdx);
+  // console.log("direction: : ", modal.direction);
   return (
     { show: modal.show, imgIdx: modal.imgIdx, direction: modal.direction }
   );

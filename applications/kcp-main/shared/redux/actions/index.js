@@ -1,37 +1,43 @@
-import { FIND_PICTURES, FETCH_PICTURES, SET_FILTERS, SHOW_PICTURES, SHOW_MODAL } from '../constants/ActionTypes';
+import { FIND_PICTURES, FETCH_PICTURES, SET_FILTERS, SHOW_PICTURES, SHOW_MODAL, SET_SEARCH } from '../constants/ActionTypes';
 import { browserHistory } from 'react-router';
 import request from 'axios';
 import _ from 'lodash';
 
 
-export const searchPictures = (term) => 
-	(dispatch) =>
-		request.post('/api/search',{searchQuery:term}).then((response) =>
-			dispatch({ type: FIND_PICTURES, payload: response.data })
-		);
+export function searchPictures(term) {
+	return { type: FIND_PICTURES, term: term };
+}
 
-export const fetchPictures = () => 
-	(dispatch) =>
-		request.get('/api').then((response) => {
+export function onSearchBlur(term) {
+  return { type: SET_SEARCH, term: term  };
+}
+
+export function fetchPictures(){
+	return function(dispatch) {
+		request.get('/api').then(function(response){
 			var data = JSON.parse(response.data);
-			dispatch({ type: FETCH_PICTURES, payload: data})
-		});
+			dispatch({ type: FETCH_PICTURES, payload: data })
+		})
+	}
+}
 
-export const filterPictures = (filter) => (
-	{ type: SET_FILTERS, filters: filter }
-);
+export function filterPictures(filter) {
+	return { type: SET_FILTERS, filter: filter }
+}
 
-export const showPictures = (pictures, count) => {
+export function showPictures(pictures, count){
   var visiblePictures = pictures.slice(0, count + 12);
   visiblePictures = visiblePictures.map((picture, idx) => ({...picture, idx}));
-  return { type: SHOW_PICTURES, visiblePictures }
+  return { type: SHOW_PICTURES, visiblePictures };
 };
 
 
-export const showModal = (modalState) => (
-  { type: SHOW_MODAL, ...modalState }
-);
+export function showModal (modalState) {
+  return { type: SHOW_MODAL, ...modalState }
+}
 
-export const hideModal = (show) => (
-  { type: HIDE_MODAL, show }
-)
+
+export function hideModal(show){
+  return { type: HIDE_MODAL, show }
+}
+

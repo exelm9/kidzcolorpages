@@ -24,7 +24,6 @@ export default class ResultsContainer extends Component {
   }
 
   render() {
-    console.log(this.props,'results container')
     const {
       isFetching
     } = this.props;
@@ -47,12 +46,15 @@ ResultsContainer.defaultProps = {
   isFetching: true
 };
 
+// redux
 const mapStateToProps = ({pictures}) => {
   return {
+    allPictures: pictures.allPictures,
     pictures: pictures.filteredPictures,
     visiblePictures: pictures.visiblePictures,
     isFetching: pictures.isFetching,
-    enabledFilters: pictures.enabledFilters
+    enabledFilter:pictures.enabledFilter,
+    searchFor: pictures.searchFor
   }
 };
 

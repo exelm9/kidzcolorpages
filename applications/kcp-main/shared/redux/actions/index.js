@@ -14,16 +14,24 @@ export const fetchPictures = () =>
 	(dispatch) =>
 		request.get('/api').then((response) => {
 			var data = JSON.parse(response.data);
-			dispatch({ type: FETCH_PICTURES, payload: data })
+			dispatch({ type: FETCH_PICTURES, payload: data})
 		});
 
-export const filterPictures = (filter) =>
-	({ type: SET_FILTERS, filters: filter });
+export const filterPictures = (filter) => (
+	{ type: SET_FILTERS, filters: filter }
+);
 
-export const showPictures = (pictures, count) =>
-	({ type: SHOW_PICTURES, payload: pictures.slice(0, count + 12) });
+export const showPictures = (pictures, count) => {
+  var visiblePictures = pictures.slice(0, count + 12);
+  visiblePictures = visiblePictures.map((picture, idx) => ({...picture, idx}));
+  return { type: SHOW_PICTURES, visiblePictures }
+};
 
 
-export const showModal = (modalState) =>
-	({ type: SHOW_MODAL, modalState });
+export const showModal = (modalState) => (
+  { type: SHOW_MODAL, ...modalState }
+);
 
+export const hideModal = (show) => (
+  { type: HIDE_MODAL, show }
+)

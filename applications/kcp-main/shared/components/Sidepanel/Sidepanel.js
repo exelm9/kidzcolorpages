@@ -34,11 +34,12 @@ export default class Sidepanel extends Component {
         <h5>Sidepanel</h5>
         <SearchBar onSearchChange={ pictureSearch }/>
         <div className="filtersWrap">
-          {filters.map(filter =>{
+          {filters.map((filter, idx) =>{
             return(
             <FilterButton
               onClick={() => this.filterPictures(filter)}
               filterType={ filter }
+              key={ idx }
             />);
            }
           )}

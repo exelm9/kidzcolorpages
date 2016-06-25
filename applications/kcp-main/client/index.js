@@ -10,9 +10,8 @@ import { syncHistoryWithStore } from 'react-router-redux';
 import routes from '../shared/routes.js';
 import {fetchPictures} from '../shared/redux/actions';
 
-import App from '../shared/containers/App/App';
-
-const store = createStore(reducer, applyMiddleware(thunk));
+const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
+const store = createStoreWithMiddleware(reducer, window.devToolsExtension ? window.devToolsExtension() : f => f);
 const history = syncHistoryWithStore(browserHistory, store);
 
 // Initial request for populating pictures

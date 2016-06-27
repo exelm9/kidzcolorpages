@@ -9,7 +9,7 @@ export default class ResultModal extends Component {
     super(props);
   }
 
-  carouselItems = this.props.visiblePictures.map((picture, idx) => (
+  carouselItems = this.props.categoryList.map((picture, idx) => (
     <Carousel.Item key={idx}>
       <Image src={`/media/alias/${picture.uuid}`}/>
       <Carousel.Caption>

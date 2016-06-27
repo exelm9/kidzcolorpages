@@ -4,15 +4,16 @@ import ResultsListItem from './resultsListItem';
 import ReactInfinite from 'react-infinite';
 
 const ResultsList = (props) => {
-    const visiblePictures = props.visiblePictures.map((image, idx) => {
+	console.log(props)
+    const categoryList = props.categoryList.map((image, idx) => {
         return <ResultsListItem image={"/media/alias/" + image.uuid} caption={image.title} showModal={props.showModal} key={idx} />
         });
 
     return (
 
-            <Infinite  elementHeight={200} preloadBatchSize={Infinite.containerHeightScaleFactor(0.5)} useWindowAsScrollContainer={true}>
-                {visiblePictures}
-                </Infinite>
+            <ReactInfinite  elementHeight={200} preloadBatchSize={ReactInfinite.containerHeightScaleFactor(0.5)} useWindowAsScrollContainer={true}>
+                {categoryList}
+                </ReactInfinite>
         );
 
 

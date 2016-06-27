@@ -12,6 +12,7 @@ export const onSearchBlur = (term) => ({ type: actions.SET_SEARCH, term: term  }
 export const fetchPictures = () => (dispatch) =>
 		request.get('/api').then((response) => {
       var data = JSON.parse(response.data);
+      console.log(data,'allll ze data')
       dispatch({type: actions.FETCH_PICTURES, payload: data})
     });
 
@@ -20,9 +21,9 @@ export const filterPictures = (filter) => {
 };
 
 export const showPictures = (pictures, count) => {
-  var visiblePictures = pictures.slice(0, count + 12);
-  visiblePictures = visiblePictures.map((picture, idx) => ({...picture, idx}));
-  return { type: actions.SHOW_PICTURES, visiblePictures };
+  var categoryList = pictures.slice(0, count + 12);
+  categoryList = categoryList.map((picture, idx) => ({...picture, idx}));
+  return { type: actions.SHOW_PICTURES, categoryList };
 };
 
 export const showModal = (modalState) => {

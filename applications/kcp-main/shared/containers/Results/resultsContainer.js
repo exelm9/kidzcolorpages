@@ -3,7 +3,7 @@ import React, {PropTypes, Component} from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as ColorPagesActions from '../../redux/actions';
-import ResultsList from '../../components/DefaultResult/resultsList';
+import CategoryItem from '../../components/DefaultResult/categoryItem';
 // import ResultsJumbotron from '../../components/FeaturedResult/resultsJumbotron';
 
 import _ from 'lodash';
@@ -20,14 +20,18 @@ export default class ResultsContainer extends Component {
   }
 
   showModal(imgIdx) {
-    this.props.actions.showModal({ show: true, imgIdx, results: this.props.visiblePictures });
+    this.props.actions.showModal({ show: true, imgIdx, results: this.props.categoryList });
   }
 
   render() {
     const {
       isFetching,
-      allPictures
+      categoryList
     } = this.props;
+
+    const categories = categoryList.map((category, idx) => {
+      return <CategoryItem caption={category.category_title} key={idx} showModal={this.showModal} />
+    });
 
     if (isFetching) {
       return <h2><i>Loading Pics</i></h2>
@@ -36,9 +40,9 @@ export default class ResultsContainer extends Component {
     return (
       <div className="col-md-9 col-md-push-3">
         {/*<ResultsJumbotron images={this.props.pictures} />*/}
-
-        <ResultsList allPictures={allPictures.categories} visiblePictures={this.props.visiblePictures} showModal={this.showModal} />
-        <ResultModal visiblePictures={this.props.visiblePictures} />
+        {/*<ResultsList allPictures={allPictures.categories} categoryList={this.props.categoryList} showModal={this.showModal} />*/}
+        {categories}
+        {/*<ResultModal categoryList={this.props.categoryList} />*/}
 
       </div>
     );
@@ -53,7 +57,7 @@ ResultsContainer.defaultProps = {
 const mapStateToProps = ({pictures}) => {
   return {
     allPictures: pictures.allPictures,
-    visiblePictures: pictures.visiblePictures,
+    categoryList: pictures.categoryList,
     isFetching: pictures.isFetching,
     enabledFilter:pictures.enabledFilter,
     searchFor: pictures.searchFor

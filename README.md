@@ -73,5 +73,3 @@ KCP ( Kidz Coloring Pages ) on Atlas
 	3)  run "$ npm install" in the /autoload
 
 	4)  run "$ node atlas " in the root of this project.
-
-	

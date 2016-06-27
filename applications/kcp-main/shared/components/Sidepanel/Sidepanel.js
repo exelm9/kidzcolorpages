@@ -36,7 +36,9 @@ export default class Sidepanel extends Component {
 
   render() {
     const pictureSearch = _.debounce((term) => { this.pictureSearch(term) }, 300);
-    const filters = this.props.filters.filters;
+    const filters = _.map(this.props.filters.filters, function(value,key){
+      return key;
+    });
     const activeFilter = this.state.activeFilterBtn;
 
     return (

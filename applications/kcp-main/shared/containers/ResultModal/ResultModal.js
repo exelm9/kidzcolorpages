@@ -7,11 +7,7 @@ import * as ColorPagesActions from '../../redux/actions';
 export default class ResultModal extends Component {
   constructor(props) {
     super(props);
-    // console.log('harr0');
-    // console.log('visible pictures: ', this.props.visiblePictures);
   }
-
-
 
   carouselItems = this.props.visiblePictures.map((picture, idx) => (
     <Carousel.Item key={idx}>

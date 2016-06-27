@@ -7,8 +7,8 @@ import * as ColorPagesActions from '../../redux/actions';
 export default class ResultModal extends Component {
   constructor(props) {
     super(props);
-    console.log('harr0');
-    console.log('visible pictures: ', this.props.visiblePictures);
+    // console.log('harr0');
+    // console.log('visible pictures: ', this.props.visiblePictures);
   }
 
 

@@ -25,9 +25,3 @@
 *.wav
 *.mp3
 *.wma
-
-!files/*.jpg
-!files/*.gif
-!files/*.png
-!files/*.svg
-!files/*.ico

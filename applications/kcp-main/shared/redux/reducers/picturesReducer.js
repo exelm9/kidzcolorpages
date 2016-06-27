@@ -3,7 +3,6 @@ import _ from 'lodash';
 
 const initialState = {
 	allPictures:null,
-  filteredPictures:null,
   visiblePictures: [],
 	isFetching:true,
 	enabledFilter:null,
@@ -16,7 +15,7 @@ export default function picturesReducer(state = initialState, action) {
     //console.log(state.enabledFilter, state.searchFor, pictures,'should be all')
     let flatPicsArr = [];
     let pics = pictures;
-    console.log(pics)
+
     if(pics){
       let allNestedPictures = pics.categories;
       // iterate through every category that has nested pictures
@@ -66,19 +65,16 @@ export default function picturesReducer(state = initialState, action) {
 
   switch (action.type) {
     case FETCH_PICTURES:
-      let filteredPictures = flattenArray(action.payload);
-      let visiblePictures = filteredPictures.slice(0, 12);
-    	return {...state, allPictures: action.payload, filteredPictures, visiblePictures, isFetching: false};
+      let visiblePictures = flattenArray(action.payload);
+    	return {...state, allPictures: action.payload, visiblePictures, isFetching: false};
     case SHOW_PICTURES:
       return {...state, visiblePictures: action.visiblePictures};
     case SET_FILTERS:
-      filteredPictures = flattenArray(state.allPictures, action.filter);
-      visiblePictures = filteredPictures.slice(0, 12);
-      return {...state, enabledFilter:action.filter, filteredPictures, visiblePictures};
+      visiblePictures = flattenArray(state.allPictures, action.filter);
+      return {...state, enabledFilter:action.filter, visiblePictures};
     case FIND_PICTURES:
-      filteredPictures = flattenArray(state.allPictures, null, action.term);
-      visiblePictures = filteredPictures.slice(0, 12);
-      return {...state, searchFor:action.term, filteredPictures, visiblePictures };
+      visiblePictures = flattenArray(state.allPictures, null, action.term);
+      return {...state, searchFor:action.term, visiblePictures };
     case SET_SEARCH:
       return {...state, searchFor:action.term};
     default:

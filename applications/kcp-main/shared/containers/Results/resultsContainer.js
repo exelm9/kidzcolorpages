@@ -53,7 +53,6 @@ ResultsContainer.defaultProps = {
 const mapStateToProps = ({pictures}) => {
   return {
     allPictures: pictures.allPictures,
-    pictures: pictures.filteredPictures,
     visiblePictures: pictures.visiblePictures,
     isFetching: pictures.isFetching,
     enabledFilter:pictures.enabledFilter,

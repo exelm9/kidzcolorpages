@@ -30,7 +30,12 @@ export default class ResultsContainer extends Component {
     } = this.props;
 
     const categories = categoryList.map((category, idx) => {
-      return <CategoryItem caption={category.category_title} key={idx} showModal={this.showModal} />
+      return <CategoryItem
+              collections={category.collections}
+              caption={category.category_title}
+              key={idx}
+              showModal={this.showModal} 
+            />
     });
 
     if (isFetching) {

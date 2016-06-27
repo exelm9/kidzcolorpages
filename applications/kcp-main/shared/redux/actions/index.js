@@ -12,7 +12,7 @@ export const onSearchBlur = (term) => ({ type: actions.SET_SEARCH, term: term  }
 export const fetchPictures = () => (dispatch) =>
 		request.get('/api').then((response) => {
       var data = JSON.parse(response.data);
-      console.log(data,'allll ze data')
+      console.log(data,'here we are')
       dispatch({type: actions.FETCH_PICTURES, payload: data})
     });
 

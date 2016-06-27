@@ -1,7 +1,7 @@
 // result component(functional)
 import React from 'react';
 
-const categoryItem = ({caption, key, showModal}) => {
+const categoryItem = ({collections, caption, key, showModal}) => {
   const handleClick = (e) => {
     console.log(e.target);
     showModal({key});

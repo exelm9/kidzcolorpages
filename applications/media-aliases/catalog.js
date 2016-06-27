@@ -256,9 +256,9 @@ function make_index(){
 					alias_count: 0,
 					aliases: []
 				}
-
+				
 				if( ! index.categories[_Category].collections[collection.collection_title] ){
-					index.categories[_Category].collections[collection.collection_title] = ({title: collection.collection_title, uuid: collection.collection_uuid});
+					index.categories[_Category].collections[collection.collection_title] = ({title: collection.collection_title, uuid: collection.collection_uuid, collection_thumb: _alias.uuid });
 					index.categories[_Category].collections[collection.collection_title].alias_count = 1;
 				} else {
 					index.categories[_Category].collections[collection.collection_title].alias_count++;

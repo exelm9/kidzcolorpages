@@ -49,7 +49,7 @@ module.exports = function(app){
 			  results.filters = _index.filters;
 			  results.segments = _index.segments;
 
-	  	res.json('<pre>' + JSON.stringify(results, null, ' ') + '</pre>')
+	  	res.json(JSON.stringify(results, null, ' '))
 	});
 
 	app.get("/err", function(req, res, next){

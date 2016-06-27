@@ -4,7 +4,7 @@ const initialState = {
   show: false,
   results: [],
   imgIdx: 0,
-  direction: ''
+  direction: 'next'
 };
 
 export default function modalReducer(state = initialState, action) {

@@ -16,7 +16,6 @@ export default function picturesReducer(state = initialState, action) {
     //console.log(state.enabledFilter, state.searchFor, pictures,'should be all')
     let flatPicsArr = [];
     let pics = pictures;
-    console.log(pics)
     if(pics){
       let allNestedPictures = pics.categories;
       // iterate through every category that has nested pictures

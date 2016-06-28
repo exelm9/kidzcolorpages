@@ -1,11 +1,11 @@
 // result component(functional)
 import React from 'react';
 
-const ResultsListItem = ({image, idx, showImage}) => {
-  const handleClick = (e) => showImage(image, idx);
+const ResultsListItem = ({image, idx, showImage, selected}) => {
+  const handleClick = (e) => showImage(idx);
   
   return (
-    <div className='thumbWrap'>
+    <div className={selected ? 'thumbWrap selected' : 'thumbWrap'}>
       <figure>
         <img
           src={image}

@@ -47,7 +47,6 @@ export default class ResultsContainer extends Component {
     return (
       <div className="col-md-9 col-md-push-3">
         {/*<ResultsJumbotron images={this.props.pictures} />*/}
-        {/*<ResultsList allPictures={allPictures.categories} categoryList={this.props.categoryList} showModal={this.showModal} />*/}
         {categories}
         {/*<ResultModal categoryList={this.props.categoryList} />*/}
 

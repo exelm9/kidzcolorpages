@@ -29,6 +29,10 @@ export const showModal = (modalState) => {
   return { type: actions.SHOW_MODAL, ...modalState };
 };
 
+export const changeImage = (imgIdx) => {
+  return { type: actions.CHANGE_IMAGE, imgIdx };
+};
+
 export const hideModal = (show) => {
   return { type: actions.HIDE_MODAL, show };
 };

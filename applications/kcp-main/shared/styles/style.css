@@ -1,6 +1,5 @@
 .sidepanel{
 	border:1px solid black;
-	width:300px;
 	padding:10px;
 }
 
@@ -37,9 +36,8 @@
 
 /* override bootstrap css */
 .filterButtons.active{
-	color:#286090 !important;
-	background-color:#FFFFFF !important;
-
+	color:#286090;
+	background-color:#FFFFFF;
 }
 
 .collectionItem{
@@ -54,5 +52,6 @@
 }
 
 .navbar{
-	background-color:#286090 !important;
+    margin-bottom:0px;
+	cursor:pointer;
 }

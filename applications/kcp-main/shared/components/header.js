@@ -13,16 +13,14 @@ export default class Header extends Component {
 
   render() {
     return (
-      <div className="container">
-        <nav className="navbar navbar-light bg-faded" >
-          <a onClick={event => this.homeReturn()} className="navbar-brand" href="#">KCP</a>
-            <ul className="nav navbar-nav">
-              <li className="nav-item active pull-xs-right">
-                <a onClick={event => this.pusher()} className="nav-link" href="#">Profile</a>
-              </li>
-            </ul>
-        </nav>
-      </div>
+      <nav className="navbar navbar-light bg-faded" >
+        <div onClick={event => this.homeReturn()} className="navbar-brand" href="#">KCP</div>
+          <ul className="nav navbar-nav">
+            <li className="nav-item active pull-xs-right">
+              <div onClick={event => this.pusher()} className="navbar-brand" href="#">Profile</div>
+            </li>
+          </ul>
+      </nav>
     );
   }
 

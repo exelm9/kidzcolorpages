@@ -1,5 +1,4 @@
 import React, {PropTypes, Component} from 'react';
-import Header from '../header';
 
 export default class Profile extends Component {
   constructor(props) {
@@ -9,7 +8,6 @@ export default class Profile extends Component {
   render() {
     return (
       <div>
-        <Header />
         <div>
           This is a profile.
         </div>

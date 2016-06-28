@@ -1,14 +1,17 @@
 import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
+import Header from '../../components/header';
 import Sidepanel from '../../components/Sidepanel/Sidepanel';
 import ResultsContainer from '../Results/resultsContainer';
 import * as ColorPagesActions from '../../redux/actions';
 import { connect } from 'react-redux';
 
+
 export default class Home extends Component {
   render() {
     return (
       <div>
+        <Header />
         <ResultsContainer />
         <Sidepanel />
       </div>

@@ -55,3 +55,18 @@
     margin-bottom:0px;
 	cursor:pointer;
 }
+
+/* Result Modal */
+
+.galleryWrap{
+	min-height:300px;
+	width:100%;
+	border:1px solid black;
+}
+
+.modalLrgImage{
+	border: none;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}

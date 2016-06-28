@@ -13,7 +13,6 @@ export default class ResultsContainer extends Component {
   constructor(props) {
     super(props);
     this.showModal =  this.showModal.bind(this);
-    console.log(props);
   }
 
   componentWillMount(){

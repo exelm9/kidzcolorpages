@@ -20,9 +20,9 @@ export const filterPictures = (filter) => {
 };
 
 export const showPictures = (pictures, count) => {
-  var visiblePictures = pictures.slice(0, count + 12);
-  visiblePictures = visiblePictures.map((picture, idx) => ({...picture, idx}));
-  return { type: actions.SHOW_PICTURES, visiblePictures };
+  var categoryList = pictures.slice(0, count + 12);
+  categoryList = categoryList.map((picture, idx) => ({...picture, idx}));
+  return { type: actions.SHOW_PICTURES, categoryList };
 };
 
 export const showModal = (modalState) => {

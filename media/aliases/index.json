@@ -55108,46 +55108,55 @@
                 "animals": {
                     "title": "animals",
                     "uuid": "a723e3dfb497b24c5f730bad44328916",
+                    "collection_thumb": "209b6030-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 89
                 },
                 "castles": {
                     "title": "castles",
                     "uuid": "27997b414710a949ed3d27371b7fd33e",
+                    "collection_thumb": "209e4674-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 6
                 },
                 "clothing": {
                     "title": "clothing",
                     "uuid": "50cf19912960f65490b334ea9c196eea",
+                    "collection_thumb": "209e6d74-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 4
                 },
                 "food": {
                     "title": "food",
                     "uuid": "62506be34d574da4a0d158a67253ea99",
+                    "collection_thumb": "209f7ee2-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 2
                 },
                 "household": {
                     "title": "household",
                     "uuid": "f2dd6c078b512971abdd8ed871bafb6f",
+                    "collection_thumb": "20a0de7e-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 42
                 },
                 "seasons": {
                     "title": "seasons",
                     "uuid": "85ed15c4d405df129035c8d503ce4e6b",
+                    "collection_thumb": "20a65cc2-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 1
                 },
                 "shapes": {
                     "title": "shapes",
                     "uuid": "8a995d2704d5368bf91297d33117ab6d",
+                    "collection_thumb": "20a65cc4-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 1
                 },
                 "sports": {
                     "title": "sports",
                     "uuid": "088495f30901580ddd5171531cd26649",
+                    "collection_thumb": "20a683c1-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 4
                 },
                 "whether": {
                     "title": "whether",
                     "uuid": "7d767e6bb05138bb94abee483ea8abc6",
+                    "collection_thumb": "20b10b1b-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 2
                 }
             },
@@ -55161,41 +55170,49 @@
                 "birds": {
                     "title": "birds",
                     "uuid": "75c73f175a85cee384f32a5608eb67d1",
+                    "collection_thumb": "209b603e-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 43
                 },
                 "bugs": {
                     "title": "bugs",
                     "uuid": "e3255bae220613022d67e26d2e4fa689",
+                    "collection_thumb": "209bd565-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 12
                 },
                 "dinosaurs": {
                     "title": "dinosaurs",
                     "uuid": "87f9c39b9e3f358174d58a584c2727b4",
+                    "collection_thumb": "209c2382-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 41
                 },
                 "dogs": {
                     "title": "dogs",
                     "uuid": "d28d2d3560fa76f0dbb1a452f8c38169",
+                    "collection_thumb": "209c98c0-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 21
                 },
                 "farm animals": {
                     "title": "farm animals",
                     "uuid": "bf02f99ef552fc8953b2d582311e44e2",
+                    "collection_thumb": "209ce6d4-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 28
                 },
                 "fish": {
                     "title": "fish",
                     "uuid": "83e4a96aed96436c621b9809e258b309",
+                    "collection_thumb": "209d0ded-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 16
                 },
                 "mystical": {
                     "title": "mystical",
                     "uuid": "73ac2804765bd1a708761ace5185f117",
+                    "collection_thumb": "209d5c0d-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 8
                 },
                 "wild animals": {
                     "title": "wild animals",
                     "uuid": "753f1c1c8add30fc2531286cea175902",
+                    "collection_thumb": "209dd132-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 56
                 }
             },
@@ -55209,21 +55226,25 @@
                 "abcs": {
                     "title": "abcs",
                     "uuid": "e5c639ea4b3706aac469718248bb0299",
+                    "collection_thumb": "209e6d7c-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 26
                 },
                 "letters": {
                     "title": "letters",
                     "uuid": "9a31962b953d38f5702495fdf5b44ad0",
+                    "collection_thumb": "209ebb91-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 25
                 },
                 "numbers": {
                     "title": "numbers",
                     "uuid": "ee5c35ce3d081da90622a10d2272ed5e",
+                    "collection_thumb": "209f09b0-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 20
                 },
                 "sounds": {
                     "title": "sounds",
                     "uuid": "ad1588d76517dd34c49c3f901bce7fcf",
+                    "collection_thumb": "209f09c6-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 20
                 }
             },
@@ -55237,6 +55258,7 @@
                 "clowns": {
                     "title": "clowns",
                     "uuid": "f9b12092c70ec2d9ae6d9ff68b061b27",
+                    "collection_thumb": "209f30d4-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 6
                 }
             },
@@ -55250,46 +55272,55 @@
                 "4th of July": {
                     "title": "4th of July",
                     "uuid": "e89cae2c084e3094a3d1f0df38eaeead",
+                    "collection_thumb": "209f7ee8-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 3
                 },
                 "christmas": {
                     "title": "christmas",
                     "uuid": "3d4fe7a00bc6fb52a91685d038733d6f",
+                    "collection_thumb": "209f7eed-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 70
                 },
                 "easter": {
                     "title": "easter",
                     "uuid": "154f020f4c00a706fdcbdfd49bee9a36",
+                    "collection_thumb": "20a04231-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 11
                 },
                 "fathers day": {
                     "title": "fathers day",
                     "uuid": "5073210ce8552c7bd181f322571e0e87",
+                    "collection_thumb": "20a06942-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 1
                 },
                 "halloween": {
                     "title": "halloween",
                     "uuid": "a6539c35ec07965956f1de7b3ec36971",
+                    "collection_thumb": "20a06945-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 46
                 },
                 "hanukkah": {
                     "title": "hanukkah",
                     "uuid": "d0f61ee27b6d199e7eba6010959f1274",
+                    "collection_thumb": "20a0b767-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 4
                 },
                 "mothers day": {
                     "title": "mothers day",
                     "uuid": "e4768583f31e2e2982d47c1fc7eb5b2a",
+                    "collection_thumb": "20a0b76c-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 11
                 },
                 "st patrics day": {
                     "title": "st patrics day",
                     "uuid": "89c3bbd4ead0e76d25ea475114fa6c0a",
+                    "collection_thumb": "20a0de74-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 4
                 },
                 "valentine's day": {
                     "title": "valentine's day",
                     "uuid": "155124088ef66d0f8619c3f3c8bde379",
+                    "collection_thumb": "20a0de79-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 3
                 }
             },
@@ -55303,11 +55334,13 @@
                 "bunny": {
                     "title": "bunny",
                     "uuid": "20ee80e63596799a1543bc9fd88d8878",
+                    "collection_thumb": "20a01b27-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 12
                 },
                 "eggs": {
                     "title": "eggs",
                     "uuid": "ab92d9fae5ee7975c7735376ec60851b",
+                    "collection_thumb": "20a0423a-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 8
                 }
             },
@@ -55321,6 +55354,7 @@
                 "flowers": {
                     "title": "flowers",
                     "uuid": "7d37c580f9c36fa004af865448a6e278",
+                    "collection_thumb": "20a153ab-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 6
                 }
             },
@@ -55334,26 +55368,31 @@
                 "activity pages": {
                     "title": "activity pages",
                     "uuid": "9e39b0dae881afb6c23de74326529160",
+                    "collection_thumb": "20a153b5-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 535
                 },
                 "angels": {
                     "title": "angels",
                     "uuid": "82a7c395a86348dd4bfd11bb05b71cbf",
+                    "collection_thumb": "20a5e786-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 23
                 },
                 "bible": {
                     "title": "bible",
                     "uuid": "a7c01f5c9df2dcea94d8d8535ef218ef",
+                    "collection_thumb": "20a60ea2-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 4
                 },
                 "color by number": {
                     "title": "color by number",
                     "uuid": "3dc6e09d9543e172b7c7eba84ece49d8",
+                    "collection_thumb": "20a635a7-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 10
                 },
                 "dot to dot": {
                     "title": "dot to dot",
                     "uuid": "0f52e55c0ee1cbc6138edd42943d398c",
+                    "collection_thumb": "20a635b3-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 18
                 }
             },
@@ -55367,6 +55406,7 @@
                 "action": {
                     "title": "action",
                     "uuid": "418c5509e2171d55b0aee5c2ea4442b5",
+                    "collection_thumb": "20a683c9-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 13
                 }
             },
@@ -55380,16 +55420,19 @@
                 "fairy tales": {
                     "title": "fairy tales",
                     "uuid": "00278abe9e7c3c7a38570b833bae3e7f",
+                    "collection_thumb": "20a6aad6-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 9
                 },
                 "magical creatures": {
                     "title": "magical creatures",
                     "uuid": "05fc0488d2b161a0271c331ef4015a5f",
+                    "collection_thumb": "20a91bdf-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 22
                 },
                 "movie characters": {
                     "title": "movie characters",
                     "uuid": "4592e5ee4920f020eda8c6f44eb1a0d7",
+                    "collection_thumb": "20a9df20-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 143
                 }
             },
@@ -55403,6 +55446,7 @@
                 "big picture book of family values": {
                     "title": "big picture book of family values",
                     "uuid": "ea97b967b47b0a89c2a8ec157b1f5c4d",
+                    "collection_thumb": "20a6aae3-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 204
                 }
             },
@@ -55416,71 +55460,85 @@
                 "aladdin": {
                     "title": "aladdin",
                     "uuid": "1d87b0018eaff7a8cf7cf63d5c067e44",
+                    "collection_thumb": "20a942f3-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 61
                 },
                 "beauty and the beast": {
                     "title": "beauty and the beast",
                     "uuid": "a06fc6427b2a372d5874cdf3ae511841",
+                    "collection_thumb": "20aa0632-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 73
                 },
                 "cinderella": {
                     "title": "cinderella",
                     "uuid": "583fea53729bcb119bc1099a0dc5e73d",
+                    "collection_thumb": "20aa7b73-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 40
                 },
                 "daisy duck": {
                     "title": "daisy duck",
                     "uuid": "0a41de6a478327baebf92a1b25fcce3d",
+                    "collection_thumb": "20ab65c5-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 11
                 },
                 "donald duck": {
                     "title": "donald duck",
                     "uuid": "9101b96731117727a5cd428c599bf338",
+                    "collection_thumb": "20ab65d3-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 66
                 },
                 "goofy": {
                     "title": "goofy",
                     "uuid": "4f94d7e65f1e7e55b5bfcf7334449d8f",
+                    "collection_thumb": "20ac020c-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 13
                 },
                 "mickey": {
                     "title": "mickey",
                     "uuid": "4d5257e5acc7fcac2f5dcd66c4e78f9a",
+                    "collection_thumb": "20ac2922-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 68
                 },
                 "minie": {
                     "title": "minie",
                     "uuid": "7e256a5897b995b39f7fc179a294723c",
+                    "collection_thumb": "20ac9e47-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 9
                 },
                 "peter pan": {
                     "title": "peter pan",
                     "uuid": "641caf42dc0cf0cddf62b6402b369f3c",
+                    "collection_thumb": "20acc567-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 35
                 },
                 "pluto": {
                     "title": "pluto",
                     "uuid": "c6009f08fc5fc6385f1ea1f5840e179f",
+                    "collection_thumb": "20ad137a-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 5
                 },
                 "sleeping beauty": {
                     "title": "sleeping beauty",
                     "uuid": "34cf805db69e7e83a9fa0da9b2f7504e",
+                    "collection_thumb": "20ad6197-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 18
                 },
                 "snow white": {
                     "title": "snow white",
                     "uuid": "aa6b789dea9808916bcc85b34146ba45",
+                    "collection_thumb": "20ad88a8-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 30
                 },
                 "teletubees": {
                     "title": "teletubees",
                     "uuid": "164ec070d8abe3db9d946cd555337d9c",
+                    "collection_thumb": "20add6c5-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 16
                 },
                 "the little mermaid": {
                     "title": "the little mermaid",
                     "uuid": "46256d82e5fe60d0e67371307424656b",
+                    "collection_thumb": "20adfdd5-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 165
                 }
             },
@@ -55494,31 +55552,37 @@
                 "cars and bikes": {
                     "title": "cars and bikes",
                     "uuid": "2f4d06d7d257785022616a434419518e",
+                    "collection_thumb": "20aff9a5-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 33
                 },
                 "plains": {
                     "title": "plains",
                     "uuid": "20b7bffdc8a9a8dbc12b53c222a6e961",
+                    "collection_thumb": "20b047c7-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 9
                 },
                 "ships and boats": {
                     "title": "ships and boats",
                     "uuid": "673cca51e8ba20ce3fec59078f28c4a1",
+                    "collection_thumb": "20b06ed0-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 10
                 },
                 "space": {
                     "title": "space",
                     "uuid": "ff2364a0be3d20e46cc69efb36afe9a5",
+                    "collection_thumb": "20b06edc-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 8
                 },
                 "trains": {
                     "title": "trains",
                     "uuid": "5083eaa1a1bda32218b4c23801e458cf",
+                    "collection_thumb": "20b095e9-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 33
                 },
                 "trucks and buses": {
                     "title": "trucks and buses",
                     "uuid": "b90ed5d27f460bb30ab3bf946def6843",
+                    "collection_thumb": "20b0e401-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 35
                 }
             },
@@ -55532,81 +55596,97 @@
                 "animals": {
                     "title": "animals",
                     "uuid": "a723e3dfb497b24c5f730bad44328916",
+                    "collection_thumb": "20b10b20-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 15
                 },
                 "boy": {
                     "title": "boy",
                     "uuid": "1a699ad5e06aa8a6db3bcf9cfb2f00f2",
+                    "collection_thumb": "20b13226-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 2
                 },
                 "comics": {
                     "title": "comics",
                     "uuid": "51af637aed604c1d5376026ae625111e",
+                    "collection_thumb": "20b13229-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 52
                 },
                 "giant": {
                     "title": "giant",
                     "uuid": "54cf0d15829b90bb7867d66bda710c97",
+                    "collection_thumb": "20b1804a-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 58
                 },
                 "hands": {
                     "title": "hands",
                     "uuid": "6c8d61508321ac444175370124200350",
+                    "collection_thumb": "20b1ce6e-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 1
                 },
                 "iron man": {
                     "title": "iron man",
                     "uuid": "698a077291520164f0481ca6156b71d2",
+                    "collection_thumb": "20b1ce70-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 1
                 },
                 "jimi": {
                     "title": "jimi",
                     "uuid": "94ca11e813946f5e475ba2e6e05fd5b0",
+                    "collection_thumb": "20b1ce72-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 4
                 },
                 "jungle book": {
                     "title": "jungle book",
                     "uuid": "2846fea1406032683f4c035d97da225e",
+                    "collection_thumb": "20b1f574-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 5
                 },
                 "life": {
                     "title": "life",
                     "uuid": "e155e1bb4a9c38e3baf90637ab7865df",
+                    "collection_thumb": "20b1f57a-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 25
                 },
                 "man": {
                     "title": "man",
                     "uuid": "39c63ddb96a31b9610cd976b896ad4f0",
+                    "collection_thumb": "20b21c91-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 17
                 },
                 "misc": {
                     "title": "misc",
                     "uuid": "bc957e26ff41470c556ee5d09e96880b",
+                    "collection_thumb": "20b24398-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 470
                 },
                 "simpsons": {
                     "title": "simpsons",
                     "uuid": "39b4fb4846c99c1d41a4e015da0b60bc",
+                    "collection_thumb": "20b5c607-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 19
                 },
                 "skull": {
                     "title": "skull",
                     "uuid": "f13460bd46c28e73e8d2b6122bea2241",
+                    "collection_thumb": "20b61424-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 15
                 },
                 "sword and the stone": {
                     "title": "sword and the stone",
                     "uuid": "3e477f5b9c1a5c23861562a291fa51f1",
+                    "collection_thumb": "20b63b35-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 1
                 },
                 "the little mermaid": {
                     "title": "the little mermaid",
                     "uuid": "46256d82e5fe60d0e67371307424656b",
+                    "collection_thumb": "20b63b37-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 1
                 },
                 "woman": {
                     "title": "woman",
                     "uuid": "56609ab6ba04048adc2cbfafbe745e10",
+                    "collection_thumb": "20b63b39-3b68-11e6-8783-4f5bc8c52ce0",
                     "alias_count": 4
                 }
             },
@@ -55618,7 +55698,6 @@
             "collection_title": "animals",
             "collection_uuid": "a723e3dfb497b24c5f730bad44328916",
             "collection_mPath": "coloring pages/animals",
-            "collection_thumb": "209b6030-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 104,
             "aliases": [
                 "209b6030-3b68-11e6-8783-4f5bc8c52ce0",
@@ -55731,7 +55810,6 @@
             "collection_title": "birds",
             "collection_uuid": "75c73f175a85cee384f32a5608eb67d1",
             "collection_mPath": "coloring pages/animals/birds",
-            "collection_thumb": "209b603e-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 43,
             "aliases": [
                 "209b603e-3b68-11e6-8783-4f5bc8c52ce0",
@@ -55783,7 +55861,6 @@
             "collection_title": "bugs",
             "collection_uuid": "e3255bae220613022d67e26d2e4fa689",
             "collection_mPath": "coloring pages/animals/bugs",
-            "collection_thumb": "209bd565-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 12,
             "aliases": [
                 "209bd565-3b68-11e6-8783-4f5bc8c52ce0",
@@ -55804,7 +55881,6 @@
             "collection_title": "dinosaurs",
             "collection_uuid": "87f9c39b9e3f358174d58a584c2727b4",
             "collection_mPath": "coloring pages/animals/dinosaurs",
-            "collection_thumb": "209c2382-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 41,
             "aliases": [
                 "209c2382-3b68-11e6-8783-4f5bc8c52ce0",
@@ -55854,7 +55930,6 @@
             "collection_title": "dogs",
             "collection_uuid": "d28d2d3560fa76f0dbb1a452f8c38169",
             "collection_mPath": "coloring pages/animals/dogs",
-            "collection_thumb": "209c98c0-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 21,
             "aliases": [
                 "209c98c0-3b68-11e6-8783-4f5bc8c52ce0",
@@ -55884,7 +55959,6 @@
             "collection_title": "farm animals",
             "collection_uuid": "bf02f99ef552fc8953b2d582311e44e2",
             "collection_mPath": "coloring pages/animals/farm animals",
-            "collection_thumb": "209ce6d4-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 28,
             "aliases": [
                 "209ce6d4-3b68-11e6-8783-4f5bc8c52ce0",
@@ -55921,7 +55995,6 @@
             "collection_title": "fish",
             "collection_uuid": "83e4a96aed96436c621b9809e258b309",
             "collection_mPath": "coloring pages/animals/fish",
-            "collection_thumb": "209d0ded-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 16,
             "aliases": [
                 "209d0ded-3b68-11e6-8783-4f5bc8c52ce0",
@@ -55946,7 +56019,6 @@
             "collection_title": "mystical",
             "collection_uuid": "73ac2804765bd1a708761ace5185f117",
             "collection_mPath": "coloring pages/animals/mystical",
-            "collection_thumb": "209d5c0d-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 8,
             "aliases": [
                 "209d5c0d-3b68-11e6-8783-4f5bc8c52ce0",
@@ -55963,7 +56035,6 @@
             "collection_title": "wild animals",
             "collection_uuid": "753f1c1c8add30fc2531286cea175902",
             "collection_mPath": "coloring pages/animals/wild animals",
-            "collection_thumb": "209dd132-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 56,
             "aliases": [
                 "209dd132-3b68-11e6-8783-4f5bc8c52ce0",
@@ -56028,7 +56099,6 @@
             "collection_title": "castles",
             "collection_uuid": "27997b414710a949ed3d27371b7fd33e",
             "collection_mPath": "coloring pages/castles",
-            "collection_thumb": "209e4674-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 6,
             "aliases": [
                 "209e4674-3b68-11e6-8783-4f5bc8c52ce0",
@@ -56043,7 +56113,6 @@
             "collection_title": "clothing",
             "collection_uuid": "50cf19912960f65490b334ea9c196eea",
             "collection_mPath": "coloring pages/clothing",
-            "collection_thumb": "209e6d74-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 4,
             "aliases": [
                 "209e6d74-3b68-11e6-8783-4f5bc8c52ce0",
@@ -56056,7 +56125,6 @@
             "collection_title": "abcs",
             "collection_uuid": "e5c639ea4b3706aac469718248bb0299",
             "collection_mPath": "coloring pages/education/abcs",
-            "collection_thumb": "209e6d7c-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 26,
             "aliases": [
                 "209e6d7c-3b68-11e6-8783-4f5bc8c52ce0",
@@ -56091,7 +56159,6 @@
             "collection_title": "letters",
             "collection_uuid": "9a31962b953d38f5702495fdf5b44ad0",
             "collection_mPath": "coloring pages/education/letters",
-            "collection_thumb": "209ebb91-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 25,
             "aliases": [
                 "209ebb91-3b68-11e6-8783-4f5bc8c52ce0",
@@ -56125,7 +56192,6 @@
             "collection_title": "numbers",
             "collection_uuid": "ee5c35ce3d081da90622a10d2272ed5e",
             "collection_mPath": "coloring pages/education/numbers",
-            "collection_thumb": "209f09b0-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 20,
             "aliases": [
                 "209f09b0-3b68-11e6-8783-4f5bc8c52ce0",
@@ -56154,7 +56220,6 @@
             "collection_title": "sounds",
             "collection_uuid": "ad1588d76517dd34c49c3f901bce7fcf",
             "collection_mPath": "coloring pages/education/sounds",
-            "collection_thumb": "209f09c6-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 20,
             "aliases": [
                 "209f09c6-3b68-11e6-8783-4f5bc8c52ce0",
@@ -56183,7 +56248,6 @@
             "collection_title": "clowns",
             "collection_uuid": "f9b12092c70ec2d9ae6d9ff68b061b27",
             "collection_mPath": "coloring pages/events and places/circus/clowns",
-            "collection_thumb": "209f30d4-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 6,
             "aliases": [
                 "209f30d4-3b68-11e6-8783-4f5bc8c52ce0",
@@ -56198,7 +56262,6 @@
             "collection_title": "food",
             "collection_uuid": "62506be34d574da4a0d158a67253ea99",
             "collection_mPath": "coloring pages/food",
-            "collection_thumb": "209f7ee2-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 2,
             "aliases": [
                 "209f7ee2-3b68-11e6-8783-4f5bc8c52ce0",
@@ -56209,7 +56272,6 @@
             "collection_title": "4th of July",
             "collection_uuid": "e89cae2c084e3094a3d1f0df38eaeead",
             "collection_mPath": "coloring pages/holidays/4th of July",
-            "collection_thumb": "209f7ee8-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 3,
             "aliases": [
                 "209f7ee8-3b68-11e6-8783-4f5bc8c52ce0",
@@ -56221,7 +56283,6 @@
             "collection_title": "christmas",
             "collection_uuid": "3d4fe7a00bc6fb52a91685d038733d6f",
             "collection_mPath": "coloring pages/holidays/christmas",
-            "collection_thumb": "209f7eed-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 70,
             "aliases": [
                 "209f7eed-3b68-11e6-8783-4f5bc8c52ce0",
@@ -56300,7 +56361,6 @@
             "collection_title": "bunny",
             "collection_uuid": "20ee80e63596799a1543bc9fd88d8878",
             "collection_mPath": "coloring pages/holidays/easter/bunny",
-            "collection_thumb": "20a01b27-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 12,
             "aliases": [
                 "20a01b27-3b68-11e6-8783-4f5bc8c52ce0",
@@ -56321,7 +56381,6 @@
             "collection_title": "easter",
             "collection_uuid": "154f020f4c00a706fdcbdfd49bee9a36",
             "collection_mPath": "coloring pages/holidays/easter",
-            "collection_thumb": "20a04231-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 11,
             "aliases": [
                 "20a04231-3b68-11e6-8783-4f5bc8c52ce0",
@@ -56341,7 +56400,6 @@
             "collection_title": "eggs",
             "collection_uuid": "ab92d9fae5ee7975c7735376ec60851b",
             "collection_mPath": "coloring pages/holidays/easter/eggs",
-            "collection_thumb": "20a0423a-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 8,
             "aliases": [
                 "20a0423a-3b68-11e6-8783-4f5bc8c52ce0",
@@ -56358,7 +56416,6 @@
             "collection_title": "fathers day",
             "collection_uuid": "5073210ce8552c7bd181f322571e0e87",
             "collection_mPath": "coloring pages/holidays/fathers day",
-            "collection_thumb": "20a06942-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 1,
             "aliases": [
                 "20a06942-3b68-11e6-8783-4f5bc8c52ce0"
@@ -56368,7 +56425,6 @@
             "collection_title": "halloween",
             "collection_uuid": "a6539c35ec07965956f1de7b3ec36971",
             "collection_mPath": "coloring pages/holidays/halloween",
-            "collection_thumb": "20a06945-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 46,
             "aliases": [
                 "20a06945-3b68-11e6-8783-4f5bc8c52ce0",
@@ -56423,7 +56479,6 @@
             "collection_title": "hanukkah",
             "collection_uuid": "d0f61ee27b6d199e7eba6010959f1274",
             "collection_mPath": "coloring pages/holidays/hanukkah",
-            "collection_thumb": "20a0b767-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 4,
             "aliases": [
                 "20a0b767-3b68-11e6-8783-4f5bc8c52ce0",
@@ -56436,7 +56491,6 @@
             "collection_title": "mothers day",
             "collection_uuid": "e4768583f31e2e2982d47c1fc7eb5b2a",
             "collection_mPath": "coloring pages/holidays/mothers day",
-            "collection_thumb": "20a0b76c-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 11,
             "aliases": [
                 "20a0b76c-3b68-11e6-8783-4f5bc8c52ce0",
@@ -56456,7 +56510,6 @@
             "collection_title": "st patrics day",
             "collection_uuid": "89c3bbd4ead0e76d25ea475114fa6c0a",
             "collection_mPath": "coloring pages/holidays/st patrics day",
-            "collection_thumb": "20a0de74-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 4,
             "aliases": [
                 "20a0de74-3b68-11e6-8783-4f5bc8c52ce0",
@@ -56469,7 +56522,6 @@
             "collection_title": "valentine's day",
             "collection_uuid": "155124088ef66d0f8619c3f3c8bde379",
             "collection_mPath": "coloring pages/holidays/valentine's day",
-            "collection_thumb": "20a0de79-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 3,
             "aliases": [
                 "20a0de79-3b68-11e6-8783-4f5bc8c52ce0",
@@ -56481,7 +56533,6 @@
             "collection_title": "household",
             "collection_uuid": "f2dd6c078b512971abdd8ed871bafb6f",
             "collection_mPath": "coloring pages/household",
-            "collection_thumb": "20a0de7e-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 42,
             "aliases": [
                 "20a0de7e-3b68-11e6-8783-4f5bc8c52ce0",
@@ -56532,7 +56583,6 @@
             "collection_title": "flowers",
             "collection_uuid": "7d37c580f9c36fa004af865448a6e278",
             "collection_mPath": "coloring pages/plants/flowers",
-            "collection_thumb": "20a153ab-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 6,
             "aliases": [
                 "20a153ab-3b68-11e6-8783-4f5bc8c52ce0",
@@ -56547,7 +56597,6 @@
             "collection_title": "activity pages",
             "collection_uuid": "9e39b0dae881afb6c23de74326529160",
             "collection_mPath": "coloring pages/projects/activity pages",
-            "collection_thumb": "20a153b5-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 535,
             "aliases": [
                 "20a153b5-3b68-11e6-8783-4f5bc8c52ce0",
@@ -57091,7 +57140,6 @@
             "collection_title": "angels",
             "collection_uuid": "82a7c395a86348dd4bfd11bb05b71cbf",
             "collection_mPath": "coloring pages/projects/angels",
-            "collection_thumb": "20a5e786-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 23,
             "aliases": [
                 "20a5e786-3b68-11e6-8783-4f5bc8c52ce0",
@@ -57123,7 +57171,6 @@
             "collection_title": "bible",
             "collection_uuid": "a7c01f5c9df2dcea94d8d8535ef218ef",
             "collection_mPath": "coloring pages/projects/bible",
-            "collection_thumb": "20a60ea2-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 4,
             "aliases": [
                 "20a60ea2-3b68-11e6-8783-4f5bc8c52ce0",
@@ -57136,7 +57183,6 @@
             "collection_title": "color by number",
             "collection_uuid": "3dc6e09d9543e172b7c7eba84ece49d8",
             "collection_mPath": "coloring pages/projects/color by number",
-            "collection_thumb": "20a635a7-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 10,
             "aliases": [
                 "20a635a7-3b68-11e6-8783-4f5bc8c52ce0",
@@ -57155,7 +57201,6 @@
             "collection_title": "dot to dot",
             "collection_uuid": "0f52e55c0ee1cbc6138edd42943d398c",
             "collection_mPath": "coloring pages/projects/dot to dot",
-            "collection_thumb": "20a635b3-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 18,
             "aliases": [
                 "20a635b3-3b68-11e6-8783-4f5bc8c52ce0",
@@ -57182,7 +57227,6 @@
             "collection_title": "seasons",
             "collection_uuid": "85ed15c4d405df129035c8d503ce4e6b",
             "collection_mPath": "coloring pages/seasons",
-            "collection_thumb": "20a65cc2-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 1,
             "aliases": [
                 "20a65cc2-3b68-11e6-8783-4f5bc8c52ce0"
@@ -57192,7 +57236,6 @@
             "collection_title": "shapes",
             "collection_uuid": "8a995d2704d5368bf91297d33117ab6d",
             "collection_mPath": "coloring pages/shapes",
-            "collection_thumb": "20a65cc4-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 1,
             "aliases": [
                 "20a65cc4-3b68-11e6-8783-4f5bc8c52ce0"
@@ -57202,7 +57245,6 @@
             "collection_title": "sports",
             "collection_uuid": "088495f30901580ddd5171531cd26649",
             "collection_mPath": "coloring pages/sports",
-            "collection_thumb": "20a683c1-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 4,
             "aliases": [
                 "20a683c1-3b68-11e6-8783-4f5bc8c52ce0",
@@ -57215,7 +57257,6 @@
             "collection_title": "action",
             "collection_uuid": "418c5509e2171d55b0aee5c2ea4442b5",
             "collection_mPath": "coloring pages/stories/cartoons/action",
-            "collection_thumb": "20a683c9-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 13,
             "aliases": [
                 "20a683c9-3b68-11e6-8783-4f5bc8c52ce0",
@@ -57237,7 +57278,6 @@
             "collection_title": "fairy tales",
             "collection_uuid": "00278abe9e7c3c7a38570b833bae3e7f",
             "collection_mPath": "coloring pages/stories/fairy tales",
-            "collection_thumb": "20a6aad6-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 9,
             "aliases": [
                 "20a6aad6-3b68-11e6-8783-4f5bc8c52ce0",
@@ -57255,7 +57295,6 @@
             "collection_title": "big picture book of family values",
             "collection_uuid": "ea97b967b47b0a89c2a8ec157b1f5c4d",
             "collection_mPath": "coloring pages/stories/kids books/big picture book of family values",
-            "collection_thumb": "20a6aae3-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 204,
             "aliases": [
                 "20a6aae3-3b68-11e6-8783-4f5bc8c52ce0",
@@ -57468,7 +57507,6 @@
             "collection_title": "magical creatures",
             "collection_uuid": "05fc0488d2b161a0271c331ef4015a5f",
             "collection_mPath": "coloring pages/stories/magical creatures",
-            "collection_thumb": "20a91bdf-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 22,
             "aliases": [
                 "20a91bdf-3b68-11e6-8783-4f5bc8c52ce0",
@@ -57499,7 +57537,6 @@
             "collection_title": "aladdin",
             "collection_uuid": "1d87b0018eaff7a8cf7cf63d5c067e44",
             "collection_mPath": "coloring pages/stories/movie characters/aladdin",
-            "collection_thumb": "20a942f3-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 61,
             "aliases": [
                 "20a942f3-3b68-11e6-8783-4f5bc8c52ce0",
@@ -57569,7 +57606,6 @@
             "collection_title": "movie characters",
             "collection_uuid": "4592e5ee4920f020eda8c6f44eb1a0d7",
             "collection_mPath": "coloring pages/stories/movie characters",
-            "collection_thumb": "20a9df20-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 143,
             "aliases": [
                 "20a9df20-3b68-11e6-8783-4f5bc8c52ce0",
@@ -57721,7 +57757,6 @@
             "collection_title": "beauty and the beast",
             "collection_uuid": "a06fc6427b2a372d5874cdf3ae511841",
             "collection_mPath": "coloring pages/stories/movie characters/beauty and the beast",
-            "collection_thumb": "20aa0632-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 73,
             "aliases": [
                 "20aa0632-3b68-11e6-8783-4f5bc8c52ce0",
@@ -57803,7 +57838,6 @@
             "collection_title": "cinderella",
             "collection_uuid": "583fea53729bcb119bc1099a0dc5e73d",
             "collection_mPath": "coloring pages/stories/movie characters/cinderella",
-            "collection_thumb": "20aa7b73-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 40,
             "aliases": [
                 "20aa7b73-3b68-11e6-8783-4f5bc8c52ce0",
@@ -57852,7 +57886,6 @@
             "collection_title": "daisy duck",
             "collection_uuid": "0a41de6a478327baebf92a1b25fcce3d",
             "collection_mPath": "coloring pages/stories/movie characters/daisy duck",
-            "collection_thumb": "20ab65c5-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 11,
             "aliases": [
                 "20ab65c5-3b68-11e6-8783-4f5bc8c52ce0",
@@ -57872,7 +57905,6 @@
             "collection_title": "donald duck",
             "collection_uuid": "9101b96731117727a5cd428c599bf338",
             "collection_mPath": "coloring pages/stories/movie characters/donald duck",
-            "collection_thumb": "20ab65d3-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 66,
             "aliases": [
                 "20ab65d3-3b68-11e6-8783-4f5bc8c52ce0",
@@ -57947,7 +57979,6 @@
             "collection_title": "goofy",
             "collection_uuid": "4f94d7e65f1e7e55b5bfcf7334449d8f",
             "collection_mPath": "coloring pages/stories/movie characters/goofy",
-            "collection_thumb": "20ac020c-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 13,
             "aliases": [
                 "20ac020c-3b68-11e6-8783-4f5bc8c52ce0",
@@ -57969,7 +58000,6 @@
             "collection_title": "mickey",
             "collection_uuid": "4d5257e5acc7fcac2f5dcd66c4e78f9a",
             "collection_mPath": "coloring pages/stories/movie characters/mickey",
-            "collection_thumb": "20ac2922-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 68,
             "aliases": [
                 "20ac2922-3b68-11e6-8783-4f5bc8c52ce0",
@@ -58046,7 +58076,6 @@
             "collection_title": "minie",
             "collection_uuid": "7e256a5897b995b39f7fc179a294723c",
             "collection_mPath": "coloring pages/stories/movie characters/minie",
-            "collection_thumb": "20ac9e47-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 9,
             "aliases": [
                 "20ac9e47-3b68-11e6-8783-4f5bc8c52ce0",
@@ -58064,7 +58093,6 @@
             "collection_title": "peter pan",
             "collection_uuid": "641caf42dc0cf0cddf62b6402b369f3c",
             "collection_mPath": "coloring pages/stories/movie characters/peter pan",
-            "collection_thumb": "20acc567-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 35,
             "aliases": [
                 "20acc567-3b68-11e6-8783-4f5bc8c52ce0",
@@ -58108,7 +58136,6 @@
             "collection_title": "pluto",
             "collection_uuid": "c6009f08fc5fc6385f1ea1f5840e179f",
             "collection_mPath": "coloring pages/stories/movie characters/pluto",
-            "collection_thumb": "20ad137a-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 5,
             "aliases": [
                 "20ad137a-3b68-11e6-8783-4f5bc8c52ce0",
@@ -58122,7 +58149,6 @@
             "collection_title": "sleeping beauty",
             "collection_uuid": "34cf805db69e7e83a9fa0da9b2f7504e",
             "collection_mPath": "coloring pages/stories/movie characters/sleeping beauty",
-            "collection_thumb": "20ad6197-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 18,
             "aliases": [
                 "20ad6197-3b68-11e6-8783-4f5bc8c52ce0",
@@ -58149,7 +58175,6 @@
             "collection_title": "snow white",
             "collection_uuid": "aa6b789dea9808916bcc85b34146ba45",
             "collection_mPath": "coloring pages/stories/movie characters/snow white",
-            "collection_thumb": "20ad88a8-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 30,
             "aliases": [
                 "20ad88a8-3b68-11e6-8783-4f5bc8c52ce0",
@@ -58188,7 +58213,6 @@
             "collection_title": "teletubees",
             "collection_uuid": "164ec070d8abe3db9d946cd555337d9c",
             "collection_mPath": "coloring pages/stories/movie characters/teletubees",
-            "collection_thumb": "20add6c5-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 16,
             "aliases": [
                 "20add6c5-3b68-11e6-8783-4f5bc8c52ce0",
@@ -58213,7 +58237,6 @@
             "collection_title": "the little mermaid",
             "collection_uuid": "46256d82e5fe60d0e67371307424656b",
             "collection_mPath": "coloring pages/stories/movie characters/the little mermaid",
-            "collection_thumb": "20adfdd5-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 166,
             "aliases": [
                 "20adfdd5-3b68-11e6-8783-4f5bc8c52ce0",
@@ -58388,7 +58411,6 @@
             "collection_title": "cars and bikes",
             "collection_uuid": "2f4d06d7d257785022616a434419518e",
             "collection_mPath": "coloring pages/vehicles/cars and bikes",
-            "collection_thumb": "20aff9a5-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 33,
             "aliases": [
                 "20aff9a5-3b68-11e6-8783-4f5bc8c52ce0",
@@ -58430,7 +58452,6 @@
             "collection_title": "plains",
             "collection_uuid": "20b7bffdc8a9a8dbc12b53c222a6e961",
             "collection_mPath": "coloring pages/vehicles/plains",
-            "collection_thumb": "20b047c7-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 9,
             "aliases": [
                 "20b047c7-3b68-11e6-8783-4f5bc8c52ce0",
@@ -58448,7 +58469,6 @@
             "collection_title": "ships and boats",
             "collection_uuid": "673cca51e8ba20ce3fec59078f28c4a1",
             "collection_mPath": "coloring pages/vehicles/ships and boats",
-            "collection_thumb": "20b06ed0-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 10,
             "aliases": [
                 "20b06ed0-3b68-11e6-8783-4f5bc8c52ce0",
@@ -58467,7 +58487,6 @@
             "collection_title": "space",
             "collection_uuid": "ff2364a0be3d20e46cc69efb36afe9a5",
             "collection_mPath": "coloring pages/vehicles/space",
-            "collection_thumb": "20b06edc-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 8,
             "aliases": [
                 "20b06edc-3b68-11e6-8783-4f5bc8c52ce0",
@@ -58484,7 +58503,6 @@
             "collection_title": "trains",
             "collection_uuid": "5083eaa1a1bda32218b4c23801e458cf",
             "collection_mPath": "coloring pages/vehicles/trains",
-            "collection_thumb": "20b095e9-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 33,
             "aliases": [
                 "20b095e9-3b68-11e6-8783-4f5bc8c52ce0",
@@ -58526,7 +58544,6 @@
             "collection_title": "trucks and buses",
             "collection_uuid": "b90ed5d27f460bb30ab3bf946def6843",
             "collection_mPath": "coloring pages/vehicles/trucks and buses",
-            "collection_thumb": "20b0e401-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 35,
             "aliases": [
                 "20b0e401-3b68-11e6-8783-4f5bc8c52ce0",
@@ -58570,7 +58587,6 @@
             "collection_title": "whether",
             "collection_uuid": "7d767e6bb05138bb94abee483ea8abc6",
             "collection_mPath": "coloring pages/whether",
-            "collection_thumb": "20b10b1b-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 2,
             "aliases": [
                 "20b10b1b-3b68-11e6-8783-4f5bc8c52ce0",
@@ -58581,7 +58597,6 @@
             "collection_title": "boy",
             "collection_uuid": "1a699ad5e06aa8a6db3bcf9cfb2f00f2",
             "collection_mPath": "sketchies/boy",
-            "collection_thumb": "20b13226-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 2,
             "aliases": [
                 "20b13226-3b68-11e6-8783-4f5bc8c52ce0",
@@ -58592,7 +58607,6 @@
             "collection_title": "comics",
             "collection_uuid": "51af637aed604c1d5376026ae625111e",
             "collection_mPath": "sketchies/comics",
-            "collection_thumb": "20b13229-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 52,
             "aliases": [
                 "20b13229-3b68-11e6-8783-4f5bc8c52ce0",
@@ -58653,7 +58667,6 @@
             "collection_title": "giant",
             "collection_uuid": "54cf0d15829b90bb7867d66bda710c97",
             "collection_mPath": "sketchies/giant",
-            "collection_thumb": "20b1804a-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 58,
             "aliases": [
                 "20b1804a-3b68-11e6-8783-4f5bc8c52ce0",
@@ -58720,7 +58733,6 @@
             "collection_title": "hands",
             "collection_uuid": "6c8d61508321ac444175370124200350",
             "collection_mPath": "sketchies/hands",
-            "collection_thumb": "20b1ce6e-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 1,
             "aliases": [
                 "20b1ce6e-3b68-11e6-8783-4f5bc8c52ce0"
@@ -58730,7 +58742,6 @@
             "collection_title": "iron man",
             "collection_uuid": "698a077291520164f0481ca6156b71d2",
             "collection_mPath": "sketchies/iron man",
-            "collection_thumb": "20b1ce70-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 1,
             "aliases": [
                 "20b1ce70-3b68-11e6-8783-4f5bc8c52ce0"
@@ -58740,7 +58751,6 @@
             "collection_title": "jimi",
             "collection_uuid": "94ca11e813946f5e475ba2e6e05fd5b0",
             "collection_mPath": "sketchies/jimi",
-            "collection_thumb": "20b1ce72-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 4,
             "aliases": [
                 "20b1ce72-3b68-11e6-8783-4f5bc8c52ce0",
@@ -58753,7 +58763,6 @@
             "collection_title": "jungle book",
             "collection_uuid": "2846fea1406032683f4c035d97da225e",
             "collection_mPath": "sketchies/jungle book",
-            "collection_thumb": "20b1f574-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 5,
             "aliases": [
                 "20b1f574-3b68-11e6-8783-4f5bc8c52ce0",
@@ -58767,7 +58776,6 @@
             "collection_title": "life",
             "collection_uuid": "e155e1bb4a9c38e3baf90637ab7865df",
             "collection_mPath": "sketchies/life",
-            "collection_thumb": "20b1f57a-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 25,
             "aliases": [
                 "20b1f57a-3b68-11e6-8783-4f5bc8c52ce0",
@@ -58801,7 +58809,6 @@
             "collection_title": "man",
             "collection_uuid": "39c63ddb96a31b9610cd976b896ad4f0",
             "collection_mPath": "sketchies/man",
-            "collection_thumb": "20b21c91-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 17,
             "aliases": [
                 "20b21c91-3b68-11e6-8783-4f5bc8c52ce0",
@@ -58827,7 +58834,6 @@
             "collection_title": "misc",
             "collection_uuid": "bc957e26ff41470c556ee5d09e96880b",
             "collection_mPath": "sketchies/misc",
-            "collection_thumb": "20b24398-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 470,
             "aliases": [
                 "20b24398-3b68-11e6-8783-4f5bc8c52ce0",
@@ -59306,7 +59312,6 @@
             "collection_title": "simpsons",
             "collection_uuid": "39b4fb4846c99c1d41a4e015da0b60bc",
             "collection_mPath": "sketchies/simpsons",
-            "collection_thumb": "20b5c607-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 19,
             "aliases": [
                 "20b5c607-3b68-11e6-8783-4f5bc8c52ce0",
@@ -59334,7 +59339,6 @@
             "collection_title": "skull",
             "collection_uuid": "f13460bd46c28e73e8d2b6122bea2241",
             "collection_mPath": "sketchies/skull",
-            "collection_thumb": "20b61424-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 15,
             "aliases": [
                 "20b61424-3b68-11e6-8783-4f5bc8c52ce0",
@@ -59358,7 +59362,6 @@
             "collection_title": "sword and the stone",
             "collection_uuid": "3e477f5b9c1a5c23861562a291fa51f1",
             "collection_mPath": "sketchies/sword and the stone",
-            "collection_thumb": "20b63b35-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 1,
             "aliases": [
                 "20b63b35-3b68-11e6-8783-4f5bc8c52ce0"
@@ -59368,7 +59371,6 @@
             "collection_title": "woman",
             "collection_uuid": "56609ab6ba04048adc2cbfafbe745e10",
             "collection_mPath": "sketchies/woman",
-            "collection_thumb": "20b63b39-3b68-11e6-8783-4f5bc8c52ce0",
             "alias_count": 4,
             "aliases": [
                 "20b63b39-3b68-11e6-8783-4f5bc8c52ce0",

@@ -3,45 +3,41 @@ import _ from 'lodash';
 
 const initialState = {
 	allPictures:null,
-  visiblePictures: [],
+  categoryList: [],
 	isFetching:true,
 	enabledFilter:null,
   searchFor:null
 }
 
 export default function picturesReducer(state = initialState, action) {
-  const flattenArray = (pictures, filter, searchTerm) => {
+  const filterCategories = (allData, filter, searchTerm) => {
     // turn nested picture data into a flat array
-    //console.log(state.enabledFilter, state.searchFor, pictures,'should be all')
-    let flatPicsArr = [];
-    let pics = pictures;
-    
-    if(pics){
-      let allNestedPictures = pics.categories;
+    //console.log(state.enabledFilter, state.searchFor, allData,'should be all')
+    let filteredCategories = [];
+
+    if(allData){
+      let allCategories = allData.categories;
       // iterate through every category that has nested pictures
-      for(let key in allNestedPictures){
-        // if filter is enabled, then only add filtered content to flatPicsArr
+      for(let key in allCategories){
+        // if filter is enabled, then only add filtered content to filteredCategories
         if(filter){
           if(removeCategory(key, filter)) continue;
         }else if(state.enabledFilter){
           if(removeCategory(key, state.enabledFilter)) continue;
         }
 
-        // if user is searching, then only add serched content to flatPicsArr
+        // if user is searching, then only add serched content to filteredCategories
         if(searchTerm){
           if(searchCategory(key, searchTerm)) continue;
         } else if(state.searchFor){
           if(searchCategory(key, state.searchFor)) continue;
         }
 
-        let categoryPictures = allNestedPictures[key];
-        for(let i = 0; i < categoryPictures.length; i++){
-          let individualPicture = categoryPictures[i]
-          flatPicsArr.push(individualPicture);
-        }
+        let category = allCategories[key];
+        filteredCategories.push(category);
       }
     }
-    return flatPicsArr;
+    return filteredCategories;
   }
 
   const removeCategory = (category, filter) => {
@@ -65,16 +61,16 @@ export default function picturesReducer(state = initialState, action) {
 
   switch (action.type) {
     case FETCH_PICTURES:
-      let visiblePictures = flattenArray(action.payload);
-    	return {...state, allPictures: action.payload, visiblePictures, isFetching: false};
+      let categoryList = filterCategories(action.payload);
+    	return {...state, allPictures: action.payload, categoryList, isFetching: false};
     case SHOW_PICTURES:
-      return {...state, visiblePictures: action.visiblePictures};
+      return {...state, categoryList: action.categoryList};
     case SET_FILTERS:
-      visiblePictures = flattenArray(state.allPictures, action.filter);
-      return {...state, enabledFilter:action.filter, visiblePictures};
+      categoryList = filterCategories(state.allPictures, action.filter);
+      return {...state, enabledFilter:action.filter, categoryList};
     case FIND_PICTURES:
-      visiblePictures = flattenArray(state.allPictures, null, action.term);
-      return {...state, searchFor:action.term, visiblePictures };
+      categoryList = filterCategories(state.allPictures, null, action.term);
+      return {...state, searchFor:action.term, categoryList };
     case SET_SEARCH:
       return {...state, searchFor:action.term};
     default:

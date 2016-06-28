@@ -41,3 +41,14 @@
 	background-color:#FFFFFF !important;
 
 }
+
+.collectionItem{
+	border:1px solid #980000;
+	height:80px;
+	width:80px;
+}
+
+.collectionWrap{
+	display:inline-block;
+	padding:5px;
+}

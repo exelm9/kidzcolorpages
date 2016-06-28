@@ -48,7 +48,7 @@ module.exports = function(app){
 			  results.categories = _index.categories;
 			  results.filters = _index.filters;
 			  results.segments = _index.segments;
-
+			  results.collections = _index.collections;
 	  	res.json(JSON.stringify(results, null, ' '))
 	});
 

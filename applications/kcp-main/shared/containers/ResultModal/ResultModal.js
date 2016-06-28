@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Modal, Carousel, Image, Button } from 'react-bootstrap';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import ResultsListItem from './resultsListItem';
+import ResultsListItem from '../../components/DefaultResult/resultsListItem';
 import * as ColorPagesActions from '../../redux/actions';
 
 export default class ResultModal extends Component {

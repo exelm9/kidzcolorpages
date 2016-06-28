@@ -19,8 +19,10 @@ export default class ResultsContainer extends Component {
 
   }
 
-  showModal(uuid, colIdx) {
-    this.props.actions.showModal({ uuid, colIdx, results: this.props.api.collections[uuid].aliases });
+  showModal({imgIdx, uuid}) {
+    console.log(`imgIdx ${imgIdx}`);
+    console.log(`uuid ${uuid}`);
+    this.props.actions.showModal({ uuid, colIdx: imgIdx, aliases: this.props.allPictures.collections[uuid].aliases });
   }
 
   render() {

@@ -2,17 +2,17 @@ import { HIDE_MODAL, SHOW_MODAL } from '../constants/ActionTypes'
 
 const initialState = {
   show: false,
-  results: [],
+  aliases: [],
   imgIdx: 0,
-  direction: 'next'
+  colIdx: 0
 };
 
 export default function modalReducer(state = initialState, action) {
   switch (action.type) {
     case SHOW_MODAL:
-      return { ...state, show: action.show, results: action.results, imgIdx: action.imgIdx };
+      return { ...state, show: true, aliases: action.aliases, colIdx: action.colIdx };
     case HIDE_MODAL:
-      return { ...state, show: action.show };
+      return { ...state, show: false };
     default:
       return state;
   }

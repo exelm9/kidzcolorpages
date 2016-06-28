@@ -19,8 +19,8 @@ export default class ResultsContainer extends Component {
 
   }
 
-  showModal(imgIdx) {
-    this.props.actions.showModal({ show: true, imgIdx, results: this.props.visiblePictures });
+  showModal(uuid, colIdx) {
+    this.props.actions.showModal({ uuid, colIdx, results: this.props.api.collections[uuid].aliases });
   }
 
   render() {
@@ -52,7 +52,7 @@ ResultsContainer.defaultProps = {
 // redux
 const mapStateToProps = ({pictures}) => {
   return {
-    allPictures: pictures.allPictures,
+    api: pictures.api,
     visiblePictures: pictures.visiblePictures,
     isFetching: pictures.isFetching,
     enabledFilter:pictures.enabledFilter,

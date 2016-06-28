@@ -228,25 +228,18 @@ function make_index(){
 
 				// Register Category
 				if(!index.categories[_Category]){
-
 					var _cat = {
 						category_title: _Category.split('/').pop(),
 						category_mPath: _Category,
 						category_uuid: hasher(_Category), // this will always be the same, if the _Category is the same.
 						collections: {},
 						collections_count: 0
-
 					};
-					
 					index.categories[_Category] = _cat;
-
 				} else {
 					var _cat = index.categories[_Category];
-
 				}
-				
-
-
+			
 				// Manage Collection Details
 				var collection = {
 					collection_title: _Collection,
@@ -258,7 +251,7 @@ function make_index(){
 				}
 
 				if( ! index.categories[_Category].collections[collection.collection_title] ){
-					index.categories[_Category].collections[collection.collection_title] = ({title: collection.collection_title, uuid: collection.collection_uuid});
+					index.categories[_Category].collections[collection.collection_title] = ({title: collection.collection_title, uuid: collection.collection_uuid, collection_thumb: _alias.uuid });
 					index.categories[_Category].collections[collection.collection_title].alias_count = 1;
 				} else {
 					index.categories[_Category].collections[collection.collection_title].alias_count++;
@@ -271,9 +264,6 @@ function make_index(){
 
 				index.collections[collection.collection_uuid].aliases.push(_alias.uuid);
 				index.collections[collection.collection_uuid].alias_count++;
-
-
-
 		}
 
 

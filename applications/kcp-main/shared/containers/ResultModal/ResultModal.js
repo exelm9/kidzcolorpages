@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Modal, Button, Col } from 'react-bootstrap';
+import { Modal, Button, Col, Row } from 'react-bootstrap';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import ResultsListItem from '../../components/DefaultResult/resultsListItem';
@@ -25,16 +25,26 @@ export default class ResultModal extends Component {
       <Modal className="Modal-Container" show={this.props.show} onHide={this.handleClose} bsSize="large" aria-labelledby="contained-modal-title-lg">
         <Modal.Header closeButton={true} onHide={this.handleClose}/>
         <Modal.Body>
-          <Col md={6} >
-            <figure>
-              <img src={`/media/alias/${this.props.aliases[this.props.imgIdx]}`} alt="" />
-            </figure>
-          </Col>
-          <Col md={6} >
-            <div>
-              {this.galleryItems}
-            </div>
-          </Col>
+          <Row>
+            <Col md={6} >
+              <figure>
+                <img className='modalLrgImage' src={`/media/alias/${this.props.aliases[this.props.imgIdx]}`} alt="" />
+              </figure>
+            </Col>
+            <Col md={6} >
+              <div className='galleryWrap'>
+                {this.galleryItems}
+              </div>
+              <div className='modalButtonsWrap'>
+                <button
+                  className={'modalButtons btn btn-primary'}
+                >Print</button>
+                <button
+                  className={'modalButtons btn btn-primary'}
+                >Pin</button>
+              </div>
+            </Col>
+          </Row>
         </Modal.Body>
         <Modal.Footer>
 
@@ -45,6 +55,7 @@ export default class ResultModal extends Component {
 }
 
 const mapStateToProps = ({modal}) => {
+  console.log(modal)
   return (
     { show: modal.show, aliases: modal.aliases, imgIdx: modal.imgIdx, colIdx: modal.colIdx }
   );

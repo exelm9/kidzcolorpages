@@ -2,10 +2,7 @@
 import React from 'react';
 
 const ResultsListItem = ({image, caption, idx, showModal}) => {
-  const handleClick = (e) => {
-    console.log(e.target);
-    showModal({idx});
-  }
+  const handleClick = (e) => showModal(uuid, idx);
   
   return (
     <div className="resultListItem">

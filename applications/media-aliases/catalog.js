@@ -228,25 +228,18 @@ function make_index(){
 
 				// Register Category
 				if(!index.categories[_Category]){
-
 					var _cat = {
 						category_title: _Category.split('/').pop(),
 						category_mPath: _Category,
 						category_uuid: hasher(_Category), // this will always be the same, if the _Category is the same.
 						collections: {},
 						collections_count: 0
-
 					};
-					
 					index.categories[_Category] = _cat;
-
 				} else {
 					var _cat = index.categories[_Category];
-
 				}
-				
-
-
+			
 				// Manage Collection Details
 				var collection = {
 					collection_title: _Collection,
@@ -271,9 +264,6 @@ function make_index(){
 
 				index.collections[collection.collection_uuid].aliases.push(_alias.uuid);
 				index.collections[collection.collection_uuid].alias_count++;
-
-
-
 		}
 
 

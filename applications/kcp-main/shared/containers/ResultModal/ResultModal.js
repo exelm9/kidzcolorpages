@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Modal, Carousel, Image, Button } from 'react-bootstrap';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import ResultsListItem from '../../components/DefaultResult/resultsListItem';
 import * as ColorPagesActions from '../../redux/actions';
 
 export default class ResultModal extends Component {
@@ -9,19 +10,17 @@ export default class ResultModal extends Component {
     super(props);
   }
 
-  carouselItems = this.props.categoryList.map((picture, idx) => (
-    <Carousel.Item key={idx}>
-      <Image src={`/media/alias/${picture.uuid}`}/>
-      <Carousel.Caption>
-        <h3>{picture.title}</h3>
-      </Carousel.Caption>
-    </Carousel.Item>
+  galleryItems = this.props.aliases.map((alias, idx) => (
+    <a href={`/media/alias/${galleryItems[idx]}`} key={galleryItems[idx]} idx={idx}>
+      <figure>
+        <img src={`/media/alias/${galleryItems[idx]}`} alt="" />
+      </figure>
+    </a>
   ));
 
   handleSelect = (selectedIndex, e) =>
     this.props.actions.showModal({
-        imgIdx: selectedIndex,
-        direction: e.direction
+        imgIdx: selectedIndex
       }
     );
   
@@ -32,9 +31,18 @@ export default class ResultModal extends Component {
       <Modal className="Modal-Container" show={this.props.show} bsSize="large" aria-labelledby="contained-modal-title-lg">
         <Modal.Header closeButton/>
         <Modal.Body>
-          <Carousel activeIndex={this.props.imgIdx} direction={this.props.direction} onSelect={this.handleSelect}>
-            {this.carouselItems}
-          </Carousel>
+          <Col md={6} >
+            <a handleSelect={`/media/alias/${galleryItems[this.props.idx]}`} key={0}>
+              <figure>
+                <img src={`/media/alias/${galleryItems[this.props.idx]}`} alt="" />
+              </figure>
+            </a>
+          </Col>
+          <Col md={6} >
+            <div>
+              {galleryItems}
+            </div>
+          </Col>
         </Modal.Body>
         <Modal.Footer>
           <Button onClick={this.handleClick}>Close</Button>
@@ -45,12 +53,8 @@ export default class ResultModal extends Component {
 }
 
 const mapStateToProps = ({modal}) => {
-  // console.log("result modal state: ");
-  // console.log("show: ", modal.show);
-  // console.log("imgIdx: ", modal.imgIdx);
-  // console.log("direction: : ", modal.direction);
   return (
-    { show: modal.show, imgIdx: modal.imgIdx, direction: modal.direction }
+    { show: modal.show, imgIdx: modal.imgIdx, colIdx: modal.colIdx }
   );
 }
 

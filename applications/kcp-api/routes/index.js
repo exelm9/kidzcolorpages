@@ -44,12 +44,14 @@ module.exports = function(app){
 		// Basic Route Demos
 	app.get('/', function(req, res, next) {
 		const _index = index || MA.get_index();
-		const results = {};
-			  results.categories = _index.categories;
-			  results.filters = _index.filters;
-			  results.segments = _index.segments;
-			  results.collections = _index.collections;
-	  	res.json(JSON.stringify(results, null, ' '))
+		const results = {
+      categories: _index.categories,
+      filters: _index.filters,
+      segments: _index.segments,
+      collections: _index.collections
+    };
+
+    res.json(JSON.stringify(results, null, ' '))
 	});
 
 	app.get("/err", function(req, res, next){

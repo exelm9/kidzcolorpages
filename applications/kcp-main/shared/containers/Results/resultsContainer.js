@@ -3,7 +3,7 @@ import React, {PropTypes, Component} from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as ColorPagesActions from '../../redux/actions';
-import CategoryItem from '../../components/DefaultResult/categoryItem';
+import CategoryItem from '../../components/CategoryItem/CategoryItem';
 // import ResultsJumbotron from '../../components/FeaturedResult/resultsJumbotron';
 
 import _ from 'lodash';
@@ -19,7 +19,9 @@ export default class ResultsContainer extends Component {
 
   }
 
-  showModal(imgIdx) {
+  showModal({imgIdx, uuid}) {
+    console.log(uuid, imgIdx)
+    return false;
     this.props.actions.showModal({ show: true, imgIdx, results: this.props.categoryList });
   }
 

@@ -61,9 +61,7 @@ export default function picturesReducer(state = initialState, action) {
 
   switch (action.type) {
     case FETCH_PICTURES:
-      console.log(action.payload.categories,'request')
       let categoryList = filterCategories(action.payload);
-      console.log(categoryList, 'after filtered')
     	return {...state, allPictures: action.payload, categoryList, isFetching: false};
     case SHOW_PICTURES:
       return {...state, categoryList: action.categoryList};

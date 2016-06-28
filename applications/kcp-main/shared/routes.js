@@ -3,12 +3,13 @@ import { Route, IndexRoute } from 'react-router';
 import App from './containers/App/App';
 import Home from './containers/Home/Home';
 import adminPlaceholder from './components/TestMiddlePanel/testRoute';
+import Profile from './components/Profile/profile';
 
 
 export default (
   <Route path="/browse" component={App}>
   	<IndexRoute component={Home}/>
     <Route path="/admin" component={adminPlaceholder} />
+    <Route path="/profile" component={Profile} />
   </Route>
 )
-

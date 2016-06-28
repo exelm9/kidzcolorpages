@@ -6,14 +6,19 @@ export default class Header extends Component {
     super(props);
   }
 
+
+
+
+
+
   render() {
     return (
       <div className="container">
         <nav className="navbar navbar-light bg-faded" >
-          <a className="navbar-brand" href="#">KCP</a>
+          <a onClick={event => this.homeReturn()} className="navbar-brand" href="#">KCP</a>
             <ul className="nav navbar-nav">
               <li className="nav-item active pull-xs-right">
-                <a className="nav-link" href="#">Profile</a>
+                <a onClick={event => this.pusher()} className="nav-link" href="#">Profile</a>
               </li>
             </ul>
         </nav>
@@ -21,6 +26,15 @@ export default class Header extends Component {
     );
   }
 
+  pusher() {
+    console.log("LOGGED");
+    browserHistory.push('/profile');
+  }
+
+  homeReturn() {
+    console.log("LOGGED AGAIN");
+    browserHistory.push('/browse');
+  }
 
 
 };

@@ -5,7 +5,7 @@
 }
 
 .search-bar{
-	
+
 }
 
 .picture-container{
@@ -51,4 +51,8 @@
 .collectionWrap{
 	display:inline-block;
 	padding:5px;
+}
+
+.navbar{
+	background-color:#286090 !important;
 }

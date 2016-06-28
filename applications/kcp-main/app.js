@@ -16,7 +16,7 @@ app.get('/browse', function(req, res, next){
 	res.send(`<!DOCTYPE html>
 				<html>
 				   <head>
-				   	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+				   	<link rel="stylesheet" href="/kcp/styles/bootstrap.css">
 				   	<link rel="stylesheet" href="/kcp/styles/style.css">
 				   </head>
 				   <body>

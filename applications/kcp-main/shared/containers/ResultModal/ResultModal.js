@@ -22,15 +22,13 @@ export default class ResultModal extends Component {
   
   render () {
     return (
-      <Modal className="Modal-Container" show={this.props.show} bsSize="large" aria-labelledby="contained-modal-title-lg">
+      <Modal className="Modal-Container" show={this.props.show} onHide={this.handleClose} bsSize="large" aria-labelledby="contained-modal-title-lg">
         <Modal.Header closeButton={true} onHide={this.handleClose}/>
         <Modal.Body>
           <Col md={6} >
-            <a href={`/media/alias/${this.props.aliases[this.props.imgIdx]}`} >
-              <figure>
-                <img src={`/media/alias/${this.props.aliases[this.props.imgIdx]}`} alt="" />
-              </figure>
-            </a>
+            <figure>
+              <img src={`/media/alias/${this.props.aliases[this.props.imgIdx]}`} alt="" />
+            </figure>
           </Col>
           <Col md={6} >
             <div>

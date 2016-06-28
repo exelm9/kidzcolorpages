@@ -1,17 +1,18 @@
 // result component(functional)
 import React from 'react';
 
-const ResultsListItem = ({image, caption, idx, showModal}) => {
-  const handleClick = (e) => showModal(uuid, idx);
+const ResultsListItem = ({image, idx, showImage}) => {
+  const handleClick = (e) => showImage(image, idx);
   
   return (
-    <div className="resultListItem">
-      <div className="thumbnail">
-        <img src={image} alt="This is an image." width={200} height={200} className="img-rounded ${idx}" onClick={(e) => handleClick(e)}/>
-        <div className="caption">
-          <p>{caption}</p>
-        </div>
-      </div>
+    <div className='thumbWrap'>
+      <figure>
+        <img
+          src={image}
+          className='collectionItem'
+          onClick={(e) => handleClick(e)}
+        />
+      </figure>
     </div>
   );
 };

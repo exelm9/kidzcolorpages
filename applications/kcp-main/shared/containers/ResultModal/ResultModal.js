@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Modal, Carousel, Image, Button } from 'react-bootstrap';
+import { Modal, Button, Col } from 'react-bootstrap';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import ResultsListItem from '../../components/DefaultResult/resultsListItem';
@@ -8,44 +8,38 @@ import * as ColorPagesActions from '../../redux/actions';
 export default class ResultModal extends Component {
   constructor(props) {
     super(props);
+    this.handleSelect = this.handleSelect.bind(this);
+    this.handleClose = this.handleClose.bind(this);
   }
 
   galleryItems = this.props.aliases.map((alias, idx) => (
-    <a href={`/media/alias/${galleryItems[idx]}`} key={galleryItems[idx]} idx={idx}>
-      <figure>
-        <img src={`/media/alias/${galleryItems[idx]}`} alt="" />
-      </figure>
-    </a>
+    <ResultsListItem image={`/media/alias/${alias}`} idx={idx} showImage={this.handleSelect} />
   ));
 
-  handleSelect = (selectedIndex, e) =>
-    this.props.actions.showModal({
-        imgIdx: selectedIndex
-      }
-    );
-  
-  handleClick = () => this.props.actions.hideModal(false);
+  handleSelect (imgIdx) { this.props.actions.changeImage(imgIdx); }
+
+  handleClose () { this.props.actions.hideModal(false); }
   
   render () {
     return (
       <Modal className="Modal-Container" show={this.props.show} bsSize="large" aria-labelledby="contained-modal-title-lg">
-        <Modal.Header closeButton/>
+        <Modal.Header closeButton={true} onHide={this.handleClose}/>
         <Modal.Body>
           <Col md={6} >
-            <a handleSelect={`/media/alias/${galleryItems[this.props.idx]}`} key={0}>
+            <a href={`/media/alias/${this.props.aliases[this.props.imgIdx]}`} >
               <figure>
-                <img src={`/media/alias/${galleryItems[this.props.idx]}`} alt="" />
+                <img src={`/media/alias/${this.props.aliases[this.props.imgIdx]}`} alt="" />
               </figure>
             </a>
           </Col>
           <Col md={6} >
             <div>
-              {galleryItems}
+              {this.galleryItems}
             </div>
           </Col>
         </Modal.Body>
         <Modal.Footer>
-          <Button onClick={this.handleClick}>Close</Button>
+
         </Modal.Footer>
       </Modal>
     );
@@ -54,7 +48,7 @@ export default class ResultModal extends Component {
 
 const mapStateToProps = ({modal}) => {
   return (
-    { show: modal.show, imgIdx: modal.imgIdx, colIdx: modal.colIdx }
+    { show: modal.show, aliases: modal.aliases, imgIdx: modal.imgIdx, colIdx: modal.colIdx }
   );
 }
 

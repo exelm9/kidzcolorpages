@@ -13,6 +13,7 @@ export default class ResultsContainer extends Component {
   constructor(props) {
     super(props);
     this.showModal =  this.showModal.bind(this);
+    console.log(props);
   }
 
   componentWillMount(){
@@ -48,7 +49,7 @@ export default class ResultsContainer extends Component {
       <div className="col-md-9 col-md-push-3">
         {/*<ResultsJumbotron images={this.props.pictures} />*/}
         {categories}
-        {/*<ResultModal categoryList={this.props.categoryList} />*/}
+        <ResultModal />
 
       </div>
     );

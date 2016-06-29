@@ -17,9 +17,7 @@ export default class ResultModal extends Component {
   handleClose () { this.props.actions.hideModal(false); }
   
   render () {
-    console.log(this.props.aliases);
     const galleryItems = this.props.aliases.map((alias, idx, arr) => {
-      console.log(arr);
       return (
         <ResultsListItem 
           image={`/media/alias/${alias}`} 
@@ -64,7 +62,6 @@ export default class ResultModal extends Component {
 }
 
 const mapStateToProps = ({modal}) => {
-  console.log(modal)
   return (
     { show: modal.show, aliases: modal.aliases, imgIdx: modal.imgIdx, colIdx: modal.colIdx }
   );

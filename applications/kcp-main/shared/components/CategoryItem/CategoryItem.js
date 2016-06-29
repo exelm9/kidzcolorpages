@@ -10,6 +10,7 @@ const categoryItem = ({collections, caption, showModal}) => {
   let attachCollections = (colIdx) => {
     showModal({collections: mappedCollections, colIdx})
   };
+  console.log(attachCollections,'what')
   const collectionItems = _.map(collections, (collection) => {
     mappedCollections.push(collection);
     return (

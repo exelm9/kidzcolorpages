@@ -31,7 +31,7 @@ export default class ResultsContainer extends Component {
       categoryList
     } = this.props;
 
-    if (isFetching || true) {
+    if (isFetching) {
       return <div className='row show-grid'>
                <div className='col-md-6 col-md-offset-3'>
                  <div className='spinnerWrap'>

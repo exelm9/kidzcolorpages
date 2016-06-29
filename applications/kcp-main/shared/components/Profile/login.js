@@ -16,7 +16,7 @@ export default class Login extends Component {
           <form className="login-form">
             <input type="text" placeholder="username"/>
             <input type="text" placeholder="password"/>
-            <button className="btn btn-default btn-lg" >LOGIN</button>
+            <button className="btn btn-default btn-lg" >login</button>
 
           </form>
         </div>

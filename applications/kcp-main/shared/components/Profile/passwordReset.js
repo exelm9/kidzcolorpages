@@ -14,7 +14,7 @@ export default class PasswordReset extends Component {
             <input type="text" placeholder="current password"/>
             <input type="text" placeholder="new password"/>
             <input type="text" placeholder="confirm password"/>
-            <button className="btn btn-default btn-lg"> SUBMIT </button>
+            <button className="btn btn-default btn-lg"> submit </button>
 
           </form>
         </div>

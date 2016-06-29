@@ -64,9 +64,25 @@ export default class ResultsContainer extends Component {
               uuid={pictureList.collection_uuid}
               key={pictureList.collection_uuid + idx}
               caption=""
+              count=""
               showModal={this.showModal}
              />
     });
+
+    if(pictures.length > 0){
+      pictures = <div className="categoryItem">
+                  <div className="thumbnail">
+                    <div className="caption">
+                      <h4>{pictureList.collection_title}</h4>
+                    </div>
+                    <div>
+                      {pictures}
+                    </div>
+                  </div>
+                </div>
+    }else{
+      pictures = null
+    }
 
     if(categories.length === 0){
       categories = <h2><i>No Pics Found</i></h2>

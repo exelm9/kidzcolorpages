@@ -1,7 +1,7 @@
 import React from 'react';
 
 const CollectionItem = (props) => {
-  const {image, caption, showModal, imgIdx, index} = props;
+  const {image, caption, showModal, imgIdx, index, count} = props;
 
   const handleClick = (e) => {
     showModal({imgIdx:props.imgIdx, uuid: props.uuid});
@@ -14,7 +14,8 @@ const CollectionItem = (props) => {
         className='collectionItem'
         onClick={(e) => handleClick(e)}
       />
-      <div>{caption}</div>
+      <b>{caption}</b>
+      <i>{count}</i>
     </div>
   );
 };

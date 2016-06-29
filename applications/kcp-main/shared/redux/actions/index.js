@@ -14,7 +14,7 @@ export const clearSearch = (term) => ({ type: actions.CLEAR_SEARCH, clear: true 
 export const fetchPictures = () => (dispatch) =>
 		request.get('/api').then((response) => {
       var data = JSON.parse(response.data);
-      console.log(data,'all data')
+      console.log(data,'all data');
       dispatch({type: actions.FETCH_PICTURES, payload: data})
     });
 
@@ -36,9 +36,9 @@ export const changeImage = (imgIdx) => {
   return { type: actions.CHANGE_IMAGE, imgIdx };
 };
 
-export const changeCollection = (colIdx) => {
-  return { type: actions.CHANGE_COLLECTION, colIdx };
-}
+export const changeCollection = (modalState) => {
+  return { type: actions.CHANGE_COLLECTION, ...modalState };
+};
 
 export const hideModal = (show) => {
   return { type: actions.HIDE_MODAL, show };

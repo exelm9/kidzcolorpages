@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 import * as ColorPagesActions from '../../redux/actions';
 import CollectionItem from '../../components/CollectionItem/CollectionItem'
 import CategoryItem from '../../components/CategoryItem/CategoryItem';
-// import ResultsJumbotron from '../../components/FeaturedResult/resultsJumbotron';
 
 import _ from 'lodash';
 import ResultModal from '../ResultModal/ResultModal';
@@ -13,16 +12,19 @@ import ResultModal from '../ResultModal/ResultModal';
 export default class ResultsContainer extends Component {
   constructor(props) {
     super(props);
-    this.showModal =  this.showModal.bind(this);
+    this.showCollectionModal =  this.showCollectionModal.bind(this);
   }
 
   componentWillMount(){
 
   }
 
-  showModal({imgIdx, uuid}) {
-    console.log(`imgIdx ${imgIdx}`);
-    console.log(`uuid ${uuid}`);
+  showCollectionModal({collections, colIdx}) {
+    let aliases = this.props.allPictures.collections[collections[colIdx].uuid].aliases;
+    this.props.actions.showModal({collectionData: this.props.allPictures.collections, collections, colIdx , aliases});
+  }
+
+  showSearchModal({imgIdx, uuid}) {
     this.props.actions.showModal({ uuid, colIdx: imgIdx, aliases: this.props.allPictures.collections[uuid].aliases });
   }
 
@@ -52,8 +54,8 @@ export default class ResultsContainer extends Component {
               collections={category.collections}
               caption={category.category_title}
               key={idx}
-              showModal={this.showModal} 
-            />)
+              showModal={this.showCollectionModal}
+            />
     });
 
     let pictures = pictureList.aliases !== undefined ? pictureList.aliases : [];

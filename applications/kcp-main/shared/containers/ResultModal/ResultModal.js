@@ -12,6 +12,7 @@ export default class ResultModal extends Component {
     this.handleClose = this.handleClose.bind(this);
     this.handlePrevious = this.handlePrevious.bind(this);
     this.handleNext = this.handleNext.bind(this);
+    this.printImage = this.printImage.bind(this);
   }
 
   handleSelect (imgIdx) { this.props.actions.changeImage(imgIdx); }
@@ -30,9 +31,17 @@ export default class ResultModal extends Component {
     this.props.actions.changeCollection({colIdx, aliases});
   }
 
-  print () {
-    
+  printImage() {
+    var iframe = document.createElement('iframe');
+    var tmp = document.getElementById('print_buffer');
+    tmp.appendChild(iframe);
+    var doc = iframe.contentDocument || iframe.contentWindow.document;
+    var img = doc.createElement("img");
+    img.src = `/media/alias/${this.props.aliases[this.props.imgIdx]}`;
+    doc.body.appendChild(img);
+    window.frames[0].print();
   }
+
 
   render () {
     const galleryItems = this.props.aliases.map((alias, idx, arr) => {
@@ -60,12 +69,11 @@ export default class ResultModal extends Component {
                 {galleryItems}
               </div>
               <div className='modalButtonsWrap'>
-                <button className='modalButtons btn btn-primary'>
-                  Print
+                <button id='print_me' className='modalButtons btn btn-primary'>
+                  <div id='print_buffer'></div>
+                  <div id='print_label'>Print</div>
                 </button>
-                <button className='modalButtons btn btn-primary'>
-                  Pin
-                </button>
+                <button className='modalButtons btn btn-primary'>Pin</button>
               </div>
             </div>
           </div>

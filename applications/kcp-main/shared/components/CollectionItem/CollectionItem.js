@@ -1,7 +1,7 @@
 import React from 'react';
 
 const CollectionItem = (props) => {
-  const {image, caption, attachCollections, colIdx} = props;
+  const {image, caption, attachCollections, colIdx, count} = props;
 
   const handleClick = (e) => {
     attachCollections(colIdx);

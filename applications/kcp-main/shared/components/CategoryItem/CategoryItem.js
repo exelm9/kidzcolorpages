@@ -13,7 +13,9 @@ const categoryItem = ({collections, caption, key, showModal}) => {
             showModal={showModal}
             uuid={collection.uuid}
             key={collection.uuid}
-            imgIdx={uniqueId++}/>
+            imgIdx={uniqueId++}
+            count={collection.alias_count}
+            />
   })
   
   return (

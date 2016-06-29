@@ -4,19 +4,24 @@ import React from 'react';
 import CollectionItem from '../CollectionItem/CollectionItem.js';
 import _ from 'lodash';
 
-const categoryItem = ({collections, caption, key, showModal}) => {
+const categoryItem = ({collections, caption, showModal}) => {
   let uniqueId = 0;
-  const collectionItems = _.map(collections, (collection, idx) => {
-    return <CollectionItem
-            image={"/media/alias/" + collection.collection_thumb}
-            caption={collection.title}
-            showModal={showModal}
-            uuid={collection.uuid}
-            key={collection.uuid}
-            imgIdx={uniqueId++}
-            count={collection.alias_count}
-            />
-  })
+  let mappedCollections = [];
+  let attachCollections = (colIdx) => {
+    showModal({collections: mappedCollections, colIdx})
+  };
+  const collectionItems = _.map(collections, (collection) => {
+    mappedCollections.push(collection);
+    return (
+      <CollectionItem
+        image={"/media/alias/" + collection.collection_thumb}
+        caption={collection.title}
+        attachCollections={attachCollections}
+        uuid={collection.uuid}
+        key={collection.uuid}
+        colIdx={uniqueId++} />
+    );
+  });
   
   return (
     <div className="categoryItem">

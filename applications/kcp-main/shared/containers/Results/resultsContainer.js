@@ -68,6 +68,7 @@ export default class ResultsContainer extends Component {
               caption=""
               count=""
               showModal={this.showModal}
+              _class="pictureWrap"
              />
     });
 

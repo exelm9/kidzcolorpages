@@ -11,9 +11,16 @@ export default class Login extends Component {
 
   render() {
     return (
-      <div className="loginForm">
-        <input />
-        <input />
+      <div className="login-page">
+        <div className="form">
+          <form className="login-form">
+            <input type="text" placeholder="username"/>
+            <input type="text" placeholder="password"/>
+            <button className="btn btn-default btn-lg" >LOGIN</button>
+
+          </form>
+        </div>
+
 
       </div>
 

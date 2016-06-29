@@ -64,7 +64,7 @@ export default class ResultsContainer extends Component {
               imgIdx={idx}
               uuid={pictureList.collection_uuid}
               key={pictureList.collection_uuid + idx}
-              caption={pictureList.collection_title + ++idx}
+              caption=""
               showModal={this.showModal}
              />
     });

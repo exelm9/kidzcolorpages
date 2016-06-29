@@ -103,7 +103,7 @@ export default function picturesReducer(state = initialState, action) {
       return {...state, categoryList: action.categoryList};
     case SET_FILTERS:
       categoryList = filterCategories(state.allPictures, action.filter);
-      return {...state, enabledFilter:action.filter, categoryList};
+      return {...state, enabledFilter:action.filter, categoryList, pictureList:[]};
     case FIND_PICTURES:
       let picsWithCategory = searchCollections(state.allPictures, action.term);
       let pictureList = picsWithCategory.pictures;

@@ -20,9 +20,11 @@ const categoryItem = ({collections, caption, showModal}) => {
         colIdx={uniqueId++}
         key={collection.uuid}
         count={collection.alias_count}
+        _class="collectionWrap"
       />
     );
   });
+
   
   return (
     <div className="categoryItem">

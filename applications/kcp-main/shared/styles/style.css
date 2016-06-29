@@ -93,6 +93,10 @@
 	padding:5px;
 }
 
+.pictureWrap{
+	display:inline-block;
+	padding:5px;
+}
 
 
 /* Result Modal */

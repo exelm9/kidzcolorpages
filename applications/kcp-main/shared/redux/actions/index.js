@@ -9,6 +9,8 @@ export const searchPictures = (term) => {
 
 export const onSearchBlur = (term) => ({ type: actions.SET_SEARCH, term: term  });
 
+export const clearSearch = (term) => ({ type: actions.CLEAR_SEARCH, clear: true  });
+
 export const fetchPictures = () => (dispatch) =>
 		request.get('/api').then((response) => {
       var data = JSON.parse(response.data);

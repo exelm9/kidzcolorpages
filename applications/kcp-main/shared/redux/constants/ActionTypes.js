@@ -8,6 +8,7 @@ export const SET_FILTERS = 'SET_FILTERS';
 
 // searchbar
 export const SET_SEARCH = 'SET_SEARCH';
+export const CLEAR_SEARCH = 'CLEAR_SEARCH';
 
 // modals
 export const SHOW_MODAL = 'SHOW_MODAL';

@@ -24,6 +24,13 @@ export default class SearchBar extends Component {
 		this.props.onSearchBlur(this.state.term);
 	}
 
+	componentWillReceiveProps(props){
+		console.log(props,'grab props')
+		if(props.clearSearch === true){
+			this.setState({term:''})
+		}
+	}
+
 	render () {
 		return(
 			<div className="search-bar">

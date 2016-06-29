@@ -37,7 +37,7 @@ export default function picturesReducer(state = initialState, action) {
 
   const searchCollections = (allData, searchTerm) => {
     let searchedCollections = {
-      pictures:null,
+      pictures:[],
       category:[]
     };
 

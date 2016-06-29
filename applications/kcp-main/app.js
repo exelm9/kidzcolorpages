@@ -17,6 +17,7 @@ app.get('/browse', function(req, res, next){
 				<html>
 				   <head>
 				   	<link rel="stylesheet" href="/kcp/styles/bootstrap.css">
+				   	<link rel="stylesheet" href="/kcp/styles/font-awesome.css">
 				   	<link rel="stylesheet" href="/kcp/styles/style.css">
 				   </head>
 				   <body>

@@ -31,7 +31,18 @@ export default class ResultsContainer extends Component {
       categoryList
     } = this.props;
 
-    const categories = categoryList.map((category, idx) => {
+    if (isFetching || true) {
+      return <div className='row show-grid'>
+               <div className='col-md-6 col-md-offset-3'>
+                 <div className='spinnerWrap'>
+                   <div className=''>Pictures Coming Soon!!!</div>
+                   <i className='fa fa-spinner fa-spin fa-5x fa-fw margin-bottom' aria-hidden='true'></i>
+                 </div>
+               </div>
+             </div>
+    }
+
+    let categories = categoryList.map((category, idx) => {
       return <CategoryItem
               collections={category.collections}
               caption={category.category_title}
@@ -40,8 +51,8 @@ export default class ResultsContainer extends Component {
             />
     });
 
-    if (isFetching) {
-      return <h2><i>Loading Pics</i></h2>
+    if(categories.length === 0){
+      categories = <h2><i>No Pics Found</i></h2>
     }
 
     return (

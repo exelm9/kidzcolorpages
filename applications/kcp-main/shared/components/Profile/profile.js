@@ -8,9 +8,10 @@ export default class Profile extends Component {
   render() {
     return (
       <div>
-        <div>
-          This is a profile.
-        </div>
+        <div>This is a profile.</div>
+        <div>Picture</div>
+        <div>email</div>
+        <div>sidebar</div>
     </div>
 
     );

@@ -4,6 +4,7 @@ import _ from 'lodash';
 const initialState = {
 	allPictures:null,
   categoryList: [],
+  pictureList:[],
 	isFetching:true,
 	enabledFilter:null,
   searchFor:null
@@ -27,18 +28,42 @@ export default function picturesReducer(state = initialState, action) {
           if(removeCategory(key, state.enabledFilter)) continue;
         }
 
-        // if user is searching, then only add searched content to filteredCategories
-        if(searchTerm){
-          if(searchCategory(key, searchTerm, collection)) continue;
-        } else if(state.searchFor){
-          if(searchCategory(key, state.searchFor, collection)) continue;
-        }
-
         let category = allCategories[key];
         filteredCategories.push(category);
       }
     }
     return filteredCategories;
+  }
+
+  const searchCollections = (allData, searchTerm) => {
+    let searchedCollections = {
+      pictures:[],
+      category:[]
+    };
+
+    if(allData){
+      let allCategories = allData.categories;
+      let allCollections = allData.collections
+      // iterate through every category that has nested pictures
+      for(let key in allCategories){
+        let collections = allCategories[key].collections
+        let foundCollections = null;
+        let category = allCategories[key];
+        // if user is searching, then only add searched content to searchedCollections
+        if(searchTerm){
+          foundCollections = findCollections(searchTerm, collections);
+          if(foundCollections.length === 0) continue;
+        } else if(state.searchFor){
+          foundCollections = findCollections(state.searchFor, collections);
+          if(foundCollections.length === 0) continue;
+        }
+
+        foundCollections = buildCollections(allCollections, foundCollections);
+        searchedCollections.pictures = foundCollections;
+        searchedCollections.category.push(category);
+      }
+    }
+    return searchedCollections;
   }
 
   const removeCategory = (category, filter) => {
@@ -50,21 +75,24 @@ export default function picturesReducer(state = initialState, action) {
     return true;
   }
 
-  const searchCategory = (category, searchTerm, collection) => {
-    let categories = category.split("/");
-    for(let i = 0; i < categories.length; i++){
-      if( categories[i].indexOf(searchTerm) > -1 ){
-        return false;
-      }
-
-      for(var key in collection){
-        let collectionItem = collection[key];
-        if( key.indexOf(searchTerm) > -1 ){
-          return false;
-        }
+  const findCollections = (searchTerm, collections) => {
+    var results = [];
+    for(var key in collections){
+      let collectionsItem = collections[key];
+      if( key.indexOf(searchTerm) > -1 ){
+        results.push(collectionsItem);
       }
     }
-    return true;
+    return results;
+  }
+
+  const buildCollections = (allCollections, collections) => {
+    let results = {}
+    for(let key in collections){
+      let uuid = collections[key].uuid;
+      results = allCollections[uuid];
+    }
+    return results;
   }
 
   switch (action.type) {
@@ -75,10 +103,12 @@ export default function picturesReducer(state = initialState, action) {
       return {...state, categoryList: action.categoryList};
     case SET_FILTERS:
       categoryList = filterCategories(state.allPictures, action.filter);
-      return {...state, enabledFilter:action.filter, categoryList};
+      return {...state, enabledFilter:action.filter, categoryList, pictureList:[]};
     case FIND_PICTURES:
-      categoryList = filterCategories(state.allPictures, null, action.term);
-      return {...state, searchFor:action.term, categoryList };
+      let picsWithCategory = searchCollections(state.allPictures, action.term);
+      let pictureList = picsWithCategory.pictures;
+      categoryList = picsWithCategory.category;
+      return {...state, searchFor:action.term, pictureList, categoryList };
     case SET_SEARCH:
       return {...state, searchFor:action.term};
     default:

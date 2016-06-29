@@ -19,6 +19,7 @@ export default function picturesReducer(state = initialState, action) {
       let allCategories = allData.categories;
       // iterate through every category that has nested pictures
       for(let key in allCategories){
+        let collection = allCategories[key].collections
         // if filter is enabled, then only add filtered content to filteredCategories
         if(filter){
           if(removeCategory(key, filter)) continue;
@@ -26,11 +27,11 @@ export default function picturesReducer(state = initialState, action) {
           if(removeCategory(key, state.enabledFilter)) continue;
         }
 
-        // if user is searching, then only add serched content to filteredCategories
+        // if user is searching, then only add searched content to filteredCategories
         if(searchTerm){
-          if(searchCategory(key, searchTerm)) continue;
+          if(searchCategory(key, searchTerm, collection)) continue;
         } else if(state.searchFor){
-          if(searchCategory(key, state.searchFor)) continue;
+          if(searchCategory(key, state.searchFor, collection)) continue;
         }
 
         let category = allCategories[key];
@@ -49,11 +50,18 @@ export default function picturesReducer(state = initialState, action) {
     return true;
   }
 
-  const searchCategory = (category, searchTerm) => {
+  const searchCategory = (category, searchTerm, collection) => {
     let categories = category.split("/");
     for(let i = 0; i < categories.length; i++){
       if( categories[i].indexOf(searchTerm) > -1 ){
         return false;
+      }
+
+      for(var key in collection){
+        let collectionItem = collection[key];
+        if( key.indexOf(searchTerm) > -1 ){
+          return false;
+        }
       }
     }
     return true;

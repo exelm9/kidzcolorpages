@@ -33,8 +33,8 @@ export const changeImage = (imgIdx) => {
   return { type: actions.CHANGE_IMAGE, imgIdx };
 };
 
-export const changeCollection = (colIdx) => {
-  return { type: actions.CHANGE_COLLECTION, colIdx };
+export const changeCollection = (modalState) => {
+  return { type: actions.CHANGE_COLLECTION, ...modalState };
 }
 
 export const hideModal = (show) => {

@@ -58,7 +58,7 @@ export default function picturesReducer(state = initialState, action) {
     }
     return true;
   }
-
+  console.log(state);
   switch (action.type) {
     case FETCH_PICTURES:
       let categoryList = filterCategories(action.payload);

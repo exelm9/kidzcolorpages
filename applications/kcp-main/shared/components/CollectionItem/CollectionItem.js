@@ -1,10 +1,10 @@
 import React from 'react';
 
 const CollectionItem = (props) => {
-  const {image, caption, showModal, imgIdx, index} = props;
+  const {image, caption, attachCollections, colIdx} = props;
 
   const handleClick = (e) => {
-    showModal({imgIdx:props.imgIdx, uuid: props.uuid});
+    attachCollections(colIdx);
   }
 
   return (

@@ -9,7 +9,7 @@ const 	autoloader = require( path.join(__dirname, '/../../autoload') );
 const 	atlas_paths = require( 'atlas_paths' );
 
 /**
-	 Mount Atlas Applications 
+	 Mount Atlas Applications
 
 	 We will fetch a list of the current Atlas Application, each of which will
 	 extend express, and we will add them to this express server as middleware.
@@ -20,7 +20,7 @@ const 	atlas_paths = require( 'atlas_paths' );
 **/
 	const  	applications = require('applications');
 	applications.forEach(function(app){
-		
+
 		// select the app's app.js file.
 		let _app_ = require( atlas_paths._APPS_ + app.app_dir +  app.entry )
 
@@ -31,11 +31,10 @@ const 	atlas_paths = require( 'atlas_paths' );
 		} else {
 			// It was not a valid express application, let's log it and skip.
 			console.log('[ error ] ', app.app_name, 'could not be mounted.')
-		}	
+		}
 	});
 
 // Mount Atlas Fallback Routes
-
 require('./routes').default(http_server, express)
 
 /**

@@ -16,16 +16,18 @@ export default class Header extends Component {
       <nav className="navbar navbar-light bg-faded" >
         <div className="container-fluid">
           {/*KCP title button*/}
-          <div onClick={event => this.homeReturn()} className="navbar-brand" href="#">KCP</div>
+          <div onClick={event => this.homeReturn()} className="navbar-brand" href="#">kcp</div>
             <ul className="nav navbar-nav navbar-right">
               <li className="dropdown">
-                <div href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu <span className="caret"></span></div>
+                <button href="#" className="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button" aria-haspopup="true" aria-expanded="false">menu <span className="caret"></span></button>
                 <ul className="dropdown-menu">
-                  <li><div onClick={event => this.goToProfilePage()} href="#">Profile</div></li>
-                  <li><div onClick={event => this.goToSettings()} href="#">Settings</div></li>
-                  <li><div href="#">Something else here</div></li>
+                  <li><div onClick={event => this.homeReturn()} href="#">home</div></li>
+                  <li><div onClick={event => this.goToProfilePage()} href="#">profile</div></li>
+                  <li><div onClick={event => this.goToSettings()} href="#">change password</div></li>
+                  <li><div onClick={event => this.goToRegister()} href="#">register</div></li>
                   <li role="separator" className="divider"></li>
-                  <li><div href="#">Log out</div></li>
+                  <li><div onClick={event => this.goToLogin()} href="#">log in</div></li>
+                  <li><div href="#">log out</div></li>
                 </ul>
               </li>
             </ul>
@@ -50,6 +52,16 @@ export default class Header extends Component {
     console.log("goToSettings");
     browserHistory.push('/passwordreset');
   }
+  goToLogin() {
+    console.log("goToLogin");
+    browserHistory.push('/login');
+  }
+
+  goToRegister() {
+    console.log("goToRegister");
+    browserHistory.push('/registration');
+  }
+
 
 
 };

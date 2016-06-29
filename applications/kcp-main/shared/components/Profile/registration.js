@@ -15,7 +15,7 @@ export default class Registration extends Component {
             <input type="text" placeholder="email"/>
             <input type="text" placeholder="password"/>
             <input type="text" placeholder="confirm password"/>
-            <button className="btn btn-default btn-lg" >REGISTER</button>
+            <button className="btn btn-default btn-lg" >register</button>
 
           </form>
         </div>

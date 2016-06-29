@@ -58,7 +58,6 @@ export default class ResultsContainer extends Component {
 
     let pictures = pictureList.aliases !== undefined ? pictureList.aliases : [];
     pictures = pictures.map((picture, idx) => {
-      console.log(pictureList,'each')
       return <CollectionItem
               image={"/media/alias/" + picture}
               imgIdx={idx}
@@ -72,8 +71,7 @@ export default class ResultsContainer extends Component {
     if(categories.length === 0){
       categories = <h2><i>No Pics Found</i></h2>
     }
-    console.log(pictures,'huh')
-    //console.log(pictureList,'picture data',categoryList,'category')
+
     return (
       <div className="col-md-9 col-md-push-3">
         {/*<ResultsJumbotron images={this.props.pictures} />*/}

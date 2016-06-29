@@ -21,6 +21,7 @@ export default class Sidepanel extends Component {
   }
 
   pictureSearch(term){
+    this.setState({activeFilterBtn:null})
     this.props.actions.searchPictures(term.toLowerCase());
   }
 

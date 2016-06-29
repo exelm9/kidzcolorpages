@@ -55,7 +55,7 @@ export default class ResultsContainer extends Component {
               caption={category.category_title}
               key={idx}
               showModal={this.showCollectionModal}
-            />
+            />);
     });
 
     let pictures = pictureList.aliases !== undefined ? pictureList.aliases : [];

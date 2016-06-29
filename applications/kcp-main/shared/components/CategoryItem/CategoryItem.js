@@ -17,9 +17,10 @@ const categoryItem = ({collections, caption, showModal}) => {
         image={"/media/alias/" + collection.collection_thumb}
         caption={collection.title}
         attachCollections={attachCollections}
-        uuid={collection.uuid}
+        colIdx={uniqueId++}
         key={collection.uuid}
-        colIdx={uniqueId++} />
+        count={collection.alias_count}
+      />
     );
   });
   

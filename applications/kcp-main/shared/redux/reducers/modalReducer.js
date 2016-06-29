@@ -12,7 +12,7 @@ const initialState = {
 export default function modalReducer(state = initialState, action) {
   switch (action.type) {
     case SHOW_MODAL:
-      return { ...state, show: true, collectionData: action.collectionData, collections: action.collections, colIdx: action.colIdx, aliases: action.aliases };
+      return { ...state, show: true, collectionData: action.collectionData, collections: action.collections, colIdx: action.colIdx, aliases: action.aliases, imgIdx: 0 };
     case HIDE_MODAL:
       return { ...state, show: false };
     case CHANGE_IMAGE:

@@ -69,7 +69,7 @@ export default class ResultModal extends Component {
                 {galleryItems}
               </div>
               <div className='modalButtonsWrap'>
-                <button id='print_me' className='modalButtons btn btn-primary'>
+                <button id='print_me' className='modalButtons btn btn-primary' onClick={this.printImage}>
                   <div id='print_buffer'></div>
                   <div id='print_label'>Print</div>
                 </button>

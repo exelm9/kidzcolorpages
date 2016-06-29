@@ -55,7 +55,7 @@ export default class Sidepanel extends Component {
               onClick={() => this.filterPictures(filter)}
               filterType={ filter }
               key={ idx }
-              activeFilter= { activeFilter }
+              activeFilter={ activeFilter }
             />);
            }
           )}

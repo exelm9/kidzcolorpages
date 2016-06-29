@@ -64,7 +64,6 @@ export default class ResultModal extends Component {
 }
 
 const mapStateToProps = ({modal}) => {
-  console.log(modal)
   return (
     { show: modal.show, aliases: modal.aliases, imgIdx: modal.imgIdx, colIdx: modal.colIdx }
   );

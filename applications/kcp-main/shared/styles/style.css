@@ -1,3 +1,9 @@
+.spinnerWrap{
+	width:100%;
+	text-align:center;
+	margin-top:45%;
+}
+
 .sidepanel{
 	border:1px solid black;
 	padding:10px;
@@ -34,11 +40,18 @@
 	width:100%;
 }
 
-/* override bootstrap css */
-.filterButtons.active{
+/* start override bootstrap css */
+.filterButtons.selected{
 	color:#286090;
 	background-color:#FFFFFF;
 }
+
+.navbar{
+    margin-bottom:0px;
+	cursor:pointer;
+}
+/* end override bootstrap css */
+
 
 .collectionItem{
 	border:1px solid #980000;
@@ -51,10 +64,7 @@
 	padding:5px;
 }
 
-.navbar{
-    margin-bottom:0px;
-	cursor:pointer;
-}
+
 
 /* Result Modal */
 

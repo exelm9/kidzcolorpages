@@ -55,7 +55,7 @@ export default class ResultsContainer extends Component {
     if(categories.length === 0){
       categories = <h2><i>No Pics Found</i></h2>
     }
-    console.log(pictureList,'picture data')
+    //console.log(pictureList,'picture data',categoryList,'category')
     return (
       <div className="col-md-9 col-md-push-3">
         {/*<ResultsJumbotron images={this.props.pictures} />*/}

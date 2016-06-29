@@ -28,13 +28,6 @@ export default function picturesReducer(state = initialState, action) {
           if(removeCategory(key, state.enabledFilter)) continue;
         }
 
-        // if user is searching, then only add searched content to filteredCategories
-        // if(searchTerm){
-        //   if(searchCategory(key, searchTerm, collection)) continue;
-        // } else if(state.searchFor){
-        //   if(searchCategory(key, state.searchFor, collection)) continue;
-        // }
-
         let category = allCategories[key];
         filteredCategories.push(category);
       }
@@ -112,9 +105,9 @@ export default function picturesReducer(state = initialState, action) {
       categoryList = filterCategories(state.allPictures, action.filter);
       return {...state, enabledFilter:action.filter, categoryList};
     case FIND_PICTURES:
-      let picWithCategory = searchCollections(state.allPictures, action.term);
-      let pictureList = picWithCategory.pictures;
-      categoryList = picWithCategory.category;
+      let picsWithCategory = searchCollections(state.allPictures, action.term);
+      let pictureList = picsWithCategory.pictures;
+      categoryList = picsWithCategory.category;
       return {...state, searchFor:action.term, pictureList, categoryList };
     case SET_SEARCH:
       return {...state, searchFor:action.term};

@@ -14,3 +14,4 @@ export const CLEAR_SEARCH = 'CLEAR_SEARCH';
 export const SHOW_MODAL = 'SHOW_MODAL';
 export const HIDE_MODAL = 'HIDE_MODAL';
 export const CHANGE_IMAGE = 'CHANGE_IMAGE';
+export const CHANGE_COLLECTION = 'CHANGE_COLLECTION';

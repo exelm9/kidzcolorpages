@@ -22,3 +22,5 @@ jspm_packages
 
 # bfg repo-cleaner
 bfg.jar
+
+configSecret.js

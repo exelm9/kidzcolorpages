@@ -1,0 +1,24 @@
+{
+  "name": "auth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "jwt-simple": "^0.5.0",
+    "mongoose": "^4.5.2",
+    "morgan": "^1.7.0",
+    "nodemon": "^1.9.2",
+    "passport": "^0.3.2",
+    "passport-jwt": "^2.1.0",
+    "passport-local": "^1.0.0"
+  }
+}

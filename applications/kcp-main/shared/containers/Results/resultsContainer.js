@@ -60,7 +60,8 @@ export default class ResultsContainer extends Component {
 
     let collectionPosition = null;
     let counter = 0;
-    let mappedCollections = _.map(categoryList[0].collections, (collection, key) => {
+    let firstCategoryList = categoryList[0];
+    let mappedCollections = firstCategoryList === undefined ? [] : _.map(categoryList[0].collections, (collection, key) => {
       if(collectionPosition === null){
         if(key === pictureList.collection_title){
           collectionPosition = counter;

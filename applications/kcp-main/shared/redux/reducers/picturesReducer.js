@@ -53,9 +53,6 @@ export default function picturesReducer(state = initialState, action) {
         if(searchTerm){
           foundCollections = findCollections(searchTerm, collections);
           if(foundCollections.length === 0) continue;
-        } else if(state.searchFor){
-          foundCollections = findCollections(state.searchFor, collections);
-          if(foundCollections.length === 0) continue;
         }
 
         foundCollections = buildCollections(allCollections, foundCollections);
@@ -90,6 +87,7 @@ export default function picturesReducer(state = initialState, action) {
     let results = {}
     for(let key in collections){
       let uuid = collections[key].uuid;
+      // fix this, should be stored as key value pair.  currently only returns one
       results = allCollections[uuid];
     }
     return results;

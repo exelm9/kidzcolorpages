@@ -12,7 +12,6 @@ export default class ResultModal extends Component {
     this.handleClose = this.handleClose.bind(this);
     this.handlePrevious = this.handlePrevious.bind(this);
     this.handleNext = this.handleNext.bind(this);
-    this.printImage = this.printImage.bind(this);
   }
 
   handleSelect (imgIdx) { this.props.actions.changeImage(imgIdx); }
@@ -31,18 +30,6 @@ export default class ResultModal extends Component {
     this.props.actions.changeCollection({colIdx, aliases});
   }
 
-  printImage() {
-    var iframe = document.createElement('iframe');
-    var tmp = document.getElementById('print_buffer');
-    tmp.appendChild(iframe);
-    var doc = iframe.contentDocument || iframe.contentWindow.document;
-    var img = doc.createElement("img");
-    img.src = `/media/alias/${this.props.aliases[this.props.imgIdx]}`;
-    doc.body.appendChild(img);
-    window.frames[0].print();
-  }
-
-
   render () {
     const galleryItems = this.props.aliases.map((alias, idx, arr) => {
       return (
@@ -60,18 +47,15 @@ export default class ResultModal extends Component {
         <Modal.Body>
           <div className="row">
             <div className="col-md-6 preview">
-              <figure>
-                <img className='modalLrgImage' src={`/media/alias/${this.props.aliases[this.props.imgIdx]}`} alt="" />
-              </figure>
+              <iframe id='preview' src={`/media/alias/${this.props.aliases[this.props.imgIdx]}`}></iframe>
             </div>
             <div className="col-md-6 more">
               <div className='galleryWrap'>
                 {galleryItems}
               </div>
               <div className='modalButtonsWrap'>
-                <button id='print_me' className='modalButtons btn btn-primary' onClick={this.printImage}>
-                  <div id='print_buffer'></div>
-                  <div id='print_label'>Print</div>
+                <button className='modalButtons btn btn-primary' onClick={() => window.frames[0].print()}>
+                  Print
                 </button>
                 <button className='modalButtons btn btn-primary'>Pin</button>
               </div>

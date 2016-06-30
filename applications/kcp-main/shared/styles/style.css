@@ -203,10 +203,12 @@
 	padding-top: 100px;
 }
 
-#print_me {
-	overflow:hidden;       border:1px solid grey; width:70px; height: 10px; position:relative; padding:10px;
+#preview {
+	width: 400px;
+	height: 500px;
+	border: none;
 }
 
-#print_label {
-	top:-5px; left:0px; width:70px; height: 5px; position:absolute; background:white; padding:10px; text-align:left;
+iframe img {
+	width: 100%;
 }

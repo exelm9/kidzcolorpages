@@ -1,16 +1,20 @@
 import React from 'react';
 
 const CollectionItem = (props) => {
-  const {image, caption, attachCollections, colIdx, count, _class} = props;
+  const {image, caption, attachCollections, colIdx, imgIdx, count, _class} = props;
 
   const handleClick = (e) => {
-    attachCollections(colIdx);
+    attachCollections(colIdx,imgIdx);
   }
+
+  let divStyle = {
+    backgroundImage: 'url(' + image + ')'
+  };
 
   return (
     <div className={_class}>
       <img
-        src={image}
+        style={divStyle}
         className='collectionItem'
         onClick={(e) => handleClick(e)}
       />

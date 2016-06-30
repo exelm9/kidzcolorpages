@@ -30,10 +30,6 @@ export default class ResultModal extends Component {
     this.props.actions.changeCollection({colIdx, aliases});
   }
 
-  componentDidMount(){
-    
-  }
-  
   render () {
     const galleryItems = this.props.aliases.map((alias, idx, arr) => {
       return (

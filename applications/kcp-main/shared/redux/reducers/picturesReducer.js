@@ -86,8 +86,10 @@ export default function picturesReducer(state = initialState, action) {
   const buildCollections = (allCollections, collections) => {
     let results = {}
     for(let key in collections){
-      let uuid = collections[key].uuid;
-      // fix this, should be stored as key value pair.  currently only returns one
+      let collection = collections[key];
+      let uuid = collection.uuid;
+      let title = collection.title
+      console.log(collection,'huh')
       results = allCollections[uuid];
     }
     return results;

@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import * as ColorPagesActions from '../../redux/actions';
 import CollectionItem from '../../components/CollectionItem/CollectionItem'
 import CategoryItem from '../../components/CategoryItem/CategoryItem';
+import PictureList from '../../components/PictureList/PictureList';
 
 import _ from 'lodash';
 import ResultModal from '../ResultModal/ResultModal';

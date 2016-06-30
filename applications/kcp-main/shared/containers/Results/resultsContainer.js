@@ -19,10 +19,10 @@ export default class ResultsContainer extends Component {
 
   }
 
-  showCollectionModal({collections, colIdx}) {
+  showCollectionModal({collections, colIdx, imgIdx}) {
     //console.log(collections, colIdx,'modal click')
     let aliases = this.props.allPictures.collections[collections[colIdx].uuid].aliases;
-    this.props.actions.showModal({collectionData: this.props.allPictures.collections, collections, colIdx , aliases});
+    this.props.actions.showModal({collectionData: this.props.allPictures.collections, collections, colIdx , imgIdx, aliases});
   }
 
   showSearchModal({imgIdx, uuid}) {
@@ -61,7 +61,6 @@ export default class ResultsContainer extends Component {
     let collectionPosition = null;
     let counter = 0;
     let mappedCollections = _.map(categoryList[0].collections, (collection, key) => {
-      console.log('key', key, 'picture title', pictureList.collection_title)
       if(collectionPosition === null){
         if(key === pictureList.collection_title){
           collectionPosition = counter;
@@ -72,8 +71,8 @@ export default class ResultsContainer extends Component {
       return collection;
     });
 
-    let attachCollections = (colIdx) => {
-      this.showCollectionModal({collections: mappedCollections, colIdx})
+    let attachCollections = (colIdx, imgIdx) => {
+      this.showCollectionModal({collections: mappedCollections, colIdx, imgIdx})
     };
     //console.log(categoryList,'huh', pictureList)
     let pictures = pictureList.aliases !== undefined ? pictureList.aliases : [];
@@ -81,6 +80,7 @@ export default class ResultsContainer extends Component {
       return <CollectionItem
               image={"/media/alias/" + picture}
               colIdx={collectionPosition}
+              imgIdx={idx}
               uuid={pictureList.collection_uuid}
               key={pictureList.collection_uuid + idx}
               caption=""

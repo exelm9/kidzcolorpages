@@ -7,8 +7,8 @@ import _ from 'lodash';
 const categoryItem = ({collections, caption, showModal}) => {
   let uniqueId = 0;
   let mappedCollections = [];
-  let attachCollections = (colIdx) => {
-    showModal({collections: mappedCollections, colIdx})
+  let attachCollections = (colIdx, imgIdx) => {
+    showModal({collections: mappedCollections, colIdx, imgIdx})
   };
 
   const collectionItems = _.map(collections, (collection) => {
@@ -22,6 +22,7 @@ const categoryItem = ({collections, caption, showModal}) => {
         key={collection.uuid}
         count={collection.alias_count}
         _class="collectionWrap"
+        imgIdx="0"
       />
     );
   });

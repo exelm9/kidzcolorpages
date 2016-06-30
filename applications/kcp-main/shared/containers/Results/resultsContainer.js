@@ -20,6 +20,7 @@ export default class ResultsContainer extends Component {
   }
 
   showCollectionModal({collections, colIdx}) {
+    //console.log(collections, colIdx,'modal click')
     let aliases = this.props.allPictures.collections[collections[colIdx].uuid].aliases;
     this.props.actions.showModal({collectionData: this.props.allPictures.collections, collections, colIdx , aliases});
   }
@@ -48,7 +49,6 @@ export default class ResultsContainer extends Component {
       )
     }
 
-    
     let categories = categoryList.map((category, idx) => {
       return (<CategoryItem
               collections={category.collections}
@@ -58,16 +58,35 @@ export default class ResultsContainer extends Component {
             />);
     });
 
+    let collectionPosition = null;
+    let counter = 0;
+    let mappedCollections = _.map(categoryList[0].collections, (collection, key) => {
+      console.log('key', key, 'picture title', pictureList.collection_title)
+      if(collectionPosition === null){
+        if(key === pictureList.collection_title){
+          collectionPosition = counter;
+        }else{
+          counter++;
+        }
+      }
+      return collection;
+    });
+
+    let attachCollections = (colIdx) => {
+      this.showCollectionModal({collections: mappedCollections, colIdx})
+    };
+    //console.log(categoryList,'huh', pictureList)
     let pictures = pictureList.aliases !== undefined ? pictureList.aliases : [];
     pictures = pictures.map((picture, idx) => {
       return <CollectionItem
               image={"/media/alias/" + picture}
-              imgIdx={idx}
+              colIdx={collectionPosition}
               uuid={pictureList.collection_uuid}
               key={pictureList.collection_uuid + idx}
               caption=""
               count=""
-              showModal={this.showModal}
+              attachCollections={attachCollections}
+              showModal={this.showCollectionModal}
               _class="pictureWrap"
              />
     });

@@ -7,10 +7,14 @@ const CollectionItem = (props) => {
     attachCollections(colIdx,imgIdx);
   }
 
+  let divStyle = {
+    backgroundImage: 'url(' + image + ')'
+  };
+
   return (
     <div className={_class}>
       <img
-        src={image}
+        style={divStyle}
         className='collectionItem'
         onClick={(e) => handleClick(e)}
       />

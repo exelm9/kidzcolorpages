@@ -55,8 +55,11 @@ export default function picturesReducer(state = initialState, action) {
           if(foundCollections.length === 0) continue;
         }
 
-        foundCollections = buildCollections(allCollections, foundCollections);
-        searchedCollections.pictures = foundCollections;
+        foundCollections = filterCollections(allCollections, foundCollections);
+        for(let i = 0; i < foundCollections.length; i++){
+          searchedCollections.pictures.push(foundCollections[i]);
+        }
+        
         searchedCollections.category.push(category);
       }
     }
@@ -83,14 +86,12 @@ export default function picturesReducer(state = initialState, action) {
     return results;
   }
 
-  const buildCollections = (allCollections, collections) => {
-    let results = {}
+  const filterCollections = (allCollections, collections) => {
+    let results = []
     for(let key in collections){
       let collection = collections[key];
       let uuid = collection.uuid;
-      let title = collection.title
-      console.log(collection,'huh')
-      results = allCollections[uuid];
+      results.push(allCollections[uuid]);
     }
     return results;
   }

@@ -94,7 +94,7 @@ export default function picturesReducer(state = initialState, action) {
     }
     return results;
   }
-  console.log(state);
+
   switch (action.type) {
     case FETCH_PICTURES:
       let categoryList = filterCategories(action.payload);

@@ -25,7 +25,6 @@ export default class SearchBar extends Component {
 	}
 
 	componentWillReceiveProps(props){
-		console.log(props,'huh')
 		if(props.clearSearch === true){
 			this.setState({term:''})
 		}

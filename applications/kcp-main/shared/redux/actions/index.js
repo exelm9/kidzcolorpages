@@ -1,6 +1,7 @@
 import * as actions from '../constants/ActionTypes';
 import { browserHistory } from 'react-router';
 import request from 'axios';
+import util from '../../utility/utility';
 import _ from 'lodash';
 
 export const searchPictures = (term) => {
@@ -14,7 +15,8 @@ export const clearSearch = (term) => ({ type: actions.CLEAR_SEARCH, clear: true 
 export const fetchPictures = () => (dispatch) =>
 		request.get('/api').then((response) => {
       var data = JSON.parse(response.data);
-      console.log(data,'all data');
+      data.filters = util.prepareFilterData(data.filters, data.categories)
+      console.log(data,'all data')
       dispatch({type: actions.FETCH_PICTURES, payload: data})
     });
 

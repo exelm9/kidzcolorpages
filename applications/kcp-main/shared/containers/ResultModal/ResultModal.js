@@ -34,36 +34,23 @@ export default class ResultModal extends Component {
   render () {
     const galleryItems = this.props.aliases.map((alias, idx, arr) => {
       return (
-        <ResultsListItem 
-          image={`/media/alias/${alias}`} 
-          idx={idx} 
-          showImage={this.handleSelect} 
+        <ResultsListItem
+          image={`/media/alias/${alias}`}
+          idx={idx}
+          showImage={this.handleSelect}
           selected={idx === this.props.imgIdx}/>
       );
     });
 
     return (
       <ReactCSSTransitionGroup transitionName="modal-transition" transitionEnterTimeout={500} transitionLeaveTimeout={500}>
-        <Modal className={"Modal-Container " + this.props.direction} show={this.props.show} onHide={this.handleClose} bsSize="large" aria-labelledby="contained-modal-title-lg">
+        <Modal className={"modal-container " + this.props.direction} show={this.props.show} onHide={this.handleClose} bsSize="large" aria-labelledby="contained-modal-title-lg">
           <Modal.Header closeButton={true} onHide={this.handleClose}/>
           <Modal.Body>
             <div className="row">
               <div className="col-md-6 preview">
                 <iframe id='preview' src={`/media/alias/${this.props.aliases[this.props.imgIdx]}`} onLoad={() => window.apply_styles()}></iframe>
               </div>
-<<<<<<< 69a92cc795b8eca93498427d10d23b27b0408cd1
-            </div>
-
-          </div>
-                        <div className='modalButtonsWrap'>
-                <button type="button" className="btn btn-primary btn-lg raised" onClick={() => { window.frames[0].print() } }>Print</button>
-              </div>
-        </Modal.Body>
-        <Modal.Footer>
-          <div className={this.props.colIdx ? 'left-arrow' : 'left-arrow hidden'} onClick={this.handlePrevious}>
-            <div className="bg">
-              <i className='fa fa-arrow-left' aria-hidden='true'></i>
-=======
               <div className="col-md-6 more">
                 <div className='galleryWrap'>
                   {galleryItems}
@@ -79,7 +66,6 @@ export default class ResultModal extends Component {
               <div className="bg">
                 <i className='fa fa-arrow-left' aria-hidden='true'></i>
               </div>
->>>>>>> [progress] begins adding animation to modal on collection change
             </div>
             <div className={this.props.colIdx === this.props.collections.length - 1 ? 'right-arrow hidden' : 'right-arrow'} onClick={this.handleNext}>
               <div className="bg">

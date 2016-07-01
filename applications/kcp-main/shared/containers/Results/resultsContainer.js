@@ -15,10 +15,6 @@ export default class ResultsContainer extends Component {
     this.showCollectionModal =  this.showCollectionModal.bind(this);
   }
 
-  componentWillMount(){
-
-  }
-
   showCollectionModal({collections, colIdx, imgIdx}) {
     //console.log(collections, colIdx,'modal click')
     let aliases = this.props.allPictures.collections[collections[colIdx].uuid].aliases;
@@ -68,10 +64,7 @@ export default class ResultsContainer extends Component {
       }
     }
 
-    
-    
     // console.log(categoryList, pictureList,'prior to pictures being built out')
-
     if(categories.length === 0){
       categories = <h2><i>No Pics Found</i></h2>
     }
@@ -88,7 +81,7 @@ export default class ResultsContainer extends Component {
   }
 };
 
-// port to a component in future
+// port to a component in future. Time crunches cause glitches in The Matrix
 const buildPictureList = (pictureList, categoryList,showCollectionModal) => {
   // setting index so modal knows which collection to grab when picture clicked
   let collectionPosition = null;
@@ -109,7 +102,6 @@ const buildPictureList = (pictureList, categoryList,showCollectionModal) => {
   };
 
   let pictures = pictureList.aliases !== undefined ? pictureList.aliases : [];
-  console.log(pictureList,'cmon')
   pictures = pictures.map((picture, idx) => {
     return <CollectionItem
             image={"/media/alias/" + picture}
@@ -124,8 +116,9 @@ const buildPictureList = (pictureList, categoryList,showCollectionModal) => {
             _class="pictureWrap"
            />
   });
+
   if(pictures.length > 0){
-    pictures = <div className="categoryItem">
+    pictures = <div key={pictureList.collection_uuid} className="categoryItem">
                 <div className="thumbnail">
                   <div className="caption">
                     <h4>{pictureList.collection_title}</h4>
@@ -138,7 +131,7 @@ const buildPictureList = (pictureList, categoryList,showCollectionModal) => {
   }else{
     pictures = null
   }
-  console.log(pictures,'huh')
+
   return pictures;
 }
 

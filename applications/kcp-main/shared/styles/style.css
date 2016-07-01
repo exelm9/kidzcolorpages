@@ -212,7 +212,7 @@ nav {
     top: 52px;
     bottom: 0px;
     z-index: 10;
-    background-color: #fafafe;
+    background-color: #def7ff;
     /* padding-top: 14px; */
     margin-bottom: -25px;
 }
@@ -254,7 +254,7 @@ button.filterButtons.btn.btn-primary, .filterButtons.btn.btn-primary.selected {
     display: block;
     top: -18px;
     right: -149px;
-    background-color: purple;
+    background-color: #0099cc;
     border-radius: 100%;
     width: 33px;
     padding: 10px;
@@ -391,11 +391,16 @@ box-shadow: inset 2px 0px 23px 3px rgba(50,0,250,0.22);
 }
 
 .right-arrow .bg, .left-arrow .bg {
-  background-color: black;
+  background-color: #2cafda;
   height: 200px;
   width: 200px;
   border-radius: 110%;
 } 
+
+.bg i {
+    color: #9fe7ff;
+    font-size: 42px;
+}
 
 
 .right-arrow .bg i, .left-arrow .bg i{
@@ -403,7 +408,7 @@ box-shadow: inset 2px 0px 23px 3px rgba(50,0,250,0.22);
 }
 
 .right-arrow .bg {
-    background-color: black;
+    background-color: #2cafda;
     height: 200px;
     width: 200px;
     border-radius: 110%;
@@ -413,13 +418,13 @@ box-shadow: inset 2px 0px 23px 3px rgba(50,0,250,0.22);
 .right-arrow .bg i {
     right: 30px;
     position: absolute;
-    top: 89px;
+    top: 79px;
 }
 
 .left-arrow .bg i {
     left: 30px;
     position: absolute;
-    top: 89px;
+    top: 79px;
 }
 
 /**************************
@@ -586,5 +591,15 @@ box-shadow: -4px 10px 23px -10px rgba(0,0,0,0.75);
 .modalButtonsWrap {
     margin-top: 10px;
     margin-left: 60px;
+}
+
+
+
+.modal-backdrop.in {
+    filter: alpha(opacity=90);
+    opacity: .9;
+}
+.modal-backdrop {
+    background-color: #feffff;
 }
 

@@ -26,8 +26,8 @@ export default class Sidepanel extends Component {
   }
 
   filterPictures(filter){
-    this.setState({activeFilterBtn:filter,clearSearch:true })
-    this.props.actions.filterPictures(filter);
+    this.setState({activeFilterBtn:filter.title,clearSearch:true })
+    this.props.actions.filterPictures(filter.title);
   }
 
   setSearchOnBlur(term){

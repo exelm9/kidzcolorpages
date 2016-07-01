@@ -620,6 +620,10 @@ button.filterButtons.btn.btn-primary:hover {
     -webkit-transform: translate(100%)!important;
 }
 
+.modal-transition-enter.modal-transition-enter-active {
+    
+}
+
 .modal-transition-leave .left {
     transform: translate(100%)!important;
     -webkit-transform: translate(100%)!important;
@@ -629,4 +633,11 @@ button.filterButtons.btn.btn-primary:hover {
     transform: translate(-100%)!important;
     -webkit-transform: translate(-100%)!important;
 }
+<<<<<<< 328ba0b69c4b17aa0ebdbef648da72017a7906b4
 >>>>>>> [progress] begins adding animation to modal on collection change
+=======
+
+.modal-transition-leave.modal-transition-leave-active {
+
+}
+>>>>>>> [progress] attempts to animate modal

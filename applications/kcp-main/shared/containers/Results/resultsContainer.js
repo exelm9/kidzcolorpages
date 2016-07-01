@@ -71,7 +71,7 @@ export default class ResultsContainer extends Component {
     }
 
     return (
-      <div className="main-container col-md-9 col-md-push-3">
+      <div className="main-container col-md-10 col-md-push-2">
         {pictures}
         {categories}
         <ResultModal />

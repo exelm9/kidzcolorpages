@@ -25,6 +25,19 @@ app.get('/browse', function(req, res, next){
 				   	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 				   	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 				   	<script src="/kcp/dist/bundle.js"></script>
+				   	<script> 
+				   		      window.apply_styles = function(){
+						        setTimeout(function(){
+						            var link = window.frames[0].document.createElement("link");
+						            var head = window.frames[0].document.getElementsByTagName("head")[0];
+						                link.setAttribute("rel", "stylesheet");
+						                link.setAttribute("type", "text/css");
+						                link.setAttribute("href", "/kcp/styles/preview.css");
+						                head.appendChild(link);
+						        },1);
+						      }
+
+				   	</script>
 				   </body>
 				</html>`
 			);

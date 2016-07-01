@@ -1,13 +1,14 @@
 'use strict';
 
 /**
+
 	Media Aliases provide an efficient and flexible means
 	to organize and categorize your media files using json files.
 
 	You can create any number of media alias files, each one will be 
 	linked, via it's properties, to it's source file. While you might end
-	up with any number of aliases which link back to the same soure files,
-	there should never be duplicate	files.
+	up with any number of aliases which link back to the same source files,
+	there should never be any duplicate	files.
 
 	It's low tech approach makes it usefull in cross app/domain media
 	sharing and eliminates all duplicates of the media files themselves.
@@ -16,7 +17,6 @@
 	should also be a Database, for more complicated interactions.
 
 */
-
 
 const fs = require('fs');
 const path = require('path');
@@ -27,16 +27,20 @@ const atlas_paths = require('atlas_paths');
 const hasher = require('MD5');
 const file_hasher = require('hash-file');
 
-
 function get_index(){
-	return JSON.parse(fs.readFileSync(path.join(__dirname, '/../../media/aliases/index.json'), 'utf8'));
+	return JSON.parse(fs.readFileSync(path.join(__dirname, '/../../media/meta/index.json'), 'utf8'));
 }
 
-function getAliasPath  ( alias_path ) {
+function get_alias_path  ( alias_path ) {
 	console.log(alias_path)
 	var needles = [ 
+		// Alias files in the Public Root
 		atlas_paths._DOC_ROOT + alias_path.replace('.alias', "") + '.alias',
+
+		// Alias files that are MD5 Hashes of a URL
 		atlas_paths._MEDIA_ + '/aliases/' + hasher(alias_path) + '.alias',
+
+		// Alias Files that exist in the /media/aliases directory
 		atlas_paths._MEDIA_ + '/aliases/' + alias_path.split('/media/').pop() + '.alias',
 	];
 
@@ -47,9 +51,9 @@ function getAliasPath  ( alias_path ) {
     return _needles || false;
 }
 
-function loadAliasDetails( path ){
-	if( typeof path !== 'string') return false;
-	var file = fs.readFileSync(path, 'utf8');
+function load_alias_details( _path ){
+	if( typeof _path !== 'string') return false;
+	var file = fs.readFileSync(_path, 'utf8');
 	if(isJson(file)){
 		return JSON.parse(file);
 	}
@@ -72,7 +76,6 @@ function isJson(prop) {
 }
 
 module.exports.get_index = get_index;
-module.exports.loadAliasDetails = loadAliasDetails;
-module.exports.getAliasPath = getAliasPath;
+module.exports.load_alias_details = load_alias_details;
+module.exports.get_alias_path = get_alias_path;
 module.exports.isJson = isJson;
-

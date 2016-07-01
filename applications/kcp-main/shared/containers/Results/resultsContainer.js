@@ -19,6 +19,7 @@ export default class ResultsContainer extends Component {
     //console.log(collections, colIdx,'modal click')
     let aliases = this.props.allPictures.collections[collections[colIdx].uuid].aliases;
     this.props.actions.showModal({collectionData: this.props.allPictures.collections, collections, colIdx , imgIdx, aliases});
+    window.apply_styles();
   }
 
   showSearchModal({imgIdx, uuid}) {

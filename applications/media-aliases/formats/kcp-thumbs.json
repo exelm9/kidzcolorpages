@@ -1,0 +1,7 @@
+{
+	"title": "KCP Thumbs Format",
+	"desc": "The image format for the KCP results page thumbs",
+	"dim_X": 300,
+	"dim_Y": 300,
+	"maintain_aspects": true
+}

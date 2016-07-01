@@ -12,14 +12,11 @@ const CollectionItem = (props) => {
   };
 
   return (
-    <div className={_class}>
-      <img
-        style={divStyle}
-        className='collectionItem'
-        onClick={(e) => handleClick(e)}
-      />
+    <div className={ _class + ' class_box_shadow'}>
+      <img style={divStyle} className='collectionItem' onClick={(e) => handleClick(e)} />
       <b>{caption}</b>
       <i>{count}</i>
+      <div class="sh_bottom"></div>
     </div>
   );
 };

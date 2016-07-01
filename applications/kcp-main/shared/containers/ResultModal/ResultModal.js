@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Modal, Col, Row } from 'react-bootstrap';
+import ReactCSSTransitionGroup from 'react/lib/ReactCSSTransitionGroup';
+import { Modal } from 'react-bootstrap';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import ResultsListItem from '../../components/DefaultResult/resultsListItem';
@@ -21,13 +22,13 @@ export default class ResultModal extends Component {
   handlePrevious () {
     let colIdx = this.props.colIdx - 1; console.log(colIdx);
     let aliases = this.props.collectionData[this.props.collections[colIdx].uuid].aliases; console.log(aliases);
-    this.props.actions.changeCollection({colIdx, aliases});
+    this.props.actions.changeCollection({colIdx, aliases, direction: 'right'});
   }
 
   handleNext () {
     let colIdx = this.props.colIdx + 1;
     let aliases = this.props.collectionData[this.props.collections[colIdx].uuid].aliases;
-    this.props.actions.changeCollection({colIdx, aliases});
+    this.props.actions.changeCollection({colIdx, aliases, direction: 'left'});
   }
 
   render () {
@@ -42,38 +43,40 @@ export default class ResultModal extends Component {
     });
 
     return (
-      <Modal className="Modal-Container" show={this.props.show} onHide={this.handleClose} bsSize="large" aria-labelledby="contained-modal-title-lg">
-        <Modal.Header closeButton={true} onHide={this.handleClose}/>
-        <Modal.Body>
-          <div className="row">
-            <div className="col-md-6 preview">
-              <iframe id='preview' src={`/media/alias/${this.props.aliases[this.props.imgIdx]}`} onLoad={() => window.apply_styles()}></iframe>
-            </div>
-            <div className="col-md-6 more">
-              <div className='galleryWrap'>
-                {galleryItems}
+      <ReactCSSTransitionGroup transitionName="modal-transition" transitionEnterTimeout={500} transitionLeaveTimeout={500}>
+        <Modal className={"Modal-Container " + this.props.direction} show={this.props.show} onHide={this.handleClose} bsSize="large" aria-labelledby="contained-modal-title-lg">
+          <Modal.Header closeButton={true} onHide={this.handleClose}/>
+          <Modal.Body>
+            <div className="row">
+              <div className="col-md-6 preview">
+                <iframe id='preview' src={`/media/alias/${this.props.aliases[this.props.imgIdx]}`} onLoad={() => window.apply_styles()}></iframe>
               </div>
-              <div className='modalButtonsWrap'>
-                <button type="button" className="btn btn-primary btn-lg raised" onClick={() => { window.frames[0].print() } }>Print</button>
+              <div className="col-md-6 more">
+                <div className='galleryWrap'>
+                  {galleryItems}
+                </div>
+                <div className='modalButtonsWrap'>
+                  <button type="button" className="btn btn-primary btn-lg raised" onClick={() => { window.frames[0].print() } }>Print</button>
+                </div>
+              </div>
+  
+            </div>
+          </Modal.Body>
+          <Modal.Footer>
+  
+            <div className={this.props.colIdx ? 'left-arrow' : 'left-arrow hidden'} onClick={this.handlePrevious}>
+              <div className="bg">
+                <i className='fa fa-arrow-left' aria-hidden='true'></i>
               </div>
             </div>
-
-          </div>
-        </Modal.Body>
-        <Modal.Footer>
-
-          <div className={this.props.colIdx ? 'left-arrow' : 'left-arrow hidden'} onClick={this.handlePrevious}>
-            <div className="bg">
-              <i className='fa fa-arrow-left' aria-hidden='true'></i>
+            <div className={this.props.colIdx === this.props.collections.length - 1 ? 'right-arrow hidden' : 'right-arrow'} onClick={this.handleNext}>
+              <div className="bg">
+                <i className='fa fa-arrow-right' aria-hidden='true'></i>
+              </div>
             </div>
-          </div>
-          <div className={this.props.colIdx === this.props.collections.length - 1 ? 'right-arrow hidden' : 'right-arrow'} onClick={this.handleNext}>
-            <div className="bg">
-              <i className='fa fa-arrow-right' aria-hidden='true'></i>
-            </div>
-          </div>
-        </Modal.Footer>
-      </Modal>
+          </Modal.Footer>
+        </Modal>
+      </ReactCSSTransitionGroup>
     );
   }
 }
@@ -85,7 +88,8 @@ const mapStateToProps = ({modal}) => ({
   collections: modal.collections,
   colIdx: modal.colIdx,
   aliases: modal.aliases, 
-  imgIdx: modal.imgIdx 
+  imgIdx: modal.imgIdx,
+  direction: modal.direction
 });
 
 

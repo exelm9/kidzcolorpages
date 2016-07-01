@@ -540,3 +540,29 @@ box-shadow: inset 2px 0px 23px 3px rgba(50,0,250,0.22);
       width: 100px!important
   }
 }
+
+.modal-wrapper {
+    overflow-x: hidden!important;
+    -webkit-transition-duration: 500ms!important;
+    transition-duration: 500ms!important;
+}
+
+.modal-transition-enter .left {
+    transform: translate(-100%)!important;
+    -webkit-transform: translate(-100%)!important;
+}
+
+.modal-transition-enter .right {
+    transform: translate(100%)!important;
+    -webkit-transform: translate(100%)!important;
+}
+
+.modal-transition-leave .left {
+    transform: translate(100%)!important;
+    -webkit-transform: translate(100%)!important;
+}
+
+.modal-transition-leave .right {
+    transform: translate(-100%)!important;
+    -webkit-transform: translate(-100%)!important;
+}

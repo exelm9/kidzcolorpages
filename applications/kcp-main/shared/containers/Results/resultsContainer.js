@@ -71,12 +71,10 @@ export default class ResultsContainer extends Component {
     }
 
     return (
-      <div className="col-md-9 col-md-push-3">
-        {/*<ResultsJumbotron images={this.props.pictures} />*/}
+      <div className="main-container col-md-9 col-md-push-3">
         {pictures}
         {categories}
         <ResultModal />
-
       </div>
     );
   }
@@ -120,7 +118,7 @@ const buildPictureList = (pictureList, categoryList,showCollectionModal) => {
 
   if(pictures.length > 0){
     pictures = <div key={pictureList.collection_uuid} className="categoryItem">
-                <div className="thumbnail">
+                <div className="">
                   <div className="caption">
                     <h4>{pictureList.collection_title}</h4>
                   </div>

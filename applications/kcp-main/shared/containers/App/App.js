@@ -5,12 +5,12 @@ import Header from '../../components/header';
 export default class App extends Component {
   render() {
     return (
-      <div>
-        <Header />
-        <div className="row">
-          {this.props.children}
-        </div>
-    </div>
+      <div className="stage">
+          <div className="application-wrap">
+          <Header />
+            {this.props.children}
+          </div>
+      </div>
     );
   }
 }

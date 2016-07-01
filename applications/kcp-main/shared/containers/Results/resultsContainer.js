@@ -57,55 +57,20 @@ export default class ResultsContainer extends Component {
               showModal={this.showCollectionModal}
             />);
     });
-    console.log(categoryList, pictureList,'prior to pictures being built out')
-    let collectionPosition = null;
-    let counter = 0;
-    let firstCategoryList = categoryList[0];
-    let mappedCollections = firstCategoryList === undefined ? [] : _.map(categoryList[0].collections, (collection, key) => {
-      if(collectionPosition === null){
-        if(key === pictureList.collection_title){
-          collectionPosition = counter;
-        }else{
-          counter++;
-        }
+
+    // if the search yields no results, then don't render picture list
+    let pictures = [];
+    if(pictureList.length > 0){
+      for(let i = 0; i < pictureList.length; i++){
+        let pictureCategory = pictureList[i].collection_mPath
+        pictureCategory = pictureCategory.substring(0, pictureCategory.lastIndexOf('/'));
+        pictures.push(buildPictureList(pictureList[i], this.props.allPictures.categories[pictureCategory], this.showCollectionModal))
       }
-      return collection;
-    });
-
-    let attachCollections = (colIdx, imgIdx) => {
-      this.showCollectionModal({collections: mappedCollections, colIdx, imgIdx})
-    };
-    //console.log(categoryList,'huh', pictureList)
-    let pictures = pictureList.aliases !== undefined ? pictureList.aliases : [];
-    pictures = pictures.map((picture, idx) => {
-      return <CollectionItem
-              image={"/media/alias/" + picture}
-              colIdx={collectionPosition}
-              imgIdx={idx}
-              uuid={pictureList.collection_uuid}
-              key={pictureList.collection_uuid + idx}
-              caption=""
-              count=""
-              attachCollections={attachCollections}
-              showModal={this.showCollectionModal}
-              _class="pictureWrap"
-             />
-    });
-
-    if(pictures.length > 0){
-      pictures = <div className="categoryItem">
-                  <div className="thumbnail">
-                    <div className="caption">
-                      <h4>{pictureList.collection_title}</h4>
-                    </div>
-                    <div>
-                      {pictures}
-                    </div>
-                  </div>
-                </div>
-    }else{
-      pictures = null
     }
+
+    
+    
+    // console.log(categoryList, pictureList,'prior to pictures being built out')
 
     if(categories.length === 0){
       categories = <h2><i>No Pics Found</i></h2>
@@ -122,6 +87,60 @@ export default class ResultsContainer extends Component {
     );
   }
 };
+
+// port to a component in future
+const buildPictureList = (pictureList, categoryList,showCollectionModal) => {
+  // setting index so modal knows which collection to grab when picture clicked
+  let collectionPosition = null;
+  let counter = 0;
+  let mappedCollections = _.map(categoryList.collections, (collection, key) => {
+    if(collectionPosition === null){
+      if(key === pictureList.collection_title){
+        collectionPosition = counter;
+      }else{
+        counter++;
+      }
+    }
+    return collection;
+  });
+
+  let attachCollections = (colIdx, imgIdx) => {
+    showCollectionModal({collections: mappedCollections, colIdx, imgIdx})
+  };
+
+  let pictures = pictureList.aliases !== undefined ? pictureList.aliases : [];
+  console.log(pictureList,'cmon')
+  pictures = pictures.map((picture, idx) => {
+    return <CollectionItem
+            image={"/media/alias/" + picture}
+            colIdx={collectionPosition}
+            imgIdx={idx}
+            uuid={pictureList.collection_uuid}
+            key={pictureList.collection_uuid + idx}
+            caption=""
+            count=""
+            attachCollections={attachCollections}
+            showModal={showCollectionModal}
+            _class="pictureWrap"
+           />
+  });
+  if(pictures.length > 0){
+    pictures = <div className="categoryItem">
+                <div className="thumbnail">
+                  <div className="caption">
+                    <h4>{pictureList.collection_title}</h4>
+                  </div>
+                  <div>
+                    {pictures}
+                  </div>
+                </div>
+              </div>
+  }else{
+    pictures = null
+  }
+  console.log(pictures,'huh')
+  return pictures;
+}
 
 
 ResultsContainer.defaultProps = {

@@ -557,6 +557,10 @@ box-shadow: inset 2px 0px 23px 3px rgba(50,0,250,0.22);
     -webkit-transform: translate(100%)!important;
 }
 
+.modal-transition-enter.modal-transition-enter-active {
+    
+}
+
 .modal-transition-leave .left {
     transform: translate(100%)!important;
     -webkit-transform: translate(100%)!important;
@@ -565,4 +569,8 @@ box-shadow: inset 2px 0px 23px 3px rgba(50,0,250,0.22);
 .modal-transition-leave .right {
     transform: translate(-100%)!important;
     -webkit-transform: translate(-100%)!important;
+}
+
+.modal-transition-leave.modal-transition-leave-active {
+
 }

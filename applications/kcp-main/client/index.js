@@ -21,9 +21,7 @@ store.dispatch(fetchPictures());
 
 ReactDOM.render(
   <Provider store={store}>
-    <div>
       <Router history={history} routes={routes} />
-    </div>
   </Provider>, 
   document.querySelector('.container')
 );

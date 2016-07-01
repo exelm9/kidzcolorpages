@@ -45,7 +45,7 @@ export default class Sidepanel extends Component {
     });
     const activeFilter = this.state.activeFilterBtn;
     return (
-      <div className="sidepanel col-sx-4 col-sm-3">
+      <div className="sidepanel col-sx-4 col-sm-3 col-md-2">
 
         <SearchBar onSearchChange={ pictureSearch } onSearchBlur={ this.setSearchOnBlur } clearSearch={ this.state.clearSearch }/>
         <div className="filtersWrap">

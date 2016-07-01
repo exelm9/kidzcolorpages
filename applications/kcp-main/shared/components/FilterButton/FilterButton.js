@@ -8,7 +8,7 @@ const FilterButton = (props) => {
       className={`filterButtons btn btn-primary ${classNames}`}
       onClick={onClick}
     >
-    {filterType}
+    <i className="filterLable"> {filterType}</i>
     </button>
   );
 };

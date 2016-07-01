@@ -14,7 +14,7 @@ exports.prepareFilterData = function(filters, categories){
   	// temporary hack when we have more time to fix data
   	// events and places doesn't have a category like holidays, stories
   	if(filter === 'events and places'){
-  		reformatedFilter['picture'] = 'ae059557-3cfe-11e6-a2ad-eba45cecdde6';
+  		reformatedFilter['picture'] = 'ae05955a-3cfe-11e6-a2ad-eba45cecdde6';
   	}
   	reformatedFilter['pages'] = pages
   	return reformatedFilter;

@@ -16,7 +16,6 @@ export default class Header extends Component {
       <nav className="navbar navbar-light bg-faded" >
         <div className="container-fluid">
           {/*KCP title button*/}
-          <div onClick={event => this.homeReturn()} className="navbar-brand" href="#">kcp</div>
             <ul className="nav navbar-nav navbar-right">
               <li className="dropdown">
                 <button href="#" className="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button" aria-haspopup="true" aria-expanded="false">menu <span className="caret"></span></button>

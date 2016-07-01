@@ -54,21 +54,23 @@ export default class ResultModal extends Component {
                 {galleryItems}
               </div>
               <div className='modalButtonsWrap'>
-                <button className='modalButtons btn btn-primary' onClick={() => { window.frames[0].print() } }>
-                  Print
-                </button>
-                <button className='modalButtons btn btn-primary'>Pin</button>
+                <button type="button" className="btn btn-primary btn-lg raised" onClick={() => { window.frames[0].print() } }>Print</button>
               </div>
             </div>
 
           </div>
         </Modal.Body>
         <Modal.Footer>
+
           <div className={this.props.colIdx ? 'left-arrow' : 'left-arrow hidden'} onClick={this.handlePrevious}>
-            <i className='fa fa-arrow-left' aria-hidden='true'></i>
+            <div className="bg">
+              <i className='fa fa-arrow-left' aria-hidden='true'></i>
+            </div>
           </div>
           <div className={this.props.colIdx === this.props.collections.length - 1 ? 'right-arrow hidden' : 'right-arrow'} onClick={this.handleNext}>
-            <i className='fa fa-arrow-right' aria-hidden='true'></i>
+            <div className="bg">
+              <i className='fa fa-arrow-right' aria-hidden='true'></i>
+            </div>
           </div>
         </Modal.Footer>
       </Modal>

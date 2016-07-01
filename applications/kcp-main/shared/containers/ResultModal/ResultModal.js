@@ -44,7 +44,7 @@ export default class ResultModal extends Component {
 
     return (
       <ReactCSSTransitionGroup transitionName="modal-transition" transitionEnterTimeout={500} transitionLeaveTimeout={500}>
-        <Modal className={"Modal-Container " + this.props.direction} show={this.props.show} onHide={this.handleClose} bsSize="large" aria-labelledby="contained-modal-title-lg">
+        <Modal className={"modal-container " + this.props.direction} show={this.props.show} onHide={this.handleClose} bsSize="large" aria-labelledby="contained-modal-title-lg">
           <Modal.Header closeButton={true} onHide={this.handleClose}/>
           <Modal.Body>
             <div className="row">

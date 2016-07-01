@@ -14,7 +14,7 @@ export default class ResultModal extends Component {
     this.handleNext = this.handleNext.bind(this);
   }
 
-  handleSelect (imgIdx) { this.props.actions.changeImage(imgIdx); }
+  handleSelect (imgIdx) { this.props.actions.changeImage(imgIdx); window.apply_styles();}
 
   handleClose () { this.props.actions.hideModal(false); }
 
@@ -47,19 +47,20 @@ export default class ResultModal extends Component {
         <Modal.Body>
           <div className="row">
             <div className="col-md-6 preview">
-              <iframe id='preview' src={`/media/alias/${this.props.aliases[this.props.imgIdx]}`}></iframe>
+              <iframe id='preview' src={`/media/alias/${this.props.aliases[this.props.imgIdx]}`} onLoad={() => window.apply_styles()}></iframe>
             </div>
             <div className="col-md-6 more">
               <div className='galleryWrap'>
                 {galleryItems}
               </div>
               <div className='modalButtonsWrap'>
-                <button className='modalButtons btn btn-primary' onClick={() => window.frames[0].print()}>
+                <button className='modalButtons btn btn-primary' onClick={() => { window.frames[0].print() } }>
                   Print
                 </button>
                 <button className='modalButtons btn btn-primary'>Pin</button>
               </div>
             </div>
+
           </div>
         </Modal.Body>
         <Modal.Footer>
@@ -74,6 +75,7 @@ export default class ResultModal extends Component {
     );
   }
 }
+
 
 const mapStateToProps = ({modal}) => ({ 
   show: modal.show, 

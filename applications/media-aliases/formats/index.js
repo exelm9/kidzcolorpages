@@ -1,0 +1,1 @@
+module.exports.kcp_thumbs = require('./kcp-thumbs.json');

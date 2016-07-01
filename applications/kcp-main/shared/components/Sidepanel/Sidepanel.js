@@ -26,8 +26,8 @@ export default class Sidepanel extends Component {
   }
 
   filterPictures(filter){
-    this.setState({activeFilterBtn:filter,clearSearch:true })
-    this.props.actions.filterPictures(filter);
+    this.setState({activeFilterBtn:filter.title,clearSearch:true })
+    this.props.actions.filterPictures(filter.title);
   }
 
   setSearchOnBlur(term){
@@ -41,7 +41,10 @@ export default class Sidepanel extends Component {
   render() {
     const pictureSearch = _.debounce((term) => { this.pictureSearch(term) }, 300);
     const filters = _.map(this.props.filters.filters, function(value,key){
-      return key;
+      let filterObj = {};
+      filterObj['picture'] = value.picture;
+      filterObj['title'] = key;
+      return filterObj;
     });
     const activeFilter = this.state.activeFilterBtn;
     return (
@@ -53,9 +56,10 @@ export default class Sidepanel extends Component {
             return(
             <FilterButton
               onClick={() => this.filterPictures(filter)}
-              filterType={ filter }
+              filterType={ filter.title }
               key={ idx }
               activeFilter={ activeFilter }
+              image={"/media/alias/" + filter.picture}
             />);
            }
           )}

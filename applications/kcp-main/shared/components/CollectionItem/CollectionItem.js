@@ -7,7 +7,7 @@ const CollectionItem = (props) => {
     attachCollections(colIdx,imgIdx);
   }
 
-  let divStyle = {
+  const divStyle = {
     backgroundImage: 'url(' + image + ')'
   };
 

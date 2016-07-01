@@ -1,6 +1,6 @@
 .galleryWrap {
     width: 131%;
-    /* border: 1px solid grey; */
+    /* border: 1px solid #0099cc; */
     height: 690px;
     overflow: hidden;
     overflow-y: scroll;
@@ -13,7 +13,7 @@
     height: 212px;
     position: relative;
     margin: 10px;
-    border: 1px solid grey;
+    border: 1px solid #0099cc;
     overflow: hidden;
     background-color: white;
 }
@@ -185,7 +185,7 @@ html, body{
 
 nav {
     position: relative;
-    border-bottom: 1px solid grey!important;
+    border-bottom: 1px solid #0099cc!important;
     width: 100%;
     z-index: 40000;
 }
@@ -195,8 +195,11 @@ nav {
     position: absolute;
     top: 52px;
     bottom: 0px;
-    border-right: 1px solid grey;
+    border-right: 1px solid #0099cc;
     z-index: 900;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #0099cc;
 }
 
 .thumbnail {
@@ -215,6 +218,7 @@ nav {
     background-color: #def7ff;
     /* padding-top: 14px; */
     margin-bottom: -25px;
+    border-left: 2px solid #0099cc;
 }
 
 .filtersWrap {
@@ -222,19 +226,6 @@ nav {
     overflow-y: scroll;
     width: 100%;
     margin: 0px;
-}
-
-
-
-button.filterButtons.btn.btn-primary, .filterButtons.btn.btn-primary.selected {
-    float: left;
-    margin: 0px;
-    width: 100%!important;
-    border-radius: 0px!important;
-    background-color: white;
-    border: 1px solid grey;
-    color: grey;
-    border-top: none;
 }
 
 *:focus {
@@ -305,30 +296,22 @@ button.filterButtons.btn.btn-primary, .filterButtons.btn.btn-primary.selected {
 
 
 button.filterButtons.btn.btn-primary {
-    width: 50%!important;
-    height: 0;
-    display: block;
-    float: left;
-    margin: 0px;
-    border-top: 1px solid #eaeaea;
-    border-right: 1px solid #eaeaea;
-    padding-top: 40%;
-    padding-bottom: 10%;
-    border-left: 1px solid #d1d1fe;
-    border-bottom: 1px solid #c9c9ff;
-}
-
-
-button.filterButtons.btn.btn-primary.selected {
-    width: 100%
-    padding-top: 90%;
+    width: 90%!important;
+    padding-top: 45%;
     padding-bottom: 45%;
-    margin-top: 0px;
-    border: 1px solid grey;
--webkit-box-shadow: inset 2px 0px 23px 3px rgba(50,0,250,0.22);
--moz-box-shadow: inset 2px 0px 23px 3px rgba(50,0,250,0.22);
-box-shadow: inset 2px 0px 23px 3px rgba(50,0,250,0.22);
+    box-shadow: 0 3px 0 0 #007299;
+    color: #1d1d1d;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 100%!important;
+    margin-bottom: 23px;
+
+    background-color: white;
 }
+
+
+
 .filtersWrap {
     overflow: hidden;
     overflow-y: scroll;
@@ -532,17 +515,24 @@ button.filterButtons.btn.btn-primary {
         padding-top: 50%;
     padding-bottom: 45%;
     box-shadow: 0 3px 0 0 #007299;
-    color: #0099cc;
+    color: black;
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
+    color: black;
+   -webkit-text-fill-color: black; /* Will override color (regardless of order) */
+   -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: white;
 }
 }
 
 }
 
-html::-webkit-scrollbar, body::-webkit-scrollbar, .sidepanel::-webkit-scrollbar { 
-    display: none; 
+::-webkit-scrollbar {
+    display: none;
+}
+*::-webkit-scrollbar {
+    display: none;
 }
 .more {
     width: 379px;
@@ -593,10 +583,19 @@ box-shadow: -4px 10px 23px -10px rgba(0,0,0,0.75);
     margin-left: 60px;
 }
 
+button.filterButtons.btn.btn-primary {
+    opacity: 0.90;
+    background-size: cover;
 
+}
 
+button.filterButtons.btn.btn-primary:hover {
+    opacity: 0.99;
+    background-size: cover;
+}
 .modal-backdrop.in {
     filter: alpha(opacity=90);
+    background-size: 110%;
     opacity: .9;
 }
 .modal-backdrop {

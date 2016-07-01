@@ -1,4 +1,4 @@
-
+/*
 
 .password-reset-page {
   width: 360px;
@@ -34,8 +34,6 @@
 	text-align:center;
 	margin-top:45%;
 }
-
-
 .categoryItem .thumbnail {
     padding-left: 24px;
     padding-top: 14px;
@@ -64,6 +62,35 @@
 	margin:5px 0 5px 0;
 	width:100%;
 }
+*/
+
+.galleryWrap {
+    width: 100%;
+    /* border: 1px solid grey; */
+    height: 440px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.thumbWrap {
+    width: 33%;
+    float: left;
+    height: 180px;
+    position: relative;
+    margin: 10px;
+    border: 1px solid grey;
+    overflow: hidden;
+}
+
+.galleryWrap img {
+    border: none;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    background: white;
+    transition: transform .2s ease-in-out;
+    padding: 10px;
+}
 
 /* start override bootstrap css */
 .filterButtons.selected{
@@ -79,7 +106,7 @@
 
 
 .collectionItem{
-	border:1px solid #980000;
+
 	height:80px;
 	width:80px;
 }
@@ -92,68 +119,6 @@
 .pictureWrap{
 	display:inline-block;
 	padding:5px;
-}
-
-
-/* Result Modal */
-
-.galleryWrap {
-	min-height: 300px;
-	width: 90%;
-	overflow: scroll;
-	height: 478px;
-	padding: 10px;
-	float: right;
-	border-bottom: 1px solid #e5e5e5;
-}
-
-.modalLrgImage{
-	border: none;
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-.modal-header, .modal-footer {
-	border: none!important;
-}
-
-/* Result Modal Gallery */
-
-.galleryWrap body {
-	width: 80%;
-	margin: 30px auto;
-	font-family: sans-serif;
-	padding: 10px;
-}
-
-.galleryWrap h3 {
-	text-align: center;
-	font-size: 1.65em;
-	margin: 0 0 30px;
-}
-
-.galleryWrap div {
-	font-size: 16px;
-	overflow: hidden;
-	display: inline-block;
-	margin-bottom: 8px;
-	width: 20%;
-	margin: 8px;
-	padding: 1%;
-	float: left;
-	height: 100px;
-	width: 100px;
-	border: 1px solid #e5e5e5;
-	border-radius: 11px;
-}
-.galleryWrap div img {
-	text-align: center;
-	width: 100%;
-	height: 100%;
-}
-.galleryWrap a:nth-of-type(2n) {
-	margin-right: 0;
 }
 
 @media screen and (min-width: 50em) {
@@ -176,15 +141,6 @@
 
 .galleryWrap figure {
 	margin: 0;
-}
-
-.galleryWrap img {
-	border: none;
-	max-width: 100%;
-	height: auto;
-	display: block;
-	background: #ccc;
-	transition: transform .2s ease-in-out;
 }
 
 .galleryWrap .p a {
@@ -215,42 +171,16 @@ iframe img {
 	position: relative;
 }
 
-.collectionWrap b {
-    position: relative;
-    text-align: center;
-    font-size: 10px;
-    display: block;
-    top: 8px;
-}
-.collectionWrap i {
-    position: relative;
-    text-align: center;
-    font-size: 10px;
-    display: block;
-    top:0px;
-    right:0px;
-}
--right: 1px solid #dddddd;
-}
-.collectionWrap i {
-    background: #ffffff;
-    border-radius: 23px;
-    border: 1px solid #b0b0b0;
-    display: block;
-    font-size: 10px;
-    height: 0px;
-    left: 77px;
-    line-height: 0px;
-    opacity: 0.9;
-    padding: 13px;
-    padding-bottom: 15px;
-    padding-right: 18px;
-    padding-top: 17px;
-    position: relative;
-    right: 0px;
-    text-align: center;
-    top: -131px!important;
-    width: 0px;
+.collectionItem {
+    height: 220px;
+    width: 200px;
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-position: -1px 1px;
+    background-repeat: no-repeat;
+    /* border: 2px solid white; */
 }
 
 
@@ -275,33 +205,19 @@ iframe img {
 }
 
 @media (min-width: 992px) {
-.container {
-    width: 100%;
-
-    margin: 0px;
-    padding: 0px;
-}
-
+  .container {
+      width: 100%;
+      margin: 0px;
+      padding: 0px;
+  }
 }
 
 @media (min-width: 768px){
-.container {
-    width: 100%;
-
-    margin: 0px;
-    padding: 0px;
-}
-}
-
-img.collectionItem {
-    width: 100px;
-    height: 100px;
-    background-size: contain;
-    border-radius: 15px;
-    border: 2px solid #000000;
-  -webkit-box-shadow: 0px 9px 18px -10px rgba(0,0,0,0.52);
--moz-box-shadow: 0px 9px 18px -10px rgba(0,0,0,0.52);
-box-shadow: 0px 9px 18px -10px rgba(0,0,0,0.52);
+  .container {
+      width: 100%;
+      margin: 0px;
+      padding: 0px;
+  }
 }
 
 
@@ -315,13 +231,11 @@ html, body{
 
 nav {
     position: relative;
-    z-index: 100;
     border-bottom: 1px solid grey!important;
     width: 100%;
 }
 .sidepanel {
     padding: 0px;
-    padding-top: 20px;
     margin: 0px;
     position: absolute;
     top: 52px;
@@ -343,12 +257,14 @@ nav {
     width: 100%;
     margin: 0px;
 }
+
+
+
 button.filterButtons.btn.btn-primary, .filterButtons.btn.btn-primary.selected {
     float: left;
     margin: 0px;
-    width: 106%!important;
+    width: 100%!important;
     border-radius: 0px!important;
-    margin-left: -1%;
     background-color: white;
     border: 1px solid grey;
     color: grey;
@@ -365,57 +281,262 @@ button.filterButtons.btn.btn-primary, .filterButtons.btn.btn-primary.selected {
     height: 516px;
     border: 1px solid #e5e5e5;
 }
+.collectionWrap i {
+    position: relative;
+    text-align: center;
+    font-size: 10px;
+    display: block;
+    top: -18px;
+    right: -149px;
+    background-color: purple;
+    border-radius: 100%;
+    width: 33px;
+    padding: 10px;
+    color: white;
+    font-style: normal;
+    font-weight: bold;
+    opacity: 0.8;
+}
+.collectionWrap b {
+    position: relative;
+    text-align: center;
+    font-size: auto;
+    display: block;
+    bottom: -191px;
+    background-color: rgba(18, 2, 254, 0.98);
+    color: white;
+    font-weight: lighter;
+    width: 112%;
+    left: -5px;
+    position: relative;
+    padding: 2px;
+}
+
+.class_box_shadow {
+    margin: 8px;
+    position: relative;
+    width: 200px;
+    height: 220px;
+    overflow: hidden;
+}
+
+.caption p {
+    font-size: 30px;
+    font-style: italic;
+    padding: 0px;
+    margin-bottom: -10px;
+}
 
 
-.class_box_shadow{
-    width: 374px;
-    min-width: 200px;
-    min-height: 130px;
-    margin: auto;
-    background: #ccc;
-    border: 5px solid white;
-    position:relative;
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
-    -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
-    -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
+button.filterButtons.btn.btn-primary {
+    width: 50%!important;
+    height: 0;
+    display: block;
+    float: left;
+    margin: 0px;
+    border-top: 1px solid #eaeaea;
+    border-right: 1px solid #eaeaea;
+    padding-top: 40%;
+    padding-bottom: 10%;
+    border-left: 1px solid #d1d1fe;
+    border-bottom: 1px solid #c9c9ff;
 }
-.sh_bottom{
-    width: 100%; height: 45%;
-    position:absolute;
-    z-index: -2;
-    bottom: 0; right: 0;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    border-radius: 50px;
-    -webkit-box-shadow: 0px 10px 2px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0px 10px 2px rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 10px 2px rgba(0, 0, 0, 0.2);
+
+
+button.filterButtons.btn.btn-primary.selected {
+    width: 100%
+    padding-top: 90%;
+    padding-bottom: 45%;
+    margin-top: 0px;
+    border: 1px solid grey;
+-webkit-box-shadow: inset 2px 0px 23px 3px rgba(50,0,250,0.22);
+-moz-box-shadow: inset 2px 0px 23px 3px rgba(50,0,250,0.22);
+box-shadow: inset 2px 0px 23px 3px rgba(50,0,250,0.22);
 }
-.sh_bottom:after{
-    content: "";
-    position:absolute;
-    right: 0; bottom:0;
-    width:150px; height: 100px;
-    z-index: -1;
-    background: rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 20px 30px 10px rgba(0, 0, 0, 0.14);
-    -webkit-box-shadow: 20px 30px 10px rgba(0, 0, 0, 0.14);
-    box-shadow: 20px 30px 10px rgba(0, 0, 0, 0.14);
-    -moz-transform:skew(10deg,10deg) translate(-40px,-15px);
-    -webkit-transform:skew(10deg,10deg) translate(-40px,-15px);
-    transform:skew(10deg,10deg) translate(-40px,-15px);
+.filtersWrap {
+    overflow: hidden;
+    overflow-y: scroll;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    overflow-y: scroll;
 }
-.sh_bottom:before{
-    content: "";
-    position:absolute;
-    left: 0; bottom:0;
-    width:150px; height: 100px;
-    z-index: -1;
-    background: rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: -20px 30px 10px rgba(0, 0, 0, 0.14);
-    -webkit-box-shadow: -20px 30px 10px rgba(0, 0, 0, 0.14);
-    box-shadow: -20px 30px 10px rgba(0, 0, 0, 0.14);
-    -webkit-transform:skew(-10deg,-10deg) translate(40px,-15px);
-    -moz-transform:skew(-10deg,-10deg) translate(40px,-15px);
-    transform:skew(-10deg,-10deg) translate(40px,-15px);
+
+.filtersWrap {
+    overflow: hidden;
+    overflow-y: scroll;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.application-container {
+    height: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.application-wrap, .container, .stage{
+    height: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.search-bar {
+    top: 11px;
+    position: fixed;
+    z-index: 1000;
+    left: 20px;
+}
+
+.navbar {
+    margin-bottom: 0px;
+    cursor: pointer;
+    position: fixed;
+    z-index: 10;
+}
+
+
+.right-arrow, .left-arrow {
+  position: absolute;
+  width: 100px;
+  overflow: hidden;
+  top: 36%;
+}
+
+
+.left-arrow {
+    left: -100px;
+    opacity: 0.5;
+}
+.right-arrow {
+    right: -100px;
+    opacity: 0.5;
+}
+
+.right-arrow .bg, .left-arrow .bg {
+  background-color: black;
+  height: 200px;
+  width: 200px;
+  border-radius: 110%;
+} 
+
+
+.right-arrow .bg i, .left-arrow .bg i{
+  color: white;
+}
+
+.right-arrow .bg {
+    background-color: black;
+    height: 200px;
+    width: 200px;
+    border-radius: 110%;
+    margin-left: -101px;
+}
+
+.right-arrow .bg i {
+    right: 30px;
+    position: absolute;
+    top: 89px;
+}
+
+.left-arrow .bg i {
+    left: 30px;
+    position: absolute;
+    top: 89px;
+}
+
+/**************************
+  DEFAULT BOOTSTRAP STYLES
+**************************/
+
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 10px 16px;
+}
+  
+.btn-lg {
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 6px;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #428bca;
+  border-color: #357ebd;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+  color: #fff;
+  background-color: #3276b1;
+  border-color: #285e8e;
+}
+
+/***********************
+  RAISED BUTTONS
+************************/
+.btn-primary.raised {
+    box-shadow: 0 3px 0 0 #007299;
+}
+.btn-primary.raised:active, .btn-primary.raised.active {
+    background: #33a6cc;
+    box-shadow: none;
+    margin-bottom: -3px;
+    margin-top: 3px;
+}
+
+/***********************
+  CUSTON BTN VALUES
+************************/
+
+.btn {
+    padding: 14px 24px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+
+.btn-primary {
+    background: #0099cc;
+    color: #ffffff;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: #33a6cc;
+}
+
+.btn-primary:active, .btn-primary.active {
+    background: #007299;
+    box-shadow: none;
+}
+
+@media (max-width: 400px){
+  .sidepanel.col-sx-2 {
+      width: 100px!important
+  }
 }

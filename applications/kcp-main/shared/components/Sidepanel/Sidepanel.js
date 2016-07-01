@@ -45,15 +45,9 @@ export default class Sidepanel extends Component {
     });
     const activeFilter = this.state.activeFilterBtn;
     return (
-      <div className="sidepanel col-md-3 col-md-pull-9">
-        <h4>Sidepanel</h4>
+      <div className="sidepanel col-sx-4 col-sm-3">
 
-        <SearchBar
-          onSearchChange={ pictureSearch }
-          onSearchBlur={ this.setSearchOnBlur }
-          clearSearch={ this.state.clearSearch }
-        />
-        <h5>Categories</h5>
+        <SearchBar onSearchChange={ pictureSearch } onSearchBlur={ this.setSearchOnBlur } clearSearch={ this.state.clearSearch }/>
         <div className="filtersWrap">
           {filters.map((filter, idx) =>{
             return(

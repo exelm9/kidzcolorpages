@@ -16,6 +16,7 @@ export const fetchPictures = () => (dispatch) =>
 		request.get('/api').then((response) => {
       var data = JSON.parse(response.data);
       data.filters = util.prepareFilterData(data.filters, data.categories)
+      console.log(data,'all data')
       dispatch({type: actions.FETCH_PICTURES, payload: data})
     });
 

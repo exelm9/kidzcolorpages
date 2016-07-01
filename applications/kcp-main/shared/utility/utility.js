@@ -7,8 +7,8 @@ exports.prepareFilterData = function(filters, categories){
   		let categoryFilter = category.split('/').pop()
   		if(categoryFilter === filter){
   			let collections = categories[category].collections;
-  			console.log(collections, filter)
-  			reformatedFilter['pictures'] = collections[Object.keys(collections)[0]].collection_thumb;
+  			reformatedFilter['picture'] = collections[Object.keys(collections)[0]].collection_thumb;
+  			break;
   		}
   	}
   	reformatedFilter['pages'] = pages

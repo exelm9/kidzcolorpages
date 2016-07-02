@@ -21,7 +21,7 @@ const categoryItem = ({collections, caption, showModal}) => {
         colIdx={uniqueId++}
         key={collection.uuid}
         count={collection.alias_count}
-        _class="collectionWrap"
+        _class="collectionWrap animated slideInLeft"
         imgIdx="0"
       />
     );
@@ -29,7 +29,7 @@ const categoryItem = ({collections, caption, showModal}) => {
 
   
   return (
-    <div className="categoryItem">
+    <div className="categoryItem animated fadeIn">
       <div className="thumbnail">
         <div className="caption">
           <p>{caption}</p>

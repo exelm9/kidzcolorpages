@@ -47,7 +47,7 @@ export default class ResultsContainer extends Component {
     }
 
     let categories = categoryList.map((category, idx) => {
-      return (<CategoryItem
+      return (<CategoryItem className="animated fadeIn"
               collections={category.collections}
               caption={category.category_title}
               key={idx}

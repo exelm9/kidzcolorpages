@@ -19,6 +19,7 @@ app.get('/browse', function(req, res, next){
 				   	<link rel="stylesheet" href="/kcp/styles/bootstrap.css">
 				   	<link rel="stylesheet" href="/kcp/styles/font-awesome.css">
 				   	<link rel="stylesheet" href="/kcp/styles/style.css">
+				   	<link rel="stylesheet" href="/kcp/styles/animate.css">
 				   </head>
 				   <body>
 				   	<div class="container"></div>

@@ -21,7 +21,7 @@ const pictureListItem = ({collections, caption, showModal}) => {
         colIdx={uniqueId++}
         key={collection.uuid}
         count={collection.alias_count}
-        _class="collectionWrap"
+        _class="collectionWrap animated slideInUp"
         imgIdx="0"
       />
     );

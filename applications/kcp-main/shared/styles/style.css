@@ -286,7 +286,7 @@ nav {
 }
 
 
-button.filterButtons.btn.btn-primary {
+/*button.filterButtons.btn.btn-primary {
     width: 90%!important;
     padding-top: 45%;
     padding-bottom: 45%;
@@ -299,6 +299,29 @@ button.filterButtons.btn.btn-primary {
     margin-bottom: 23px;
 
     background-color: white;
+}*/
+button.filterButtons.btn.btn-primary i {
+  font-style: normal;
+}
+button.filterButtons.btn.btn-primary {
+    width: 100%!important;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    box-shadow: 0 3px 0 0 #007299;
+    background-color: white;
+    color: black;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: black;
+    margin-top: 24px;
+    height: 54px;
+    /* -webkit-text-fill-color: black; */
+    /* -webkit-text-stroke-width: 1px; */
+    /* -webkit-text-stroke-color: white; */
+    background-image: none!important;
+    color: black;
+    border-radius: 50px;
 }
 
 
@@ -499,22 +522,7 @@ button.filterButtons.btn.btn-primary {
 button.filterButtons.btn.btn-primary{
   font-size:10px;
 }
-@media (max-width: 1500px){
-    button.filterButtons.btn.btn-primary {
-        width: 100%!important;
-            padding-top: 50%;
-        padding-bottom: 45%;
-        box-shadow: 0 3px 0 0 #007299;
-        color: black;
-        font-weight: 700;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        color: black;
-       -webkit-text-fill-color: black; /* Will override color (regardless of order) */
-       -webkit-text-stroke-width: 1px;
-       -webkit-text-stroke-color: white;
-    }
-}
+
 
 ::-webkit-scrollbar {
     display: none;

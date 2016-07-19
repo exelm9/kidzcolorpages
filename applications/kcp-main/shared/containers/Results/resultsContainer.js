@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import * as ColorPagesActions from '../../redux/actions';
 import CollectionItem from '../../components/CollectionItem/CollectionItem'
 import CategoryItem from '../../components/CategoryItem/CategoryItem';
+import ReactDOM from 'react-dom';
 
 import _ from 'lodash';
 import ResultModal from '../ResultModal/ResultModal';
@@ -24,6 +25,10 @@ export default class ResultsContainer extends Component {
 
   showSearchModal({imgIdx, uuid}) {
     this.props.actions.showModal({ uuid, colIdx: imgIdx, aliases: this.props.allPictures.collections[uuid].aliases });
+  }
+
+  componentWillUpdate(){
+    ReactDOM.findDOMNode(this).scrollTop = 0;
   }
 
   render() {

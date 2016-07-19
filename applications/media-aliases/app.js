@@ -11,7 +11,7 @@ require(path.join(__dirname, '/../../autoload'));
 const atlas_paths = require('atlas_paths');
 
 const MA = require('./media-aliases');
-const MQ = require('./media-queries');
+// const MQ = require('./media-queries');
 
 // Basic Route Demos
 // -----------------
@@ -76,7 +76,7 @@ app.get('*', function (req, res, next) {
 			var file = path.join(alias_dir, file_hash, "/original" + alias_details.uuid_file_ext );
 			var dims = file_query_format.split('x');
 			// rework to make it so it will build the files on first request
-			MQ.format_image(file, query_file, dims[0])
+			// MQ.format_image(file, query_file, dims[0])
 			res.sendfile(query_file)
 		}
 		

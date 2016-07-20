@@ -42,9 +42,9 @@ require('./routes').default(http_server, express)
 	in a centralized manor.
 */
 http_server.use( require( path.join( atlas_paths._APPS_, '/errors/app' )))
-
+const port =  process.env.PRODUCTION ? 80 : 1337
 // Launch Server
-http_server.listen(1337, function () {
+http_server.listen(port, function () {
   console.log('Example app listening on port 1337!')
 });
 

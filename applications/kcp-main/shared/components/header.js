@@ -44,7 +44,7 @@ export default class Header extends Component {
 
   homeReturn() {
     console.log("homeReturn");
-    browserHistory.push('/browse');
+    browserHistory.push('/');
   }
 
   goToSettings() {

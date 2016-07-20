@@ -10,7 +10,7 @@ import PasswordReset from './components/Profile/passwordReset';
 
 
 export default (
-  <Route path="/browse" component={App}>
+  <Route path="/" component={App}>
   	<IndexRoute component={Home}/>
     <Route path="/admin" component={adminPlaceholder} />
     <Route path="/profile" component={Profile} />

@@ -4,7 +4,6 @@ import ResultsList from './DefaultResult/resultsList';
 
 const Footer = () => {
 
-
   return (
     <div>
       Still a footer.

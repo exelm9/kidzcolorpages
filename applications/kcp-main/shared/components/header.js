@@ -38,26 +38,21 @@ export default class Header extends Component {
   }
 
   goToProfilePage() {
-    console.log("goToProfilePage");
     browserHistory.push('/profile');
   }
 
   homeReturn() {
-    console.log("homeReturn");
     browserHistory.push('/');
   }
 
   goToSettings() {
-    console.log("goToSettings");
     browserHistory.push('/passwordreset');
   }
   goToLogin() {
-    console.log("goToLogin");
     browserHistory.push('/login');
   }
 
   goToRegister() {
-    console.log("goToRegister");
     browserHistory.push('/registration');
   }
 

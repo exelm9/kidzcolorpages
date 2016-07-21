@@ -43,14 +43,20 @@ export default function picturesReducer(state = initialState, action) {
 
     if(allData){
       let allCategories = allData.categories;
-      let allCollections = allData.collections
+      let allCollections = allData.collections;
+      let searchedCategory = {};
       // iterate through every category that has nested pictures
       for(let key in allCategories){
         let collections = allCategories[key].collections
         let foundCollections = null;
         let category = allCategories[key];
+        
         // if user is searching, then only add searched content to searchedCollections
         if(searchTerm){
+          if(findCategory(searchTerm, category.category_title)){
+            searchedCollections.category.push(category);
+            searchedCategory[category.category_title] = 'added';
+          }
           foundCollections = findCollections(searchTerm, collections);
           if(foundCollections.length === 0) continue;
         }
@@ -59,8 +65,12 @@ export default function picturesReducer(state = initialState, action) {
         for(let i = 0; i < foundCollections.length; i++){
           searchedCollections.pictures.push(foundCollections[i]);
         }
+
+        // prevents duplication from searchterm grabbing a collection category as well as searched category
+        if(!searchedCategory[category.category_title]){
+          searchedCollections.category.push(category);
+        }
         
-        searchedCollections.category.push(category);
       }
     }
     return searchedCollections;
@@ -73,6 +83,13 @@ export default function picturesReducer(state = initialState, action) {
         return false;
     }
     return true;
+  }
+
+  const findCategory = (searchTerm, category) => {
+    if( category.indexOf(searchTerm) > -1 ){
+      return true;
+    }
+    return false;
   }
 
   const findCollections = (searchTerm, collections) => {
